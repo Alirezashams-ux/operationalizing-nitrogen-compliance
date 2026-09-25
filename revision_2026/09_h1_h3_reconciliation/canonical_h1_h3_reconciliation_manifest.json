@@ -1,0 +1,210 @@
+{
+  "assembly_id": "canonical_h1_h3_reconciliation_9f680046d8619817",
+  "starting_git_commit": "045d265f54d29eb1212758307161072c25379541",
+  "branch": "controlled-reruns-v1",
+  "python_version": "3.8.10",
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "protocol_tag": "corrected-protocol-v1",
+  "authorized_horizons": [
+    1,
+    3
+  ],
+  "authorized_models": [
+    "Persistence",
+    "Ridge",
+    "ElasticNet",
+    "HGBR"
+  ],
+  "input_files": [
+    "revision_2026/03_corrected_protocol/alarm_evaluation_protocol.md",
+    "revision_2026/03_corrected_protocol/build_purged_nested_splits.py",
+    "revision_2026/03_corrected_protocol/canonical_dataset_lock.json",
+    "revision_2026/03_corrected_protocol/corrected_evaluation_protocol.md",
+    "revision_2026/03_corrected_protocol/corrected_split_assignment.csv",
+    "revision_2026/03_corrected_protocol/corrected_split_summary.csv",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/alarm_evaluation_protocol.md",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/canonical_dataset_lock.json",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_evaluation_protocol.md",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_assignment.csv",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_summary.csv",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/rerun_execution_plan.csv",
+    "revision_2026/03_corrected_protocol/rerun_execution_plan.csv",
+    "revision_2026/03_corrected_protocol/test_purged_nested_splits.py",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_completion_report.md",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_event_prevalence.csv",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_by_fold.csv",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_pooled.csv",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_predictions.csv",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_completion_report.md",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_decision_b_issue_registry.csv",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_event_prevalence.csv",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_metric_reconciliation.csv",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_by_fold.csv",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_pooled.csv",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_predictions.csv",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json",
+    "revision_2026/04_controlled_reruns/persistence/persistence_completion_report.md",
+    "revision_2026/04_controlled_reruns/persistence/persistence_event_prevalence.csv",
+    "revision_2026/04_controlled_reruns/persistence/persistence_metrics_by_fold.csv",
+    "revision_2026/04_controlled_reruns/persistence/persistence_metrics_pooled.csv",
+    "revision_2026/04_controlled_reruns/persistence/persistence_predictions.csv",
+    "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json",
+    "revision_2026/04_controlled_reruns/ridge/ridge_completion_report.md",
+    "revision_2026/04_controlled_reruns/ridge/ridge_event_prevalence.csv",
+    "revision_2026/04_controlled_reruns/ridge/ridge_metrics_by_fold.csv",
+    "revision_2026/04_controlled_reruns/ridge/ridge_metrics_pooled.csv",
+    "revision_2026/04_controlled_reruns/ridge/ridge_predictions.csv",
+    "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json"
+  ],
+  "input_checksums": {
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_completion_report.md": "a0a1141c7b4e81203bd1f9e40d3df94faa7b7b938c648da40522415c405cc29e",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_event_prevalence.csv": "64f1b42b94f82ee5952b42018a2691ec74f025945187de98caa27585832ef38f",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json": "14be259172e160e5dffb56432e6c71482c4c80c7dfec10fad51a9dc6f9ec6b15",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_by_fold.csv": "7ef0cba62a430da9e3d99f54f94041f98350ec96e42231389fa95deb32a82c90",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_pooled.csv": "048c02ccb30746c3cbdd0d7cbee92b630a0512b8c1ea7798f4c38d30df24fbe6",
+    "revision_2026/04_controlled_reruns/elasticnet/elasticnet_predictions.csv": "dab8dd118ac95fbdef4bac3ca1b763be93320ea0dac1573a8b3b269a15960edb",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_decision_b_issue_registry.csv": "7362af24f26129ce7a5f5f86a1480a4d69b5322976e5c67695a221dbee6b4ce0",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_metric_reconciliation.csv": "a1cd579b1723f006e3c08e5c8af56dfff84064d4b5726eb00604feadd281cfd0",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_completion_report.md": "d2e537b1f6d14fca0885f367a11ef74bb213b22369f069bfbd73ee3ff68e8084",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_event_prevalence.csv": "d5518fb8fdb4b0f4badb4c2afe0c5c44e1598450cab01005a7a2c3dcde1534f9",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json": "e03082490b0a7b7fb6116c6ef2ba316f55487fa405aec1b11654a5a107c80d96",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_by_fold.csv": "0abb3b0c65c6f4c1142694fb54f68cd21ee5734fdaf216c1de8dbed3d2f4ca87",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_pooled.csv": "2a414b325fd156e170d40d1c0504dd3b7926010a369d11bea1fb9b670f8bbde7",
+    "revision_2026/04_controlled_reruns/hgbr/hgbr_predictions.csv": "f5b4689128aa9cab965bbf8eac3879d05050b32a0c62572c7b3365f7bdc3ba36",
+    "revision_2026/04_controlled_reruns/persistence/persistence_completion_report.md": "2ed4bfab19b9703ec747f199a6acb488078685589f3315c0f97c82c560f570f8",
+    "revision_2026/04_controlled_reruns/persistence/persistence_event_prevalence.csv": "ff3991e212e39f77af511a260d4f220cb74f28cce49ffaaa36252d1b4adb3737",
+    "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json": "444b2d820e38e5704b90010cb1fd1890aa85a5de1560a024eb5689ccdc107c2a",
+    "revision_2026/04_controlled_reruns/persistence/persistence_metrics_by_fold.csv": "6c716094f371283a2f9b77701b1e60db738e54e4bbc188d99976cc2d10c7dcb1",
+    "revision_2026/04_controlled_reruns/persistence/persistence_metrics_pooled.csv": "72ced96eaab2effa6614105eb79ac2dc0e64b466a41eb6babdc68a0e90a26dcf",
+    "revision_2026/04_controlled_reruns/persistence/persistence_predictions.csv": "383014421fa4419e7ba626a9a0e0df61f1b302431bb546c9049ce9f8a4b51754",
+    "revision_2026/04_controlled_reruns/ridge/ridge_completion_report.md": "8a86394982d03312c5702f19c699a5cda396ff6d0c2f23466c489c8d5f1ac20e",
+    "revision_2026/04_controlled_reruns/ridge/ridge_event_prevalence.csv": "63d750592e0c3c7be01a1579afc6daaf727badaa9255473d3d8609a71c9f69d0",
+    "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json": "af0dede277f047c90e483480d21fd6d485edce14e78d9bf8b20d4bdfb2d8438b",
+    "revision_2026/04_controlled_reruns/ridge/ridge_metrics_by_fold.csv": "ef93864fc755300d9c988c167361a8ddde6b6f08c5072486a229052caba1d8cd",
+    "revision_2026/04_controlled_reruns/ridge/ridge_metrics_pooled.csv": "fce9723255d985f8fc6540cb2a093c1c288236ec1270728f5bcf432a02c46194",
+    "revision_2026/04_controlled_reruns/ridge/ridge_predictions.csv": "1bc1646a73abbb94a60c59eb9637e2c9f09ea8d88627a1ee12c46253d2a0594b",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/alarm_evaluation_protocol.md": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_evaluation_protocol.md": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+    "revision_2026/03_corrected_protocol/locked_protocol_v1/rerun_execution_plan.csv": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+    "revision_2026/03_corrected_protocol/alarm_evaluation_protocol.md": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+    "revision_2026/03_corrected_protocol/build_purged_nested_splits.py": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+    "revision_2026/03_corrected_protocol/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+    "revision_2026/03_corrected_protocol/corrected_evaluation_protocol.md": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+    "revision_2026/03_corrected_protocol/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+    "revision_2026/03_corrected_protocol/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+    "revision_2026/03_corrected_protocol/rerun_execution_plan.csv": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+    "revision_2026/03_corrected_protocol/test_purged_nested_splits.py": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2"
+  },
+  "source_run_ids": {
+    "Persistence": "persistence_corrected_2bbf5eba419b_6ed147cd_f83baf57",
+    "Ridge": "ridge_corrected_41f184a29ff8_6ed147cd_f83baf57",
+    "ElasticNet": "elasticnet_corrected_69cfb2bf8bc1_6ed147cd_f83baf57",
+    "HGBR": "hgbr_corrected_1db2f3472cd4_6ed147cd_f83baf57"
+  },
+  "artifact_generation_commits": {
+    "Persistence": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+    "Ridge": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+    "ElasticNet": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+    "HGBR": "1db2f3472cd48274a5afa4010f446952d76c6042"
+  },
+  "package_freeze_tags": {
+    "Persistence": "persistence-corrected-v1",
+    "Ridge": "ridge-corrected-v1",
+    "ElasticNet": "elasticnet-corrected-v1",
+    "HGBR": "hgbr-corrected-v1"
+  },
+  "package_freeze_commits": {
+    "Persistence": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+    "Ridge": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+    "ElasticNet": "1db2f3472cd48274a5afa4010f446952d76c6042",
+    "HGBR": "4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62"
+  },
+  "remote_tag_status": {
+    "corrected-protocol-v1": true,
+    "persistence-corrected-v1": true,
+    "ridge-corrected-v1": true,
+    "elasticnet-corrected-v1": true,
+    "hgbr-corrected-v1": true
+  },
+  "canonical_row_counts": {
+    "H1": 762,
+    "H3": 747
+  },
+  "fold_counts": {
+    "H1": {
+      "1": 254,
+      "2": 254,
+      "3": 254
+    },
+    "H3": {
+      "1": 249,
+      "2": 249,
+      "3": 249
+    }
+  },
+  "date_ranges": {
+    "H1": {
+      "feature_date_start": "2021-09-29",
+      "feature_date_end": "2023-10-30",
+      "target_date_start": "2021-09-30",
+      "target_date_end": "2023-10-31"
+    },
+    "H3": {
+      "feature_date_start": "2021-10-12",
+      "feature_date_end": "2023-10-28",
+      "target_date_start": "2021-10-15",
+      "target_date_end": "2023-10-31"
+    }
+  },
+  "event_counts": {
+    "H1": {
+      "events_tau15": 141,
+      "events_tau16": 74,
+      "events_tau17": 30,
+      "prevalence_tau15": 0.18503937007874016,
+      "prevalence_tau16": 0.09711286089238845,
+      "prevalence_tau17": 0.03937007874015748
+    },
+    "H3": {
+      "events_tau15": 134,
+      "events_tau16": 71,
+      "events_tau17": 29,
+      "prevalence_tau15": 0.17938420348058903,
+      "prevalence_tau16": 0.09504685408299866,
+      "prevalence_tau17": 0.038821954484605084
+    }
+  },
+  "metric_methods": {
+    "MAE": "mean(abs(y_true - y_pred))",
+    "MSE": "mean((y_true - y_pred)^2)",
+    "RMSE": "sqrt(MSE)",
+    "pooled_method": "pool all rows first, then compute metrics",
+    "MASE_period": 1,
+    "MASE_method": "mean_absolute_scaled_error_over_pooled_rows_using_fold_local_train_denominator"
+  },
+  "tolerance": 1e-12,
+  "verification_pass": true,
+  "key_equality_pass": true,
+  "source_event_label_pass": true,
+  "source_registry_pass": true,
+  "metric_reconciliation_pass": true,
+  "mase_convention_pass": true,
+  "source_preservation_result": true,
+  "test_result": "pass_56_of_56",
+  "deterministic_result": "pass",
+  "warnings": [
+    "locked_protocol_registry_missing_files_noncritical: build_purged_nested_splits.py,test_purged_nested_splits.py"
+  ],
+  "final_decision": "A",
+  "checksum_result": {
+    "registry_pass": true,
+    "coverage_pass": true,
+    "coverage_missing": [],
+    "coverage_extra": []
+  }
+}

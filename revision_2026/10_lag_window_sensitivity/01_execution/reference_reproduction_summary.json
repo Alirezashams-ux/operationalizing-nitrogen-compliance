@@ -1,0 +1,13 @@
+{
+  "tolerance": 1e-06,
+  "overall_pass": true,
+  "material_failure": false,
+  "pathway_status": {
+    "Ridge_H1": "pass",
+    "Ridge_H3": "pass",
+    "Ridge_H5": "pass",
+    "HGBR_H1": "pass",
+    "HGBR_H3": "pass",
+    "HGBR_H5": "pass"
+  }
+}

@@ -1,0 +1,35 @@
+term_type,term,usage_requirement,status,notes
+preferred,leakage-safe,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,target-date embargo,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,chronological outer fold,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,Budget-Constrained Recall Temporal Convolutional Network,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,BCR-TCN v1.1,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,fixed rank ensemble,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,retrospective offline top-k evaluation,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,past-only sequential threshold simulation,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,historical quota-enforced sequential simulation,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,nominal alarm budget,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,realized alarm burden,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,candidate alarm,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,issued alarm,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,suppressed candidate,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,unused capacity,allowed_and_preferred,required,Use consistently in final revision text and labels.
+preferred,prospective shadow deployment,allowed_and_preferred,required,Use consistently in final revision text and labels.
+restriction,restriction_rule,BCR-TCN v1.1 is H5-only.,required,constraint
+restriction,restriction_rule,v1.1 is an internal project implementation/model version.,required,constraint
+restriction,restriction_rule,"Budget-constrained refers to budget-aligned checkpoint selection, not differentiable hard quota in loss.",required,constraint
+restriction,restriction_rule,The fixed rank ensemble was not reoptimized under corrected test data.,required,constraint
+restriction,restriction_rule,Retrospective top-k uses complete held-out fold rankings.,required,constraint
+restriction,restriction_rule,Past-only sequential baseline is causal but does not guarantee a hard quota.,required,constraint
+restriction,restriction_rule,Quota-enforced policy satisfies A_j <= ceil(r x j) at every eligible prefix.,required,constraint
+restriction,restriction_rule,Quota-enforced policy does not force every slot to be used.,required,constraint
+restriction,restriction_rule,None of the sequential packages is prospective field validation.,required,constraint
+prohibited,deployed,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,field validated,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,real-time validated,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,prospectively validated,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,fully operational,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,universally superior,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,optimal lag window,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,hard capacity equality,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims
+prohibited,guaranteed realized fraction equal to r,do_not_use_without_explicit_historical_context,blocked,avoid unsupported deployment or optimality claims

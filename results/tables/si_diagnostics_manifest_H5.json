@@ -1,0 +1,15 @@
+{
+  "horizon": 5,
+  "epochs_requested": 60,
+  "splits": 3,
+  "cv_strategy": "TimeSeriesSplit expanding-window blocked forward chaining",
+  "outputs": {
+    "training_epoch_diagnostics_csv": "results/tables/si_training_epoch_diagnostics_H5.csv",
+    "overfit_underfit_flags_csv": "results/tables/si_overfit_underfit_epoch_flags_H5.csv",
+    "gradient_health_flags_csv": "results/tables/si_gradient_health_epoch_flags_H5.csv",
+    "gradient_ve_summary_csv": "results/tables/si_gradient_ve_summary_H5.csv",
+    "failure_bars_csv": "results/tables/si_failure_bars_H5.csv",
+    "failure_bars_overall_csv": "results/tables/si_failure_bars_overall_H5.csv",
+    "overfit_underfit_counts_csv": "results/tables/si_overfit_underfit_counts_H5.csv"
+  }
+}

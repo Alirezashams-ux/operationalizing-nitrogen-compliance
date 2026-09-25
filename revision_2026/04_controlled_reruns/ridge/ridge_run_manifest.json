@@ -1,0 +1,143 @@
+{
+  "run_id": "ridge_corrected_41f184a29ff8_6ed147cd_f83baf57",
+  "model": "Ridge",
+  "horizons": [
+    1,
+    3,
+    5
+  ],
+  "configuration_provenance_status": "B",
+  "dataset_path": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/00_provenance/recovered_inputs/figure2/Ulsan_Yongsan.csv",
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_path": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/corrected_split_assignment.csv",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "protocol_tag": "corrected_protocol_v1",
+  "git_branch": "controlled-reruns-v1",
+  "git_commit": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+  "execution_command": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python /home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/run_corrected_ridge.py",
+  "timestamp": "2026-08-04T09:13:51+00:00",
+  "software_versions": {
+    "python_version": "3.8.10",
+    "scikit_learn_version": "1.3.2",
+    "pandas_version": "2.0.3",
+    "numpy_version": "1.24.4"
+  },
+  "feature_sets": {
+    "1": [
+      "TNout_lag1",
+      "TNout_roll7",
+      "TNout_roll14",
+      "Inflow",
+      "Inflow_roll7",
+      "TNin",
+      "TNin_roll7",
+      "TOCin",
+      "TOCin_roll7",
+      "BODin",
+      "BODin_roll7",
+      "C_N",
+      "temp_mean_c",
+      "temp_roll7",
+      "precip_total_mm",
+      "precip_sum3",
+      "sin_doy",
+      "cos_doy"
+    ],
+    "3": [
+      "TNout_lag1",
+      "TNout_roll7",
+      "TNout_roll14",
+      "Inflow",
+      "Inflow_roll7",
+      "TNin",
+      "TNin_roll7",
+      "TOCin",
+      "TOCin_roll7",
+      "BODin",
+      "BODin_roll7",
+      "C_N",
+      "temp_mean_c",
+      "temp_roll7",
+      "precip_total_mm",
+      "precip_sum3",
+      "sin_doy",
+      "cos_doy"
+    ],
+    "5": [
+      "TNout_lag1",
+      "TNout_roll7",
+      "TNout_roll14",
+      "Inflow",
+      "Inflow_roll7",
+      "TNin",
+      "TNin_roll7",
+      "TOCin",
+      "TOCin_roll7",
+      "BODin",
+      "BODin_roll7",
+      "C_N",
+      "temp_mean_c",
+      "temp_roll7",
+      "precip_total_mm",
+      "precip_sum3",
+      "sin_doy",
+      "cos_doy"
+    ]
+  },
+  "candidate_alphas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "selected_alphas_by_fold": {
+    "1": {
+      "1": 10.0,
+      "2": 100.0,
+      "3": 100.0
+    },
+    "3": {
+      "1": 0.01,
+      "2": 100.0,
+      "3": 100.0
+    },
+    "5": {
+      "1": 100.0,
+      "2": 100.0,
+      "3": 100.0
+    }
+  },
+  "prediction_file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/ridge_predictions.csv",
+  "prediction_sha256": "1bc1646a73abbb94a60c59eb9637e2c9f09ea8d88627a1ee12c46253d2a0594b",
+  "metrics_files": [
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/ridge_inner_selection_results.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/ridge_selected_configurations.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/ridge_metrics_by_fold.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/ridge_metrics_pooled.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/ridge_event_prevalence.csv"
+  ],
+  "metrics_sha256": {
+    "ridge_inner_selection_results.csv": "760695944acfe1967c532ac06d8a402f54877b29e2d1e6c5ea24f789d5f92546",
+    "ridge_selected_configurations.csv": "d92a89156bfc46b143ec8b914f84182885084a0c74c0249d727e44ac9b759029",
+    "ridge_metrics_by_fold.csv": "ef93864fc755300d9c988c167361a8ddde6b6f08c5072486a229052caba1d8cd",
+    "ridge_metrics_pooled.csv": "fce9723255d985f8fc6540cb2a093c1c288236ec1270728f5bcf432a02c46194",
+    "ridge_event_prevalence.csv": "63d750592e0c3c7be01a1579afc6daaf727badaa9255473d3d8609a71c9f69d0"
+  },
+  "test_result": "pass_15_of_15",
+  "legacy_sources": [
+    "src/train_main_linear.py",
+    "src/build_ulsan_npz.py",
+    "results/metrics/main_linear_metrics_H1.json",
+    "results/metrics/main_linear_metrics_H3.json",
+    "results/metrics/main_linear_metrics_H5.json",
+    "results/metrics/main_linear_metrics.json",
+    "results/tables/main_linear_leaderboard.csv",
+    "reports/Optimization_Process_Exact_Trustable_Results.md",
+    "revision_2026/02_corrected_pipeline/model_rerun_decision.csv",
+    "revision_2026/03_corrected_protocol/rerun_execution_plan.csv"
+  ],
+  "notes": "Ridge rebuilt under corrected purged nested protocol with fold-local inner alpha selection and strict outer-test isolation.",
+  "test_command": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python /home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns/ridge/test_corrected_ridge.py",
+  "test_summary": "Ran 15 tests; failures=0; errors=0."
+}

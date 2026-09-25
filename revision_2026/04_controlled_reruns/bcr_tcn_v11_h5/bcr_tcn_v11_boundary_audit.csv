@@ -1,0 +1,4 @@
+outer_fold,subtrain_feature_start,subtrain_feature_end,subtrain_latest_target_date,validation_feature_start,validation_feature_end,validation_latest_target_date,outer_test_feature_start,outer_test_feature_end,inner_purge_days,outer_purge_days,inner_feature_gap_days,outer_feature_gap_days,inner_target_gap_days,outer_target_gap_days,inner_boundary_pass,outer_boundary_pass,sequence_causality_pass
+1,2021-02-03,2021-08-23,2021-08-28,2021-08-29,2021-10-04,2021-10-09,2021-10-10,2022-06-15,5,5,6,6,1,1,True,True,True
+2,2021-02-03,2022-03-23,2022-03-28,2022-03-29,2022-06-10,2022-06-15,2022-06-16,2023-02-19,5,5,6,6,1,1,True,True,True
+3,2021-02-03,2022-10-20,2022-10-25,2022-10-26,2023-02-14,2023-02-19,2023-02-20,2023-10-26,5,5,6,6,1,1,True,True,True

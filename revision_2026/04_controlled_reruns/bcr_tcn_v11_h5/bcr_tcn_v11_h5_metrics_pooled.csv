@@ -1,0 +1,2 @@
+model,model_version,horizon,outer_fold,N,MAE,MSE,RMSE,MASE,date_start,date_end,dataset_sha256,split_sha256,run_id
+BCR-TCN,1.1,5,pooled,747,12.595419934361056,163.488331647278,12.786255575706203,10.42394620138753,2021-10-10,2023-10-26,6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb,f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a,bcr_tcn_v11_h5_corrected_4d16b4d513e4_6ed147cd_f83baf57

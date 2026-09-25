@@ -1,0 +1,16 @@
+tag_name,tag_type,tag_object_id,peeled_commit_id,local_exists,remote_exists,remote_tag_object_id,remote_peeled_commit_id,expected_role,retained_for_final_integration,notes
+corrected-protocol-v1,commit,2bbf5eba419b0650693f1e88326107bf9a346c68,2bbf5eba419b0650693f1e88326107bf9a346c68,True,False,,,corrected split protocol freeze,True,remote query unavailable
+persistence-corrected-v1,commit,41f184a29ff88aaf275f3365267b8c909ce7598a,41f184a29ff88aaf275f3365267b8c909ce7598a,True,False,,,persistence corrected rerun freeze,True,remote query unavailable
+ridge-corrected-v1,commit,69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585,69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585,True,False,,,ridge corrected rerun freeze,True,remote query unavailable
+elasticnet-corrected-v1,commit,1db2f3472cd48274a5afa4010f446952d76c6042,1db2f3472cd48274a5afa4010f446952d76c6042,True,False,,,elasticnet corrected rerun freeze,True,remote query unavailable
+hgbr-corrected-v1,commit,4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62,4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62,True,False,,,hgbr corrected rerun freeze,True,remote query unavailable
+bcr-tcn-v11-h5-corrected-v1,commit,596f1d05ff477c317b9712d1233b64c6443e8c32,596f1d05ff477c317b9712d1233b64c6443e8c32,True,False,,,bcr-tcn h5 corrected rerun freeze,True,remote query unavailable
+canonical-h5-assembly-v1,commit,ea6e72f891afc7a62a9ca8206242f946047edbab,ea6e72f891afc7a62a9ca8206242f946047edbab,True,False,,,canonical h5 cross-model assembly freeze,True,remote query unavailable
+fully-nested-hybridrank-h5-feasibility-v1,commit,ea738f9bca32b3bf5648a860c35cd84fbe4e205b,ea738f9bca32b3bf5648a860c35cd84fbe4e205b,True,False,,,hybridrank feasibility diagnostic freeze,True,remote query unavailable
+fixed-hybridrank-h5-scores-v1,commit,1a7fa526c26397ac50810bca24f57d3765aa4af4,1a7fa526c26397ac50810bca24f57d3765aa4af4,True,False,,,fixed rank ensemble freeze,True,remote query unavailable
+retrospective-h5-alarm-budget-v1,commit,140b8193f31425f7506fae4f36987246eedab729,140b8193f31425f7506fae4f36987246eedab729,True,False,,,retrospective top-k freeze,True,remote query unavailable
+sequential-h5-past-quantile-v1,commit,e98a21d77033d746e7b77f348af8dc34be0768fd,e98a21d77033d746e7b77f348af8dc34be0768fd,True,False,,,past-only sequential freeze,True,remote query unavailable
+quota-enforced-sequential-h5-v1,commit,045d265f54d29eb1212758307161072c25379541,045d265f54d29eb1212758307161072c25379541,True,False,,,quota-enforced sequential freeze,True,remote query unavailable
+canonical-h1-h3-reconciliation-v1,tag,12001426cd12342d5e4b8c8eba166d857838912c,15cc6f8414df3e60692700963afc296e7653236e,True,False,,,canonical h1/h3 reconciliation freeze,True,remote query unavailable
+lag-window-sensitivity-design-v1,tag,d33f8f36ba4d1604f51d8ccf035177723b9cc6ca,dee06bcfeca0c3c224897a2a92261c13f4fea26e,True,False,,,lag-window design freeze,True,remote query unavailable
+lag-window-sensitivity-execution-v1,tag,0ece3a84d51fcc80d29fa83a3ee4c08edce95006,f61278b3e3fc2cb0b69564b346a4bf32e037b4fb,True,False,,,lag-window execution freeze,True,remote query unavailable

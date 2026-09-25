@@ -1,0 +1,13 @@
+model,horizon,fold,observed_N,expected_N,duplicate_key_count,missing_key_count,extra_key_count,y_true_mismatch_count,target_offset_mismatch_count,feature_date_start,feature_date_end,target_date_start,target_date_end,key_equality_pass,y_true_equality_pass,target_offset_pass
+ElasticNet,3,1,249,249,0,0,0,0,0,2021-10-12,2022-06-17,2021-10-15,2022-06-20,True,True,True
+ElasticNet,3,2,249,249,0,0,0,0,0,2022-06-18,2023-02-21,2022-06-21,2023-02-24,True,True,True
+ElasticNet,3,3,249,249,0,0,0,0,0,2023-02-22,2023-10-28,2023-02-25,2023-10-31,True,True,True
+HGBR,3,1,249,249,0,0,0,0,0,2021-10-12,2022-06-17,2021-10-15,2022-06-20,True,True,True
+HGBR,3,2,249,249,0,0,0,0,0,2022-06-18,2023-02-21,2022-06-21,2023-02-24,True,True,True
+HGBR,3,3,249,249,0,0,0,0,0,2023-02-22,2023-10-28,2023-02-25,2023-10-31,True,True,True
+Persistence,3,1,249,249,0,0,0,0,0,2021-10-12,2022-06-17,2021-10-15,2022-06-20,True,True,True
+Persistence,3,2,249,249,0,0,0,0,0,2022-06-18,2023-02-21,2022-06-21,2023-02-24,True,True,True
+Persistence,3,3,249,249,0,0,0,0,0,2023-02-22,2023-10-28,2023-02-25,2023-10-31,True,True,True
+Ridge,3,1,249,249,0,0,0,0,0,2021-10-12,2022-06-17,2021-10-15,2022-06-20,True,True,True
+Ridge,3,2,249,249,0,0,0,0,0,2022-06-18,2023-02-21,2022-06-21,2023-02-24,True,True,True
+Ridge,3,3,249,249,0,0,0,0,0,2023-02-22,2023-10-28,2023-02-25,2023-10-31,True,True,True

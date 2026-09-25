@@ -1,0 +1,47 @@
+{
+  "current_revised_manuscript_draft": {
+    "all_candidates_found": [
+      "reports/Final_main_ACS_Manuscript.docx",
+      "deliverables/public_release_split_20260406/data_and_docs/reports/Final_main_ACS_Manuscript.docx"
+    ],
+    "availability_status": "available",
+    "parse_status": "parsed_docx_xml",
+    "selected_document": "reports/Final_main_ACS_Manuscript.docx"
+  },
+  "reviewer_response": {
+    "all_candidates_found": [],
+    "availability_status": "external_input_required",
+    "parse_status": "not_parsed",
+    "selected_document": ""
+  },
+  "submitted_manuscript": {
+    "all_candidates_found": [
+      "reports/Manuscript.docx",
+      "reports/Manuscript_ready_for_ACS.pdf",
+      "notebooks/ACS_Manuscript.docx"
+    ],
+    "availability_status": "available",
+    "parse_status": "parsed_docx_xml",
+    "selected_document": "reports/Manuscript.docx"
+  },
+  "submitted_si": {
+    "all_candidates_found": [
+      "reports/methods and materials_SI.md",
+      "reports/SI_complete_blockedCV_training_validation_diagnostics.md",
+      "deliverables/si_upload_packages_20260329/SI_blocked_cv_and_methods.zip"
+    ],
+    "availability_status": "available",
+    "parse_status": "parsed_text",
+    "selected_document": "reports/methods and materials_SI.md"
+  },
+  "working_revision_record": {
+    "all_candidates_found": [
+      "RELEASE_STEP_BY_STEP_ACS.md",
+      "reports/final_submission_sanity_check_20260406.md",
+      "reports/reproducibility_declaration_submission_ready_20260406.md"
+    ],
+    "availability_status": "available",
+    "parse_status": "parsed_text",
+    "selected_document": "RELEASE_STEP_BY_STEP_ACS.md"
+  }
+}

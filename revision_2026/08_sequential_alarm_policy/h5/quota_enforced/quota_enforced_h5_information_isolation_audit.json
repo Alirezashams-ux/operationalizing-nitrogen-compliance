@@ -1,0 +1,11 @@
+{
+  "label_permutation_pass": true,
+  "future_score_perturbation_pass": true,
+  "current_score_locality_pass": true,
+  "no_outcome_dependency_pass": true,
+  "max_earlier_alarm_difference_under_future_perturbation": 0,
+  "max_earlier_cutoff_difference_under_future_perturbation": 0.0,
+  "max_earlier_quota_state_difference_under_future_perturbation": 0,
+  "max_earlier_quota_state_difference_under_current_perturbation": 0,
+  "summary_pass": true
+}

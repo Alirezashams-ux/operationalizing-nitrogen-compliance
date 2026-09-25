@@ -1,0 +1,11 @@
+{
+  "selection_recomputed_after_label_permutation": true,
+  "scores_identical": true,
+  "ranks_identical": true,
+  "alarm_flags_identical": true,
+  "cutoffs_identical": true,
+  "maximum_score_difference": 0.0,
+  "maximum_rank_difference": 0.0,
+  "metrics_change_observed_after_label_permutation": true,
+  "selection_label_invariance_pass": true
+}

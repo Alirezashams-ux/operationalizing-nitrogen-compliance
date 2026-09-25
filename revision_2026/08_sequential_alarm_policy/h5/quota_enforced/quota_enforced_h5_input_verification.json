@@ -1,0 +1,84 @@
+{
+  "verification_pass": true,
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "protocol_tag": "corrected_protocol_v1",
+  "git_branch": "controlled-reruns-v1",
+  "git_commit": "e98a21d77033d746e7b77f348af8dc34be0768fd",
+  "source_sequential_run_id": "sequential_h5_alarm_policy_140b8193f314_6ed147cd_f83baf57",
+  "source_sequential_decision": "A",
+  "source_decisions_file": "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_decisions.csv",
+  "source_decisions_sha256_expected": "09e935f6dcd3fb4ccc11f3c1944216e12ce91471bebb5c0f2b72fff4074f3212",
+  "source_decisions_sha256_observed": "09e935f6dcd3fb4ccc11f3c1944216e12ce91471bebb5c0f2b72fff4074f3212",
+  "protocol_checks": {
+    "canonical_dataset_lock.json": {
+      "expected": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "observed": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "pass": true
+    },
+    "build_purged_nested_splits.py": {
+      "expected": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+      "observed": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+      "pass": true
+    },
+    "corrected_split_assignment.csv": {
+      "expected": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "observed": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "pass": true
+    },
+    "corrected_split_summary.csv": {
+      "expected": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "observed": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "pass": true
+    },
+    "test_purged_nested_splits.py": {
+      "expected": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+      "observed": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+      "pass": true
+    },
+    "corrected_evaluation_protocol.md": {
+      "expected": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "observed": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "pass": true
+    },
+    "alarm_evaluation_protocol.md": {
+      "expected": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "observed": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "pass": true
+    },
+    "rerun_execution_plan.csv": {
+      "expected": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "observed": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "pass": true
+    }
+  },
+  "source_package_checksums_file_sha256": "66c0079d3409c40ad01e1f7a558db224c77f627bdeebf2527b970ebe4bd9b386",
+  "source_package_files_preserved": true,
+  "source_package_fingerprints_before": {
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_decisions.csv": "09e935f6dcd3fb4ccc11f3c1944216e12ce91471bebb5c0f2b72fff4074f3212",
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_completion_report.md": "ed0fca622ca921644b9f48b1532fe88a2890411eac3436580980ba2696ae54ea",
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_manifest.json": "acea4b5cf7c729d289fe364e30dd026ac228576d3331a65304413e9cfcab9fef",
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_checksums.sha256": "66c0079d3409c40ad01e1f7a558db224c77f627bdeebf2527b970ebe4bd9b386"
+  },
+  "source_package_fingerprints_after": {
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_decisions.csv": "09e935f6dcd3fb4ccc11f3c1944216e12ce91471bebb5c0f2b72fff4074f3212",
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_completion_report.md": "ed0fca622ca921644b9f48b1532fe88a2890411eac3436580980ba2696ae54ea",
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_manifest.json": "acea4b5cf7c729d289fe364e30dd026ac228576d3331a65304413e9cfcab9fef",
+    "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_checksums.sha256": "66c0079d3409c40ad01e1f7a558db224c77f627bdeebf2527b970ebe4bd9b386"
+  },
+  "source_information_isolation_baseline": {
+    "label_invariance_pass": true,
+    "future_score_invariance_pass": true,
+    "prefix_causality_pass": true,
+    "maximum_earlier_decision_difference": 0.0,
+    "maximum_label_based_score_difference": 0.0,
+    "maximum_label_based_cutoff_difference": 0.0,
+    "maximum_label_based_alarm_difference": 0.0
+  },
+  "timestamp": "2026-08-06T01:44:27+00:00",
+  "software_versions": {
+    "python": "3.8.10",
+    "pandas": "2.0.3",
+    "numpy": "1.24.4"
+  }
+}

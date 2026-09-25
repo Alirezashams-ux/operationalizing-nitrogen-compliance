@@ -1,0 +1,16 @@
+model,model_full_name,has_point_metrics,has_alarm_metrics,point_records,alarm_records
+bcr_tcn_v11,BCR-TCN v1.1,False,True,0,4
+enet,ElasticNet (generic),True,True,1,4
+enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",True,True,3,18
+enet_a0.01_l0.5,"ElasticNet (alpha=0.01, l1_ratio=0.5)",True,True,3,18
+enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",True,True,3,18
+enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",True,True,3,22
+enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",True,True,3,18
+enet_a1.0_l0.5,"ElasticNet (alpha=1.0, l1_ratio=0.5)",True,True,3,18
+hgbr,Histogram Gradient Boosting Regressor (Optuna-tuned),True,True,1,4
+hybrid_paper_fixed,Hybrid rank ensemble (paper-fixed weights),False,True,0,4
+hybrid_point,Hybrid point predictor (weighted regression blend),True,False,1,0
+hybrid_rank_ens,Hybrid rank ensemble (paper v2),False,True,0,4
+hybrid_rank_v2,Hybrid rank ensemble v2 (policy-based),False,True,0,4
+persistence,Persistence baseline (carry-forward),True,True,4,26
+tcn,TCN risk score model,False,True,0,4

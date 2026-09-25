@@ -1,0 +1,56 @@
+{
+  "run_id": "quota_enforced_h5_policy_e98a21d77033_6ed147cd_f83baf57",
+  "horizon": 5,
+  "models": [
+    "Persistence",
+    "Ridge",
+    "ElasticNet",
+    "HGBR",
+    "BCR-TCN v1.1",
+    "HybridRank_fixed_documented"
+  ],
+  "thresholds": [
+    15,
+    16,
+    17
+  ],
+  "nominal_budgets": [
+    0.05,
+    0.1
+  ],
+  "startup_days": 30,
+  "policy_type": "quota_enforced_sequential_past_only",
+  "candidate_rule": "candidate_alarm = policy_score > past_only_cutoff (strict equality no-alarm)",
+  "quota_rule": "alarm_flag = candidate_alarm AND alarms_before_current_date < ceil(r*j)",
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "canonical_assembly_id": "canonical_h5_cross_model_6ed147cd_f83baf57_596f1d05ff47",
+  "source_sequential_run_id": "sequential_h5_alarm_policy_140b8193f314_6ed147cd_f83baf57",
+  "source_sequential_decision": "A",
+  "source_decisions_file": "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_decisions.csv",
+  "source_decisions_sha256": "09e935f6dcd3fb4ccc11f3c1944216e12ce91471bebb5c0f2b72fff4074f3212",
+  "git_branch": "controlled-reruns-v1",
+  "git_commit": "e98a21d77033d746e7b77f348af8dc34be0768fd",
+  "execution_command": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python /home/alrezshams/acs_tnout_ulsan_revision/revision_2026/08_sequential_alarm_policy/h5/quota_enforced/build_quota_enforced_h5_alarm_policy.py",
+  "timestamp": "2026-08-06T01:44:27+00:00",
+  "software_versions": {
+    "python": "3.8.10",
+    "pandas": "2.0.3",
+    "numpy": "1.24.4"
+  },
+  "verification_pass": true,
+  "candidate_reproduction_pass": true,
+  "capacity_audit_pass": true,
+  "suppression_audit_pass": true,
+  "information_isolation_pass": true,
+  "source_preservation_pass": true,
+  "audit_pass": true,
+  "test_result": "pass_25_of_25",
+  "deterministic_result": "pass",
+  "final_decision": "A",
+  "notes": [
+    "No model training, tuning, refit, or recalibration was performed.",
+    "No retrospective top-k selection, no HybridRank regeneration, and no sequential external validation were run.",
+    "Frozen past-only sequential decisions were used as read-only source for candidate-alarm reproduction."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "handoff_dir": "results/paper_artifacts/20260303_163929_mainpaper_fig2_fig5_csv_handoff",
+  "report_csv": "results/paper_artifacts/20260303_163929_mainpaper_fig2_fig5_csv_handoff/sanity_check_report.csv",
+  "report_md": "results/paper_artifacts/20260303_163929_mainpaper_fig2_fig5_csv_handoff/sanity_check_report.md",
+  "issues": [
+    "Figure 3: missing required columns ['H', 'recall_mean', 'precision_mean']"
+  ]
+}

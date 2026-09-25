@@ -1,0 +1,4 @@
+horizon_days,feature_date_start,feature_date_end,target_date_start,target_date_end,all_models_identical_dates
+1,1,1,1,1,True
+3,1,1,1,1,True
+5,1,1,1,1,True

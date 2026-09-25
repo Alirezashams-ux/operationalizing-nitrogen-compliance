@@ -1,0 +1,7 @@
+model,type,prediction_file,weights_file
+hybrid_point,regression,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/predictions/hybrid_point_H5_preds.csv,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/models/point_hybrid_weights_H5.csv
+hybrid_rank_v2,ranking,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/predictions/rank_scores_tauwise_H5.csv,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/models/rank_hybrid_weights_H5.csv
+hybrid_paper_fixed,ranking,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/predictions/rank_scores_tauwise_H5.csv,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/models/paper_fixed_rank_weights_H5.csv
+enet,regression,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/predictions/enet_H5_preds.csv,n/a (external pretrained model)
+persistence,baseline,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/predictions/persistence_H5_preds.csv,n/a (rule-based)
+hgbr,regression,/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/predictions/hgbr_H5_preds.csv,n/a (external pretrained model)

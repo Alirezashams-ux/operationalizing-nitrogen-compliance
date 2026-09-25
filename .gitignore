@@ -1,0 +1,54 @@
+# ============================================================
+# PUBLIC RELEASE SAFETY
+# ============================================================
+
+# Restricted WWTP source datasets
+Seoul_Tancheon_1.csv
+Ulsan_Yongsan.csv
+Ulsan_Yongyeon WWTP .csv
+
+# Raw input directories
+data/raw/
+**/data/raw/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environment / credentials
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Archives / private Git history
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.bundle
+
+# Manuscript / submission working documents
+*.doc
+*.docx
+*.ppt
+*.pptx
+
+# Temporary / backup files
+*.bak
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Row-level derived feature matrices from restricted source data
+*.npz
+*.npy

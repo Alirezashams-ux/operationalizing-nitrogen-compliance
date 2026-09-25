@@ -1,0 +1,11 @@
+type,id,title,path,status,note
+Table,Table 1,Leakage-safe point forecasting performance across H=1/3/5,results/tables/leaderboard_point_by_horizon.csv,use,Main text Section 3.2
+Table,Table 2,Exceedance prevalence and random-baseline recall by horizon/threshold,results/paper_artifacts/20260220_132823_ACS_Uncertainty_Decision/tables/Table2_exceedance_prevalence_random_baseline.csv,new,Main text Section 3.1
+Table,Table 3,Alarm-budget metrics by model at H=5 (core operating points),results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/paper_ready/tables/Table3_main_long.csv,use,Main text Section 3.3
+Table,Table 4,Normalized H5 comparison on shared folds/windows (fold mean ± CI),results/paper_artifacts/20260220_132823_ACS_Uncertainty_Decision/tables/Table4_H5_normalized_context_comparison.csv,new,Main text Section 3.4
+Table,Table 5,"Key operating-point uncertainty (precision/recall, fold CI)",results/paper_artifacts/20260220_132823_ACS_Uncertainty_Decision/tables/Table5_key_operating_points_fold_uncertainty.csv,new,Main text Section 3.5
+Figure,Figure 1,Study workflow and leakage-safe evaluation protocol,(prepare in manuscript graphics folder),needed,Methods overview
+Figure,Figure 2,Cross-horizon point-performance summary,(derive from results/tables/leaderboard_point_by_horizon.csv),needed,Main text Section 3.2
+Figure,Figure 3,"Budget–recall curves at H=5 (τ=15,16)",results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/paper_ready/figures/Fig3_H5_v2_panel_tau15_16_budget_recall.pdf,use,Main text Section 3.4
+Figure,Figure 4,Fold-uncertainty bars at key operating points,results/paper_artifacts/20260220_132823_ACS_Uncertainty_Decision/figures/Fig4_key_operating_points_uncertainty.pdf,new,Main text Section 3.5
+Figure,Figure 5,"Decision figure (H=5, τ=16): TP captured vs k with fold CI",results/paper_artifacts/20260220_132823_ACS_Uncertainty_Decision/figures/Fig5_decision_curve_H5_tau16_tp_vs_k.pdf,new,Decision-oriented summary

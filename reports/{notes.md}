@@ -1,0 +1,50 @@
+# H1 Prediction Evaluation (2026-02-18)
+
+Source files:
+- `results/predictions/enet_a0.1_l0.5_H1_preds.csv`
+- `results/predictions/persistence_1_H1_preds.csv`
+- `results/tables/fold_metrics_from_preds_H1.csv`
+
+## Fold-wise MAE/RMSE
+
+| model | split | n | MAE | RMSE |
+|---|---:|---:|---:|---:|
+| enet_a0.1_l0.5 | fold_1 | 254 | 1.5287 | 1.9270 |
+| enet_a0.1_l0.5 | fold_2 | 254 | 1.3640 | 1.7568 |
+| enet_a0.1_l0.5 | fold_3 | 254 | 1.7192 | 2.1024 |
+| enet_a0.1_l0.5 | overall | 762 | 1.5373 | 1.9339 |
+| persistence_1 | fold_1 | 254 | 1.3325 | 1.7759 |
+| persistence_1 | fold_2 | 254 | 1.5222 | 1.9711 |
+| persistence_1 | fold_3 | 254 | 1.7835 | 2.3865 |
+| persistence_1 | overall | 762 | 1.5461 | 2.0603 |
+
+## Interpretation
+
+`enet_a0.1_l0.5` is the better default model for H1 forecasting based on overall error (MAE 1.5373 vs 1.5461; RMSE 1.9339 vs 2.0603). The persistence baseline is stronger in fold 1, but performance degrades more sharply by fold 3, while ElasticNet remains more stable and clearly better on RMSE in later data. This suggests the linear model captures signal beyond naive carry-forward and should be preferred for alarm-budget evaluation.
+
+## Alarm policy comparison (recall-first vs precision-first)
+
+Compared files:
+- `results/tables/alarm_best_operating_points_H1.csv` (recall-first)
+- `results/tables/alarm_best_operating_points_H1_precision_first.csv` (precision-first)
+
+Across all 24 operating points (`scope × tau × budget`), model selection is identical between the two rules (0 changes). Selection counts are:
+- `persistence_1`: 20 / 24
+- `enet_a0.1_l0.5`: 4 / 24
+
+For overall-only operating points (`results/tables/alarm_best_operating_points_H1_overall.csv`), all 6 points select `persistence_1` under the current threshold/budget grid.
+
+## Cross-horizon summary (H1, H3, H5)
+
+Source file:
+- `results/tables/cross_horizon_linear_alarm_summary.csv`
+
+| horizon | best-by-MAE model | best avg MAE | persistence avg MAE | tau=15 recall @ 5% (best / persistence) | tau=15 recall @ 10% (best / persistence) |
+|---:|---|---:|---:|---:|---:|
+| 1 | enet_a0.1_l0.5 | 1.5373 | 1.5461 | 0.1915 / 0.2128 | 0.3121 / 0.3546 |
+| 3 | enet_a0.1_l0.5 | 1.7191 | 2.0250 | 0.1643 / 0.1429 | 0.2214 / 0.2643 |
+| 5 | enet_a1.0_l0.2 | 1.7944 | 2.0775 | 0.1214 / 0.1357 | 0.1786 / 0.2429 |
+
+### Takeaway
+
+Point-forecast quality favors ElasticNet across all horizons, with performance gap widening at longer horizons (H3/H5). For alarm capture at `tau=15`, persistence remains competitive and often better in recall under the current top-k budget policy, especially at the 10% budget. This indicates model choice should depend on objective: choose ElasticNet for prediction accuracy, and validate persistence or hybrid ranking if maximizing event recall is the primary operational target.

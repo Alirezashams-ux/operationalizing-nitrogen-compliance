@@ -1,0 +1,153 @@
+{
+  "run_id": "fixed_hybridrank_h5_ea738f9bca32_6ed147cd_f83baf57",
+  "purpose": "Construct corrected fixed H5 rank-ensemble scores from frozen canonical corrected component predictions",
+  "policy_name": "HybridRank_fixed_documented",
+  "submitted_alias": "hybrid_paper_fixed",
+  "horizon": 5,
+  "thresholds": [
+    15,
+    16,
+    17
+  ],
+  "fixed_weights": {
+    "BCR-TCN v1.1": 0.5,
+    "ElasticNet": 0.25,
+    "Persistence": 0.25,
+    "HGBR": 0.0
+  },
+  "rank_normalization_rule": {
+    "direction": "ascending",
+    "tie_method": "average",
+    "formula": "(average_rank-1)/(N-1)",
+    "N_lte_1": "0"
+  },
+  "rank_population": "within_outer_test_fold",
+  "score_context": "retrospective_offline_only",
+  "canonical_assembly_id": "canonical_h5_cross_model_6ed147cd_f83baf57_596f1d05ff47",
+  "canonical_N": 747,
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "protocol_tag": "corrected_protocol_v1",
+  "fully_nested_feasibility_decision": "C",
+  "git_branch": "controlled-reruns-v1",
+  "git_commit": "ea738f9bca32b3bf5648a860c35cd84fbe4e205b",
+  "python_executable": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python",
+  "python_version": "3.8.10",
+  "execution_command": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python build_fixed_hybridrank_h5_scores.py",
+  "timestamp": "2026-08-05T07:58:52+00:00",
+  "software_versions": {
+    "pandas": "2.0.3",
+    "numpy": "1.24.4"
+  },
+  "source_files": [
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_wide.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_long.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_manifest.json",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_source_registry.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/canonical_dataset_lock.json",
+    "/home/alrezshams/acs_tnout_ulsan/src/make_hybrid_rank_ensemble_v2.py",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/run_config.json",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/models/paper_fixed_rank_weights_H5.csv",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/predictions/rank_scores_tauwise_H5.csv",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/hybrid_rank_v2_H5_preds.csv",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/models/model_registry_H5.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_manifest.json",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_completion_report.md",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fold1_component_validation_tau16_diagnostic.csv",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_checksums.sha256"
+  ],
+  "source_checksums": {
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_wide.csv": "bd0ff5160804c6945fb45e1c52c10d76f95ec1d85b4466f6ff681bed76431d77",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_long.csv": "01e319cc242ed38200e529a88ca196952017ea7804cd6287bcd405ed59ed0af4",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_manifest.json": "fa0fc288cdb09954d11ee2da26f8258e2fb945f7d4c1f13d446daf72591e7c98",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_source_registry.csv": "7d6d10f75e0f50e50dc8bc39ff982077cd541e8602709c70a794001b380c79bb",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+    "/home/alrezshams/acs_tnout_ulsan/src/make_hybrid_rank_ensemble_v2.py": "356ee54f367b836ef76746c804dc75dfd24c785c9b6222134c407c423bf49707",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/run_config.json": "b6e2e12ea4eb0703144258a0e3374476099265fbadd5ce6b0cd037f19148ba64",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/models/paper_fixed_rank_weights_H5.csv": "7bea2c99a4dcf536055895f2e8292960abecef719c71536d50cb410ae1528b9a",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/predictions/rank_scores_tauwise_H5.csv": "740b83e4061568742d459f7a614f329b531b1271196e29cab46da3d12d6856d4",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/hybrid_rank_v2_H5_preds.csv": "db790103e3b68c6b9bac0af49bd72a5c655f54a95202293b4d04e7b1902b27f3",
+    "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/models/model_registry_H5.csv": "6c3fa4aaebf6e4adb3da1af4ca1a535a86f475f19217cbf341e6d7313b98c0c9",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_manifest.json": "d9b283e49a388793d2c9458c587812f246862fda33d274627a01cf7b00c3007f",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_completion_report.md": "8e094c20a9c2d3400329484b3774f28d817783f1f33f24c5fc32584c8726b997",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fold1_component_validation_tau16_diagnostic.csv": "0d4da7a258038accf6b96773617c0573dfde4821dd8933ec7e32b4e9a96d0fa9",
+    "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_checksums.sha256": "5af5bd3e9424ea749f1b1d01e87da806af2fa3863a83731a18718e94bdb2e5f6"
+  },
+  "output_files": [
+    "build_fixed_hybridrank_h5_scores.py",
+    "fixed_hybridrank_h5_completion_report.md",
+    "fixed_hybridrank_h5_manifest.json",
+    "fixed_hybridrank_h5_scores.csv",
+    "fixed_hybridrank_isolation_audit.csv",
+    "fixed_hybridrank_label_invariance_audit.json",
+    "fixed_hybridrank_policy_definition.md",
+    "fixed_hybridrank_rank_audit.csv",
+    "fixed_hybridrank_score_summary.csv",
+    "fixed_hybridrank_source_registry.csv",
+    "fixed_hybridrank_weights.csv",
+    "future_alarm_tie_rule_registry.md",
+    "input_verification.json",
+    "test_fixed_hybridrank_h5_scores.py"
+  ],
+  "output_checksums": {
+    "build_fixed_hybridrank_h5_scores.py": "41bec777c3470dc2bd26e51b0bc097fde9fdc94743bcad6f9f9a16c5dc9ac955",
+    "fixed_hybridrank_h5_completion_report.md": "a2a711df9989cca86e982aab7415d0b3888884792bad1c1767583fa6125e5c73",
+    "fixed_hybridrank_h5_manifest.json": "230de55c9fa716dbddee885cb97ab370def34bc7cde8ec482bd52a44c8475304",
+    "fixed_hybridrank_h5_scores.csv": "2a58db17e87efed5bcba0f5014e515d2946a709a72fdd2d676a0e9bda34dcb79",
+    "fixed_hybridrank_isolation_audit.csv": "a20f52a45d9d6cab963ba71897af439251ec5b960844d710a69aeb2c64828dd6",
+    "fixed_hybridrank_label_invariance_audit.json": "a50d28077f2821bfbcde6bbebab96fe9e38e5e3307ad683ddccd8bc1f0421aac",
+    "fixed_hybridrank_policy_definition.md": "b8d9a0199410026fee3af6d20358ea1b4462a36fd7a7611c0d89a59846930a56",
+    "fixed_hybridrank_rank_audit.csv": "4041800be0889161ac8e88ef8b92ff3535b454f0fd1edf2ed97b3b63eb2e6d03",
+    "fixed_hybridrank_score_summary.csv": "e90aa66e5e548c83639add6988f0e938e041db9dfb51d1e1e8bd6c269000d5ee",
+    "fixed_hybridrank_source_registry.csv": "4946b67a879b8db3b4001cf3f83b3c38677ab556d6a27200fd1b4658957fdf43",
+    "fixed_hybridrank_weights.csv": "a44c40de5519a2a752968ed40d84c2523ae0a609c94ca062053cbb095427d486",
+    "future_alarm_tie_rule_registry.md": "70214e07b01098cd5ad90fa225d4b540b57a78a215535e4b2f7fb7231146e9df",
+    "input_verification.json": "854a484bf1f4a5640b3cfcca24bf6283afcbe4c5bd8437a804c8f6c7639f2c02",
+    "test_fixed_hybridrank_h5_scores.py": "33ab1c493fc812858f6272c0698a3162d106b589ce529911d598b4c5758a37b2"
+  },
+  "label_invariance_result": {
+    "test_method": "permute_y_true_and_event_labels_in_memory_then_recompute_fixed_ranks_and_scores",
+    "random_seed": 42,
+    "rows_tested": 2241,
+    "thresholds_tested": [
+      15,
+      16,
+      17
+    ],
+    "rank_values_identical": true,
+    "hybrid_scores_identical": true,
+    "maximum_absolute_score_difference": 0.0,
+    "label_invariance_pass": true
+  },
+  "test_result": "pass_67_of_67",
+  "deterministic_result": "pass",
+  "files_modified_outside_authorized_directory": [],
+  "limitations": [
+    "The tuned submitted pathway is not retained.",
+    "Fully nested tuned reconstruction stopped with Decision C because Fold 1 component-validation had zero tau=16 events.",
+    "This stage is fixed-policy score construction only and does not compute alarm metrics.",
+    "Within-outer-test-fold rank normalization makes the score retrospective and non-deployable.",
+    "A separate sequential policy will be evaluated later."
+  ],
+  "source_preservation": {
+    "protected_dirs_checked": [
+      "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol",
+      "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/04_controlled_reruns",
+      "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model",
+      "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fully_nested"
+    ],
+    "external_files_checked": [
+      "/home/alrezshams/acs_tnout_ulsan/src/make_hybrid_rank_ensemble_v2.py",
+      "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/run_config.json",
+      "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/models/paper_fixed_rank_weights_H5.csv",
+      "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/predictions/rank_scores_tauwise_H5.csv",
+      "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/hybrid_rank_v2_H5_preds.csv",
+      "/home/alrezshams/acs_tnout_ulsan/results/hybrid_rank_v2_runs/20260220_131820_H5_hybrid_rank_v2/models/model_registry_H5.csv"
+    ],
+    "changed_protected": [],
+    "changed_external": [],
+    "pass": true
+  },
+  "input_verification_file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/06_corrected_hybridrank/h5/fixed_policy/input_verification.json",
+  "final_decision": "A"
+}

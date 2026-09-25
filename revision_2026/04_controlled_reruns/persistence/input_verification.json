@@ -1,0 +1,64 @@
+{
+  "dataset_path": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/00_provenance/recovered_inputs/figure2/Ulsan_Yongsan.csv",
+  "dataset_sha256_expected": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "dataset_sha256_observed": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/corrected_split_assignment.csv",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "protocol_tag": "corrected_protocol_v1",
+  "git_commit": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+  "verification_pass": true,
+  "timestamp": "2026-08-04T06:47:56+00:00",
+  "python_version": "3.13.2",
+  "pandas_version": "3.0.0",
+  "numpy_version": "1.26.4",
+  "protocol_checksum_checks": [
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/canonical_dataset_lock.json",
+      "expected_sha256": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "observed_sha256": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/build_purged_nested_splits.py",
+      "expected_sha256": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+      "observed_sha256": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/corrected_split_assignment.csv",
+      "expected_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "observed_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/corrected_split_summary.csv",
+      "expected_sha256": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "observed_sha256": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/test_purged_nested_splits.py",
+      "expected_sha256": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+      "observed_sha256": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/corrected_evaluation_protocol.md",
+      "expected_sha256": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "observed_sha256": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/alarm_evaluation_protocol.md",
+      "expected_sha256": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "observed_sha256": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "pass": true
+    },
+    {
+      "file": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol/rerun_execution_plan.csv",
+      "expected_sha256": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "observed_sha256": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "pass": true
+    }
+  ]
+}

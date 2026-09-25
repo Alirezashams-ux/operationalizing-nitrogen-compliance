@@ -1,0 +1,4 @@
+horizon,outer_fold,total_N,startup_N,eligible_N,startup_start,startup_end,eligible_start,eligible_end,startup_rule,future_scores_used,labels_used
+5,1,249,30,219,2021-10-15,2021-11-13,2021-11-14,2022-06-20,first_30_chronological_dates_no_alarm,False,False
+5,2,249,30,219,2022-06-21,2022-07-20,2022-07-21,2023-02-24,first_30_chronological_dates_no_alarm,False,False
+5,3,249,30,219,2023-02-25,2023-03-26,2023-03-27,2023-10-31,first_30_chronological_dates_no_alarm,False,False

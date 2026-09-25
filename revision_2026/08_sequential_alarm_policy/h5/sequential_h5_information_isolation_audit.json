@@ -1,0 +1,9 @@
+{
+  "label_invariance_pass": true,
+  "future_score_invariance_pass": true,
+  "prefix_causality_pass": true,
+  "maximum_earlier_decision_difference": 0.0,
+  "maximum_label_based_score_difference": 0.0,
+  "maximum_label_based_cutoff_difference": 0.0,
+  "maximum_label_based_alarm_difference": 0.0
+}

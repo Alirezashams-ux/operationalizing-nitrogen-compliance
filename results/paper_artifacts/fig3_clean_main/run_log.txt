@@ -1,0 +1,10 @@
+Rows read: 166
+Mode: main
+Completeness rule: complete grid required (18/18 recall cells present)
+Models included: enet a0.01 l0.2, enet a0.01 l0.5, enet a0.1 l0.2, enet a0.1 l0.5, enet a1.0 l0.2, enet a1.0 l0.5, Persistence
+Unique models included: 7
+Available H values: [1, 3, 5]
+Available tau values: [15, 16, 17]
+Available r values: [0.050, 0.100]
+Saved: results/paper_artifacts/fig3_clean_main/fig3_alarm_budget_leaderboard_clean.pdf
+Saved: results/paper_artifacts/fig3_clean_main/fig3_alarm_budget_leaderboard_clean.png

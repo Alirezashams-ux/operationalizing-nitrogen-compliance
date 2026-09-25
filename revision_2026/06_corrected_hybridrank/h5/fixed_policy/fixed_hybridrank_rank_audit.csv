@@ -1,0 +1,37 @@
+outer_fold,threshold,component,N,raw_min,raw_max,raw_missing_count,raw_unique_count,tie_group_count,maximum_tie_size,rank_min,rank_max,rank_missing_count,rank_direction_pass,rank_range_pass,rank_formula_pass,y_true_dependency,event_label_dependency,audit_pass
+1,15,BCR-TCN v1.1,249,0.3856854736804962,0.6005144715309143,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+1,15,ElasticNet,249,9.262456814687626,15.058829739053518,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+1,15,HGBR,249,9.81068408178743,14.325057161750289,0,180,43,8,0.0,1.0,0,True,True,True,False,False,True
+1,15,Persistence,249,7.6,19.6,0,202,41,4,0.0,1.0,0,True,True,True,False,False,True
+1,16,BCR-TCN v1.1,249,0.3796406984329223,0.5348162055015564,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+1,16,ElasticNet,249,9.262456814687626,15.058829739053518,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+1,16,HGBR,249,9.81068408178743,14.325057161750289,0,180,43,8,0.0,1.0,0,True,True,True,False,False,True
+1,16,Persistence,249,7.6,19.6,0,202,41,4,0.0,1.0,0,True,True,True,False,False,True
+1,17,BCR-TCN v1.1,249,0.4250890910625458,0.5890769958496094,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+1,17,ElasticNet,249,9.262456814687626,15.058829739053518,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+1,17,HGBR,249,9.81068408178743,14.325057161750289,0,180,43,8,0.0,1.0,0,True,True,True,False,False,True
+1,17,Persistence,249,7.6,19.6,0,202,41,4,0.0,1.0,0,True,True,True,False,False,True
+2,15,BCR-TCN v1.1,249,0.3781573176383972,0.6032060384750366,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+2,15,ElasticNet,249,11.28309831888009,13.734484787936951,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+2,15,HGBR,249,11.103852212105146,13.81753578470871,0,145,51,17,0.008064516129032258,1.0,0,True,True,True,False,False,True
+2,15,Persistence,249,6.31,17.45,0,200,42,4,0.0,1.0,0,True,True,True,False,False,True
+2,16,BCR-TCN v1.1,249,0.2665756046772003,0.6021106839179993,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+2,16,ElasticNet,249,11.28309831888009,13.734484787936951,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+2,16,HGBR,249,11.103852212105146,13.81753578470871,0,145,51,17,0.008064516129032258,1.0,0,True,True,True,False,False,True
+2,16,Persistence,249,6.31,17.45,0,200,42,4,0.0,1.0,0,True,True,True,False,False,True
+2,17,BCR-TCN v1.1,249,0.4048559069633484,0.5835230946540833,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+2,17,ElasticNet,249,11.28309831888009,13.734484787936951,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+2,17,HGBR,249,11.103852212105146,13.81753578470871,0,145,51,17,0.008064516129032258,1.0,0,True,True,True,False,False,True
+2,17,Persistence,249,6.31,17.45,0,200,42,4,0.0,1.0,0,True,True,True,False,False,True
+3,15,BCR-TCN v1.1,249,0.460661232471466,0.621146023273468,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+3,15,ElasticNet,249,12.106411769311704,13.029221726212514,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+3,15,HGBR,249,9.651673340736984,15.46275182211274,0,248,1,2,0.0,1.0,0,True,True,True,False,False,True
+3,15,Persistence,249,7.15,17.98,0,214,33,3,0.0,1.0,0,True,True,True,False,False,True
+3,16,BCR-TCN v1.1,249,0.343280553817749,0.5913535952568054,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+3,16,ElasticNet,249,12.106411769311704,13.029221726212514,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+3,16,HGBR,249,9.651673340736984,15.46275182211274,0,248,1,2,0.0,1.0,0,True,True,True,False,False,True
+3,16,Persistence,249,7.15,17.98,0,214,33,3,0.0,1.0,0,True,True,True,False,False,True
+3,17,BCR-TCN v1.1,249,0.4596560895442962,0.6531727910041809,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+3,17,ElasticNet,249,12.106411769311704,13.029221726212514,0,249,0,1,0.0,1.0,0,True,True,True,False,False,True
+3,17,HGBR,249,9.651673340736984,15.46275182211274,0,248,1,2,0.0,1.0,0,True,True,True,False,False,True
+3,17,Persistence,249,7.15,17.98,0,214,33,3,0.0,1.0,0,True,True,True,False,False,True

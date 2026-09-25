@@ -1,0 +1,5 @@
+model,model_full_name,source_group,horizon,MAE,RMSE,MASE1,MASE7,source_file,rank_MAE,rank_RMSE
+hybrid_point,Hybrid point predictor (weighted regression blend),hybrid_rank_v2_guarded,5,1.712735274475903,2.2115470845958685,1.103976127253051,0.8148628618472348,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,1,1
+enet,ElasticNet (generic),hybrid_rank_v2_guarded,5,1.7680670149154971,2.2587175270745177,1.139641253927905,0.8411878760146418,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,2,2
+hgbr,Histogram Gradient Boosting Regressor (Optuna-tuned),hybrid_rank_v2_guarded,5,1.795447704749488,2.290501071497145,1.1572899988185572,0.8542147036919691,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,3,3
+persistence,Persistence baseline (carry-forward),hybrid_rank_v2_guarded,5,2.074511405454582,2.666127990376657,1.3371658197656016,0.9869839933674076,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,4,4

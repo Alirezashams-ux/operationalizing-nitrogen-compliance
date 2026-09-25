@@ -1,0 +1,5 @@
+component,weight
+tcn,0.5
+y_pred_enet,0.25
+y_pred_persist,0.25
+y_pred_hgbr,0.0

@@ -1,0 +1,17 @@
+model,tau,r,n,k,events,tp,precision,recall,source,model_label
+bcr_tcn_v11,15,0.05,747,38,134,19,0.5,0.142,recomputed_from_preds,BCR-TCN v1.1
+bcr_tcn_v11,15,0.1,747,75,134,29,0.387,0.216,recomputed_from_preds,BCR-TCN v1.1
+bcr_tcn_v11,16,0.05,747,38,71,15,0.395,0.211,recomputed_from_preds,BCR-TCN v1.1
+bcr_tcn_v11,16,0.1,747,75,71,18,0.24,0.254,recomputed_from_preds,BCR-TCN v1.1
+enet_a0.1_l0.5,15,0.05,747,38,134,16,0.421,0.119,recomputed_from_preds,"ElasticNet (α=0.1, ℓ1=0.5)"
+enet_a0.1_l0.5,15,0.1,747,75,134,33,0.44,0.246,recomputed_from_preds,"ElasticNet (α=0.1, ℓ1=0.5)"
+enet_a0.1_l0.5,16,0.05,747,38,71,8,0.211,0.113,recomputed_from_preds,"ElasticNet (α=0.1, ℓ1=0.5)"
+enet_a0.1_l0.5,16,0.1,747,75,71,19,0.253,0.268,recomputed_from_preds,"ElasticNet (α=0.1, ℓ1=0.5)"
+hybrid_rank_ens,15,0.05,747,38,134,21,0.553,0.157,recomputed_from_preds,Hybrid A (rank ensemble)
+hybrid_rank_ens,15,0.1,747,75,134,27,0.36,0.201,recomputed_from_preds,Hybrid A (rank ensemble)
+hybrid_rank_ens,16,0.05,747,38,71,17,0.447,0.239,recomputed_from_preds,Hybrid A (rank ensemble)
+hybrid_rank_ens,16,0.1,747,75,71,21,0.28,0.296,recomputed_from_preds,Hybrid A (rank ensemble)
+persistence,15,0.05,747,38,134,19,0.5,0.142,recomputed_from_preds,Persistence
+persistence,15,0.1,747,75,134,32,0.427,0.239,recomputed_from_preds,Persistence
+persistence,16,0.05,747,38,71,15,0.395,0.211,recomputed_from_preds,Persistence
+persistence,16,0.1,747,75,71,23,0.307,0.324,recomputed_from_preds,Persistence

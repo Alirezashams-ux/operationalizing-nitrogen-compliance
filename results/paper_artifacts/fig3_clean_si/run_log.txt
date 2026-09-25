@@ -1,0 +1,10 @@
+Rows read: 166
+Mode: si
+Completeness rule: at least one recall value per model (missing shown as NA cells)
+Models included: BCR-TCN v1.1, enet, enet a0.01 l0.2, enet a0.01 l0.5, enet a0.1 l0.2, enet a0.1 l0.5, enet a1.0 l0.2, enet a1.0 l0.5, HGBR, Hybrid (paper), HybridRank ens, HybridRank v2, Persistence, TCN
+Unique models included: 14
+Available H values: [1, 3, 5]
+Available tau values: [15, 16, 17]
+Available r values: [0.050, 0.100]
+Saved: results/paper_artifacts/fig3_clean_si/fig3_alarm_budget_leaderboard_clean.pdf
+Saved: results/paper_artifacts/fig3_clean_si/fig3_alarm_budget_leaderboard_clean.png

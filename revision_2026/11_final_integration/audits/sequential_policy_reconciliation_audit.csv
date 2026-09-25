@@ -1,0 +1,8 @@
+check,expected,observed_unique,pass,observed
+startup_dates_per_fold,30,30,True,
+eligible_dates_per_fold,219,219,True,
+pooled_eligible_dates,657,,True,657
+quota_prefix_inequality,A_j <= ceil(r * j),,True,max(prefix_excess_over_capacity) <= 0
+quota_capacity_audit_pass,True,,True,True
+quota_candidate_matches_frozen_baseline,True,,True,True
+past_only_cutoff_uses_prior_scores_only,True,,True,True

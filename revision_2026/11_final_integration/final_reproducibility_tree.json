@@ -1,0 +1,317 @@
+{
+  "nodes": [
+    {
+      "builder": "revision_2026/03_corrected_protocol/build_purged_nested_splits.py",
+      "checksum_registry": "revision_2026/03_corrected_protocol/corrected_protocol_v1.sha256",
+      "child_outputs": [
+        "corrected_protocol",
+        "controlled_reruns"
+      ],
+      "deterministic_result": "captured upstream",
+      "directory": "revision_2026/00_provenance/recovered_inputs/figure2",
+      "limitations": "Raw lock only; not a model-evaluation artifact.",
+      "manifest": "revision_2026/03_corrected_protocol/canonical_dataset_lock.json",
+      "package_name": "raw_dataset_lock",
+      "peeled_commit": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+      "role": "raw dataset lock",
+      "source_files": [
+        "Ulsan_Yongsan.csv"
+      ],
+      "standalone_test": "revision_2026/03_corrected_protocol/test_purged_nested_splits.py",
+      "tag": "corrected-protocol-v1",
+      "test_result": "captured upstream"
+    },
+    {
+      "builder": "revision_2026/03_corrected_protocol/build_purged_nested_splits.py",
+      "checksum_registry": "revision_2026/03_corrected_protocol/corrected_protocol_v1.sha256",
+      "child_outputs": [
+        "persistence_corrected",
+        "ridge_corrected",
+        "elasticnet_corrected",
+        "hgbr_corrected",
+        "bcr_tcn_v11_h5_corrected"
+      ],
+      "deterministic_result": "",
+      "directory": "revision_2026/03_corrected_protocol",
+      "limitations": "Protocol freeze only.",
+      "manifest": "",
+      "package_name": "corrected_protocol",
+      "peeled_commit": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+      "role": "canonical corrected protocol and split freeze",
+      "standalone_test": "revision_2026/03_corrected_protocol/test_purged_nested_splits.py",
+      "tag": "corrected-protocol-v1",
+      "test_result": ""
+    },
+    {
+      "builder": "",
+      "checksum_registry": "",
+      "child_outputs": [
+        "canonical_h1_h3_reconciliation",
+        "canonical_h5_assembly"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/04_controlled_reruns/persistence",
+      "limitations": "Point model rerun source.",
+      "manifest": "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json",
+      "package_name": "persistence_corrected",
+      "peeled_commit": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+      "role": "controlled persistence rerun inputs",
+      "standalone_test": "revision_2026/04_controlled_reruns/persistence/test_corrected_persistence.py",
+      "tag": "persistence-corrected-v1",
+      "test_result": "pass_12_of_12"
+    },
+    {
+      "builder": "",
+      "checksum_registry": "",
+      "child_outputs": [
+        "canonical_h1_h3_reconciliation",
+        "canonical_h5_assembly",
+        "lag_window_sensitivity_execution"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/04_controlled_reruns/ridge",
+      "limitations": "Point model rerun source.",
+      "manifest": "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json",
+      "package_name": "ridge_corrected",
+      "peeled_commit": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+      "role": "controlled ridge rerun inputs",
+      "standalone_test": "revision_2026/04_controlled_reruns/ridge/test_corrected_ridge.py",
+      "tag": "ridge-corrected-v1",
+      "test_result": "pass_15_of_15"
+    },
+    {
+      "builder": "",
+      "checksum_registry": "",
+      "child_outputs": [
+        "canonical_h1_h3_reconciliation",
+        "canonical_h5_assembly"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/04_controlled_reruns/elasticnet",
+      "limitations": "Point model rerun source.",
+      "manifest": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json",
+      "package_name": "elasticnet_corrected",
+      "peeled_commit": "1db2f3472cd48274a5afa4010f446952d76c6042",
+      "role": "controlled elasticnet rerun inputs",
+      "standalone_test": "revision_2026/04_controlled_reruns/elasticnet/test_corrected_elasticnet.py",
+      "tag": "elasticnet-corrected-v1",
+      "test_result": "pass_15_of_15"
+    },
+    {
+      "builder": "",
+      "checksum_registry": "",
+      "child_outputs": [
+        "canonical_h1_h3_reconciliation",
+        "canonical_h5_assembly",
+        "lag_window_sensitivity_execution"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/04_controlled_reruns/hgbr",
+      "limitations": "Point model rerun source.",
+      "manifest": "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json",
+      "package_name": "hgbr_corrected",
+      "peeled_commit": "4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62",
+      "role": "controlled hgbr rerun inputs",
+      "standalone_test": "revision_2026/04_controlled_reruns/hgbr/test_corrected_hgbr.py",
+      "tag": "hgbr-corrected-v1",
+      "test_result": "pass_20_of_20"
+    },
+    {
+      "builder": "",
+      "checksum_registry": "",
+      "child_outputs": [
+        "canonical_h5_assembly"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5",
+      "limitations": "H5-only model source.",
+      "manifest": "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_run_manifest.json",
+      "package_name": "bcr_tcn_v11_h5_corrected",
+      "peeled_commit": "596f1d05ff477c317b9712d1233b64c6443e8c32",
+      "role": "controlled bcr-tcn h5 rerun inputs",
+      "standalone_test": "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/test_corrected_bcr_tcn_v11_h5.py",
+      "tag": "bcr-tcn-v11-h5-corrected-v1",
+      "test_result": "pass_25_of_25"
+    },
+    {
+      "builder": "revision_2026/05_canonical_predictions/h5_cross_model/build_canonical_h5_predictions.py",
+      "checksum_registry": "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_checksums.sha256",
+      "child_outputs": [
+        "fixed_hybridrank_scores",
+        "retrospective_alarm_budget",
+        "sequential_past_only"
+      ],
+      "deterministic_result": "",
+      "directory": "revision_2026/05_canonical_predictions/h5_cross_model",
+      "limitations": "Canonical H5 rows and metrics.",
+      "manifest": "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_manifest.json",
+      "package_name": "canonical_h5_assembly",
+      "peeled_commit": "ea6e72f891afc7a62a9ca8206242f946047edbab",
+      "role": "canonical h5 predictions and pooled metrics",
+      "standalone_test": "revision_2026/05_canonical_predictions/h5_cross_model/test_canonical_h5_assembly.py",
+      "tag": "canonical-h5-assembly-v1",
+      "test_result": "pass_21_of_21"
+    },
+    {
+      "builder": "revision_2026/06_corrected_hybridrank/h5/fully_nested/build_fully_nested_hybridrank_h5.py",
+      "checksum_registry": "revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_checksums.sha256",
+      "child_outputs": [
+        "fixed_hybridrank_scores"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/06_corrected_hybridrank/h5/fully_nested",
+      "limitations": "Diagnostic infeasibility/guarded non-selection branch only.",
+      "manifest": "revision_2026/06_corrected_hybridrank/h5/fully_nested/fully_nested_hybridrank_h5_manifest.json",
+      "package_name": "fully_nested_hybridrank_feasibility",
+      "peeled_commit": "ea738f9bca32b3bf5648a860c35cd84fbe4e205b",
+      "role": "hybridrank feasibility diagnostic branch",
+      "standalone_test": "revision_2026/06_corrected_hybridrank/h5/fully_nested/test_fully_nested_hybridrank_h5.py",
+      "tag": "fully-nested-hybridrank-h5-feasibility-v1",
+      "test_result": "pass_guard_block_28_of_28"
+    },
+    {
+      "builder": "revision_2026/06_corrected_hybridrank/h5/fixed_policy/build_fixed_hybridrank_h5_scores.py",
+      "checksum_registry": "revision_2026/06_corrected_hybridrank/h5/fixed_policy/fixed_hybridrank_h5_checksums.sha256",
+      "child_outputs": [
+        "retrospective_alarm_budget",
+        "sequential_past_only",
+        "sequential_quota_enforced"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/06_corrected_hybridrank/h5/fixed_policy",
+      "limitations": "Fixed rank ensemble for alarm evaluations only.",
+      "manifest": "revision_2026/06_corrected_hybridrank/h5/fixed_policy/fixed_hybridrank_h5_manifest.json",
+      "package_name": "fixed_hybridrank_scores",
+      "peeled_commit": "1a7fa526c26397ac50810bca24f57d3765aa4af4",
+      "role": "fixed rank ensemble scores for rank/alarm stages",
+      "standalone_test": "revision_2026/06_corrected_hybridrank/h5/fixed_policy/test_fixed_hybridrank_h5_scores.py",
+      "tag": "fixed-hybridrank-h5-scores-v1",
+      "test_result": "pass_67_of_67"
+    },
+    {
+      "builder": "revision_2026/07_retrospective_alarm_budget/h5/build_retrospective_h5_alarm_budget.py",
+      "checksum_registry": "revision_2026/07_retrospective_alarm_budget/h5/retrospective_h5_alarm_budget_checksums.sha256",
+      "child_outputs": [
+        "final_integration"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/07_retrospective_alarm_budget/h5",
+      "limitations": "Retrospective offline top-k only.",
+      "manifest": "revision_2026/07_retrospective_alarm_budget/h5/retrospective_h5_alarm_budget_manifest.json",
+      "package_name": "retrospective_alarm_budget",
+      "peeled_commit": "140b8193f31425f7506fae4f36987246eedab729",
+      "role": "retrospective fold-local top-k alarm-budget evaluation",
+      "standalone_test": "revision_2026/07_retrospective_alarm_budget/h5/test_retrospective_h5_alarm_budget.py",
+      "tag": "retrospective-h5-alarm-budget-v1",
+      "test_result": "pass_66_of_66"
+    },
+    {
+      "builder": "revision_2026/08_sequential_alarm_policy/h5/build_sequential_h5_alarm_policy.py",
+      "checksum_registry": "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_checksums.sha256",
+      "child_outputs": [
+        "sequential_quota_enforced",
+        "final_integration"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/08_sequential_alarm_policy/h5",
+      "limitations": "Historical past-only simulation only.",
+      "manifest": "revision_2026/08_sequential_alarm_policy/h5/sequential_h5_alarm_policy_manifest.json",
+      "package_name": "sequential_past_only",
+      "peeled_commit": "e98a21d77033d746e7b77f348af8dc34be0768fd",
+      "role": "historical past-only sequential threshold simulation",
+      "standalone_test": "revision_2026/08_sequential_alarm_policy/h5/test_sequential_h5_alarm_policy.py",
+      "tag": "sequential-h5-past-quantile-v1",
+      "test_result": "pass_65_of_65"
+    },
+    {
+      "builder": "revision_2026/08_sequential_alarm_policy/h5/quota_enforced/build_quota_enforced_h5_alarm_policy.py",
+      "checksum_registry": "revision_2026/08_sequential_alarm_policy/h5/quota_enforced/quota_enforced_h5_checksums.sha256",
+      "child_outputs": [
+        "final_integration"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/08_sequential_alarm_policy/h5/quota_enforced",
+      "limitations": "Historical quota-enforced simulation only.",
+      "manifest": "revision_2026/08_sequential_alarm_policy/h5/quota_enforced/quota_enforced_h5_manifest.json",
+      "package_name": "sequential_quota_enforced",
+      "peeled_commit": "045d265f54d29eb1212758307161072c25379541",
+      "role": "historical quota-enforced sequential simulation",
+      "standalone_test": "revision_2026/08_sequential_alarm_policy/h5/quota_enforced/test_quota_enforced_h5_alarm_policy.py",
+      "tag": "quota-enforced-sequential-h5-v1",
+      "test_result": "pass_25_of_25"
+    },
+    {
+      "builder": "revision_2026/09_h1_h3_reconciliation/build_canonical_h1_h3_reconciliation.py",
+      "checksum_registry": "revision_2026/09_h1_h3_reconciliation/canonical_h1_h3_reconciliation_checksums.sha256",
+      "child_outputs": [
+        "lag_window_sensitivity_design",
+        "final_integration"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/09_h1_h3_reconciliation",
+      "limitations": "Canonical H1/H3 source.",
+      "manifest": "revision_2026/09_h1_h3_reconciliation/canonical_h1_h3_reconciliation_manifest.json",
+      "package_name": "canonical_h1_h3_reconciliation",
+      "peeled_commit": "15cc6f8414df3e60692700963afc296e7653236e",
+      "role": "canonical h1/h3 corrected predictions and metrics",
+      "standalone_test": "revision_2026/09_h1_h3_reconciliation/test_canonical_h1_h3_reconciliation.py",
+      "tag": "canonical-h1-h3-reconciliation-v1",
+      "test_result": "pass_56_of_56"
+    },
+    {
+      "builder": "revision_2026/10_lag_window_sensitivity/00_design/build_lag_window_sensitivity_design.py",
+      "checksum_registry": "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design_checksums.sha256",
+      "child_outputs": [
+        "lag_window_sensitivity_execution"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/10_lag_window_sensitivity/00_design",
+      "limitations": "Design freeze.",
+      "manifest": "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design_manifest.json",
+      "package_name": "lag_window_sensitivity_design",
+      "peeled_commit": "dee06bcfeca0c3c224897a2a92261c13f4fea26e",
+      "role": "lag-window sensitivity design freeze",
+      "standalone_test": "revision_2026/10_lag_window_sensitivity/00_design/test_lag_window_sensitivity_design.py",
+      "tag": "lag-window-sensitivity-design-v1",
+      "test_result": "pass_44_of_44"
+    },
+    {
+      "builder": "revision_2026/10_lag_window_sensitivity/01_execution/run_lag_window_sensitivity_execution.py",
+      "checksum_registry": "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_execution_checksums.sha256",
+      "child_outputs": [
+        "final_integration"
+      ],
+      "deterministic_result": "pass",
+      "directory": "revision_2026/10_lag_window_sensitivity/01_execution",
+      "limitations": "Execution freeze for lag sensitivity outputs.",
+      "manifest": "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_execution_manifest.json",
+      "package_name": "lag_window_sensitivity_execution",
+      "peeled_commit": "f61278b3e3fc2cb0b69564b346a4bf32e037b4fb",
+      "role": "lag-window sensitivity execution freeze",
+      "standalone_test": "revision_2026/10_lag_window_sensitivity/01_execution/test_lag_window_sensitivity_execution.py",
+      "tag": "lag-window-sensitivity-execution-v1",
+      "test_result": "pass_75_of_75"
+    },
+    {
+      "builder": "revision_2026/11_final_integration/build_final_computational_integration.py",
+      "checksum_registry": "revision_2026/11_final_integration/final_computational_integration_checksums.sha256",
+      "child_outputs": [
+        "final tables",
+        "final figures",
+        "final registries",
+        "final audits"
+      ],
+      "deterministic_result": "pending",
+      "directory": "revision_2026/11_final_integration",
+      "limitations": "Computational package only; manuscript editing performed separately.",
+      "manifest": "revision_2026/11_final_integration/final_computational_integration_manifest.json",
+      "package_name": "final_integration",
+      "peeled_commit": "f61278b3e3fc2cb0b69564b346a4bf32e037b4fb",
+      "role": "stage3 final computational integration",
+      "standalone_test": "revision_2026/11_final_integration/test_final_computational_integration.py",
+      "tag": "none",
+      "test_result": "pending"
+    }
+  ],
+  "root": "raw_dataset_lock"
+}

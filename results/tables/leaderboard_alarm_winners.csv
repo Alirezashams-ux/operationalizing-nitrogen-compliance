@@ -1,0 +1,27 @@
+source_group,horizon,tau_mgL,budget_r,winner_model,winner_full_name,precision,recall,TP,events,k
+hybrid_rank_v2_guarded,5,15,0.05,hybrid_paper_fixed,Hybrid rank ensemble (paper-fixed weights),0.5526315789473685,0.1567164179104477,21,134,38
+hybrid_rank_v2_guarded,5,15,0.1,enet,ElasticNet (generic),0.44,0.2462686567164179,33,134,75
+hybrid_rank_v2_guarded,5,16,0.05,hybrid_paper_fixed,Hybrid rank ensemble (paper-fixed weights),0.4473684210526316,0.2394366197183098,17,71,38
+hybrid_rank_v2_guarded,5,16,0.1,hybrid_rank_v2,Hybrid rank ensemble v2 (policy-based),0.3466666666666667,0.3661971830985915,26,71,75
+main_alarm,1,15,0.05,persistence,Persistence baseline (carry-forward),0.7692307692307693,0.2127659574468085,30,141,39
+main_alarm,1,15,0.1,persistence,Persistence baseline (carry-forward),0.6493506493506493,0.3546099290780142,50,141,77
+main_alarm,1,16,0.05,persistence,Persistence baseline (carry-forward),0.5128205128205128,0.2702702702702703,20,74,39
+main_alarm,1,16,0.1,persistence,Persistence baseline (carry-forward),0.4285714285714285,0.4459459459459459,33,74,77
+main_alarm,1,17,0.05,persistence,Persistence baseline (carry-forward),0.2307692307692307,0.3,9,30,39
+main_alarm,1,17,0.1,enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",0.1818181818181818,0.4666666666666667,14,30,77
+main_alarm,3,15,0.05,enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",0.631578947368421,0.1714285714285714,24,140,38
+main_alarm,3,15,0.1,enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",0.5131578947368421,0.2785714285714286,39,140,76
+main_alarm,3,16,0.05,enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",0.4210526315789473,0.2191780821917808,16,73,38
+main_alarm,3,16,0.1,enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",0.3026315789473684,0.3150684931506849,23,73,76
+main_alarm,3,17,0.05,enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",0.2105263157894736,0.2758620689655172,8,29,38
+main_alarm,3,17,0.1,enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",0.1578947368421052,0.4137931034482758,12,29,76
+main_alarm,5,15,0.05,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",0.5263157894736842,0.1428571428571428,20,140,38
+main_alarm,5,15,0.1,enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",0.4473684210526316,0.2428571428571428,34,140,76
+main_alarm,5,16,0.05,persistence,Persistence baseline (carry-forward),0.3684210526315789,0.1917808219178082,14,73,38
+main_alarm,5,16,0.1,enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",0.3026315789473684,0.3150684931506849,23,73,76
+main_alarm,5,17,0.05,enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",0.2105263157894736,0.2758620689655172,8,29,38
+main_alarm,5,17,0.1,enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",0.1447368421052631,0.3793103448275862,11,29,76
+paper_v2_h5,5,15,0.05,hybrid_rank_ens,Hybrid rank ensemble (paper v2),0.5526315789473685,0.1567164179104477,21,134,38
+paper_v2_h5,5,15,0.1,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",0.44,0.2462686567164179,33,134,75
+paper_v2_h5,5,16,0.05,hybrid_rank_ens,Hybrid rank ensemble (paper v2),0.4473684210526316,0.2394366197183098,17,71,38
+paper_v2_h5,5,16,0.1,persistence,Persistence baseline (carry-forward),0.3066666666666666,0.323943661971831,23,71,75

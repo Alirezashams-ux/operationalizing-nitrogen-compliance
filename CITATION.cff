@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated ACS ES&T Water article and the archived software release when available."
+
+title: "Operationalizing Nitrogen Compliance: Reproducibility Code and Analysis Artifacts"
+version: "1.0.0"
+type: software
+
+authors:
+  - family-names: "Mahvelati Shamsabadi"
+    given-names: "Alireza"
+  - family-names: "Mahvelati Shamsabadi"
+    given-names: "Morteza"
+  - family-names: "Atri"
+    given-names: "Tejas Ravi"
+  - family-names: "Kim"
+    given-names: "Jinwoo"
+  - family-names: "Masoumilaria"
+    given-names: "Shokouh"
+  - family-names: "Park"
+    given-names: "Minwoo"
+  - family-names: "Lee"
+    given-names: "Sudong"
+  - family-names: "Kyung"
+    given-names: "Daeseung"
+
+license: "MIT"
+
+repository-code: "https://github.com/Alirezashams-ux/operationalizing-nitrogen-compliance"
+url: "https://github.com/Alirezashams-ux/operationalizing-nitrogen-compliance"
+
+abstract: >
+  Reproducibility code and nonrestricted computational artifacts supporting
+  the published ACS ES&T Water study "Operationalizing Nitrogen Compliance:
+  A Leakage-Safe, Alarm-Budget Framework for Wastewater Treatment Early Warning."
+  Restricted raw wastewater-treatment datasets are not redistributed.
+
+keywords:
+  - wastewater treatment
+  - nitrogen compliance
+  - early warning
+  - machine learning
+  - time series
+  - alarm budget
+  - leakage-safe validation
+  - reproducibility

@@ -1,0 +1,464 @@
+{
+  "repository": "/home/alrezshams/acs_tnout_ulsan_revision",
+  "authorized_output_directory": "revision_2026/09_h1_h3_reconciliation",
+  "required_branch": "controlled-reruns-v1",
+  "required_python_version": "3.8.10",
+  "expected_dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "expected_split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "verification": {
+    "working_tree_status_paths": [
+      "revision_2026/09_h1_h3_reconciliation/"
+    ],
+    "starting_git_commit": "045d265f54d29eb1212758307161072c25379541",
+    "active_branch": "controlled-reruns-v1",
+    "python_version": "3.8.10",
+    "root_protocol_sha256sum_output": "canonical_dataset_lock.json: OK\nbuild_purged_nested_splits.py: OK\ncorrected_split_assignment.csv: OK\ncorrected_split_summary.csv: OK\ntest_purged_nested_splits.py: OK\ncorrected_evaluation_protocol.md: OK\nalarm_evaluation_protocol.md: OK\nrerun_execution_plan.csv: OK\n",
+    "root_protocol_sha256sum_error": "",
+    "locked_protocol_sha256sum_output": "canonical_dataset_lock.json: OK\nbuild_purged_nested_splits.py: FAILED open or read\ncorrected_split_assignment.csv: OK\ncorrected_split_summary.csv: OK\ntest_purged_nested_splits.py: FAILED open or read\ncorrected_evaluation_protocol.md: OK\nalarm_evaluation_protocol.md: OK\nrerun_execution_plan.csv: OK\n",
+    "locked_protocol_sha256sum_error": "sha256sum: build_purged_nested_splits.py: No such file or directory\nsha256sum: test_purged_nested_splits.py: No such file or directory\nsha256sum: WARNING: 2 listed files could not be read\n",
+    "protocol_manifest_checks": {
+      "canonical_dataset_lock.json": {
+        "expected": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "observed": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "exists": true,
+        "pass": true
+      },
+      "build_purged_nested_splits.py": {
+        "expected": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+        "observed": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+        "exists": true,
+        "pass": true
+      },
+      "corrected_split_assignment.csv": {
+        "expected": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "observed": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "exists": true,
+        "pass": true
+      },
+      "corrected_split_summary.csv": {
+        "expected": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "observed": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "exists": true,
+        "pass": true
+      },
+      "test_purged_nested_splits.py": {
+        "expected": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+        "observed": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+        "exists": true,
+        "pass": true
+      },
+      "corrected_evaluation_protocol.md": {
+        "expected": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "observed": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "exists": true,
+        "pass": true
+      },
+      "alarm_evaluation_protocol.md": {
+        "expected": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "observed": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "exists": true,
+        "pass": true
+      },
+      "rerun_execution_plan.csv": {
+        "expected": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "observed": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "exists": true,
+        "pass": true
+      }
+    },
+    "locked_protocol_manifest_checks": {
+      "canonical_dataset_lock.json": {
+        "expected": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "observed": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "exists": true,
+        "pass": true
+      },
+      "build_purged_nested_splits.py": {
+        "expected": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+        "observed": null,
+        "exists": false,
+        "pass": false
+      },
+      "corrected_split_assignment.csv": {
+        "expected": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "observed": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "exists": true,
+        "pass": true
+      },
+      "corrected_split_summary.csv": {
+        "expected": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "observed": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "exists": true,
+        "pass": true
+      },
+      "test_purged_nested_splits.py": {
+        "expected": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+        "observed": null,
+        "exists": false,
+        "pass": false
+      },
+      "corrected_evaluation_protocol.md": {
+        "expected": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "observed": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "exists": true,
+        "pass": true
+      },
+      "alarm_evaluation_protocol.md": {
+        "expected": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "observed": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "exists": true,
+        "pass": true
+      },
+      "rerun_execution_plan.csv": {
+        "expected": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "observed": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "exists": true,
+        "pass": true
+      }
+    },
+    "protocol_root_locked_identity": [
+      {
+        "file": "alarm_evaluation_protocol.md",
+        "root_exists": true,
+        "locked_exists": true,
+        "root_sha": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "locked_sha": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "identical": true
+      },
+      {
+        "file": "build_purged_nested_splits.py",
+        "root_exists": true,
+        "locked_exists": false,
+        "root_sha": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+        "locked_sha": null,
+        "identical": false
+      },
+      {
+        "file": "canonical_dataset_lock.json",
+        "root_exists": true,
+        "locked_exists": true,
+        "root_sha": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "locked_sha": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "identical": true
+      },
+      {
+        "file": "corrected_evaluation_protocol.md",
+        "root_exists": true,
+        "locked_exists": true,
+        "root_sha": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "locked_sha": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "identical": true
+      },
+      {
+        "file": "corrected_split_assignment.csv",
+        "root_exists": true,
+        "locked_exists": true,
+        "root_sha": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "locked_sha": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "identical": true
+      },
+      {
+        "file": "corrected_split_summary.csv",
+        "root_exists": true,
+        "locked_exists": true,
+        "root_sha": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "locked_sha": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "identical": true
+      },
+      {
+        "file": "rerun_execution_plan.csv",
+        "root_exists": true,
+        "locked_exists": true,
+        "root_sha": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "locked_sha": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "identical": true
+      },
+      {
+        "file": "test_purged_nested_splits.py",
+        "root_exists": true,
+        "locked_exists": false,
+        "root_sha": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+        "locked_sha": null,
+        "identical": false
+      }
+    ],
+    "dataset_path": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/00_provenance/recovered_inputs/figure2/Ulsan_Yongsan.csv",
+    "dataset_sha_expected_from_lock": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+    "dataset_sha_observed": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+    "split_sha_expected_from_manifest": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+    "split_sha_observed": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+    "local_tag_commits": {
+      "corrected-protocol-v1": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+      "persistence-corrected-v1": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+      "ridge-corrected-v1": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+      "elasticnet-corrected-v1": "1db2f3472cd48274a5afa4010f446952d76c6042",
+      "hgbr-corrected-v1": "4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62"
+    },
+    "remote_tag_presence": {
+      "corrected-protocol-v1": true,
+      "persistence-corrected-v1": true,
+      "ridge-corrected-v1": true,
+      "elasticnet-corrected-v1": true,
+      "hgbr-corrected-v1": true
+    },
+    "remote_tag_warning": "",
+    "source_directory_preservation": {
+      "corrected-protocol-v1": {
+        "source_dir": "revision_2026/03_corrected_protocol",
+        "changed_paths": [],
+        "pass": true
+      },
+      "persistence-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/persistence",
+        "changed_paths": [],
+        "pass": true
+      },
+      "ridge-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/ridge",
+        "changed_paths": [],
+        "pass": true
+      },
+      "elasticnet-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/elasticnet",
+        "changed_paths": [],
+        "pass": true
+      },
+      "hgbr-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/hgbr",
+        "changed_paths": [],
+        "pass": true
+      }
+    },
+    "source_model_info": {
+      "Persistence": {
+        "run_id": "persistence_corrected_2bbf5eba419b_6ed147cd_f83baf57",
+        "artifact_generation_commit": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+        "prediction_file": "revision_2026/04_controlled_reruns/persistence/persistence_predictions.csv",
+        "prediction_sha256": "383014421fa4419e7ba626a9a0e0df61f1b302431bb546c9049ce9f8a4b51754",
+        "prediction_sha256_manifest": "383014421fa4419e7ba626a9a0e0df61f1b302431bb546c9049ce9f8a4b51754",
+        "prediction_file_identity_pass": true,
+        "metrics_by_fold_file": "revision_2026/04_controlled_reruns/persistence/persistence_metrics_by_fold.csv",
+        "metrics_pooled_file": "revision_2026/04_controlled_reruns/persistence/persistence_metrics_pooled.csv",
+        "event_prevalence_file": "revision_2026/04_controlled_reruns/persistence/persistence_event_prevalence.csv",
+        "metrics_file_checks": {
+          "persistence_metrics_by_fold.csv": {
+            "expected": "6c716094f371283a2f9b77701b1e60db738e54e4bbc188d99976cc2d10c7dcb1",
+            "observed": "6c716094f371283a2f9b77701b1e60db738e54e4bbc188d99976cc2d10c7dcb1",
+            "pass": true
+          },
+          "persistence_metrics_pooled.csv": {
+            "expected": "72ced96eaab2effa6614105eb79ac2dc0e64b466a41eb6babdc68a0e90a26dcf",
+            "observed": "72ced96eaab2effa6614105eb79ac2dc0e64b466a41eb6babdc68a0e90a26dcf",
+            "pass": true
+          },
+          "persistence_event_prevalence.csv": {
+            "expected": "ff3991e212e39f77af511a260d4f220cb74f28cce49ffaaa36252d1b4adb3737",
+            "observed": "ff3991e212e39f77af511a260d4f220cb74f28cce49ffaaa36252d1b4adb3737",
+            "pass": true
+          }
+        },
+        "manifest_file": "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json",
+        "completion_report_file": "revision_2026/04_controlled_reruns/persistence/persistence_completion_report.md",
+        "test_result": "pass_12_of_12",
+        "completion_decision": "A",
+        "package_freeze_tag": "persistence-corrected-v1",
+        "package_freeze_commit": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+        "remote_tag_present": true,
+        "source_preservation_pass": true,
+        "model_info_pass": true
+      },
+      "Ridge": {
+        "run_id": "ridge_corrected_41f184a29ff8_6ed147cd_f83baf57",
+        "artifact_generation_commit": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+        "prediction_file": "revision_2026/04_controlled_reruns/ridge/ridge_predictions.csv",
+        "prediction_sha256": "1bc1646a73abbb94a60c59eb9637e2c9f09ea8d88627a1ee12c46253d2a0594b",
+        "prediction_sha256_manifest": "1bc1646a73abbb94a60c59eb9637e2c9f09ea8d88627a1ee12c46253d2a0594b",
+        "prediction_file_identity_pass": true,
+        "metrics_by_fold_file": "revision_2026/04_controlled_reruns/ridge/ridge_metrics_by_fold.csv",
+        "metrics_pooled_file": "revision_2026/04_controlled_reruns/ridge/ridge_metrics_pooled.csv",
+        "event_prevalence_file": "revision_2026/04_controlled_reruns/ridge/ridge_event_prevalence.csv",
+        "metrics_file_checks": {
+          "ridge_metrics_by_fold.csv": {
+            "expected": "ef93864fc755300d9c988c167361a8ddde6b6f08c5072486a229052caba1d8cd",
+            "observed": "ef93864fc755300d9c988c167361a8ddde6b6f08c5072486a229052caba1d8cd",
+            "pass": true
+          },
+          "ridge_metrics_pooled.csv": {
+            "expected": "fce9723255d985f8fc6540cb2a093c1c288236ec1270728f5bcf432a02c46194",
+            "observed": "fce9723255d985f8fc6540cb2a093c1c288236ec1270728f5bcf432a02c46194",
+            "pass": true
+          },
+          "ridge_event_prevalence.csv": {
+            "expected": "63d750592e0c3c7be01a1579afc6daaf727badaa9255473d3d8609a71c9f69d0",
+            "observed": "63d750592e0c3c7be01a1579afc6daaf727badaa9255473d3d8609a71c9f69d0",
+            "pass": true
+          }
+        },
+        "manifest_file": "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json",
+        "completion_report_file": "revision_2026/04_controlled_reruns/ridge/ridge_completion_report.md",
+        "test_result": "pass_15_of_15",
+        "completion_decision": "A",
+        "package_freeze_tag": "ridge-corrected-v1",
+        "package_freeze_commit": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+        "remote_tag_present": true,
+        "source_preservation_pass": true,
+        "model_info_pass": true
+      },
+      "ElasticNet": {
+        "run_id": "elasticnet_corrected_69cfb2bf8bc1_6ed147cd_f83baf57",
+        "artifact_generation_commit": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+        "prediction_file": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_predictions.csv",
+        "prediction_sha256": "dab8dd118ac95fbdef4bac3ca1b763be93320ea0dac1573a8b3b269a15960edb",
+        "prediction_sha256_manifest": "dab8dd118ac95fbdef4bac3ca1b763be93320ea0dac1573a8b3b269a15960edb",
+        "prediction_file_identity_pass": true,
+        "metrics_by_fold_file": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_by_fold.csv",
+        "metrics_pooled_file": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_pooled.csv",
+        "event_prevalence_file": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_event_prevalence.csv",
+        "metrics_file_checks": {
+          "elasticnet_metrics_by_fold.csv": {
+            "expected": "7ef0cba62a430da9e3d99f54f94041f98350ec96e42231389fa95deb32a82c90",
+            "observed": "7ef0cba62a430da9e3d99f54f94041f98350ec96e42231389fa95deb32a82c90",
+            "pass": true
+          },
+          "elasticnet_metrics_pooled.csv": {
+            "expected": "048c02ccb30746c3cbdd0d7cbee92b630a0512b8c1ea7798f4c38d30df24fbe6",
+            "observed": "048c02ccb30746c3cbdd0d7cbee92b630a0512b8c1ea7798f4c38d30df24fbe6",
+            "pass": true
+          },
+          "elasticnet_event_prevalence.csv": {
+            "expected": "64f1b42b94f82ee5952b42018a2691ec74f025945187de98caa27585832ef38f",
+            "observed": "64f1b42b94f82ee5952b42018a2691ec74f025945187de98caa27585832ef38f",
+            "pass": true
+          }
+        },
+        "manifest_file": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json",
+        "completion_report_file": "revision_2026/04_controlled_reruns/elasticnet/elasticnet_completion_report.md",
+        "test_result": "pass_15_of_15",
+        "completion_decision": "A",
+        "package_freeze_tag": "elasticnet-corrected-v1",
+        "package_freeze_commit": "1db2f3472cd48274a5afa4010f446952d76c6042",
+        "remote_tag_present": true,
+        "source_preservation_pass": true,
+        "model_info_pass": true
+      },
+      "HGBR": {
+        "run_id": "hgbr_corrected_1db2f3472cd4_6ed147cd_f83baf57",
+        "artifact_generation_commit": "1db2f3472cd48274a5afa4010f446952d76c6042",
+        "prediction_file": "revision_2026/04_controlled_reruns/hgbr/hgbr_predictions.csv",
+        "prediction_sha256": "f5b4689128aa9cab965bbf8eac3879d05050b32a0c62572c7b3365f7bdc3ba36",
+        "prediction_sha256_manifest": "f5b4689128aa9cab965bbf8eac3879d05050b32a0c62572c7b3365f7bdc3ba36",
+        "prediction_file_identity_pass": true,
+        "metrics_by_fold_file": "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_by_fold.csv",
+        "metrics_pooled_file": "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_pooled.csv",
+        "event_prevalence_file": "revision_2026/04_controlled_reruns/hgbr/hgbr_event_prevalence.csv",
+        "metrics_file_checks": {
+          "hgbr_metrics_by_fold.csv": {
+            "expected": "0abb3b0c65c6f4c1142694fb54f68cd21ee5734fdaf216c1de8dbed3d2f4ca87",
+            "observed": "0abb3b0c65c6f4c1142694fb54f68cd21ee5734fdaf216c1de8dbed3d2f4ca87",
+            "pass": true
+          },
+          "hgbr_metrics_pooled.csv": {
+            "expected": "2a414b325fd156e170d40d1c0504dd3b7926010a369d11bea1fb9b670f8bbde7",
+            "observed": "2a414b325fd156e170d40d1c0504dd3b7926010a369d11bea1fb9b670f8bbde7",
+            "pass": true
+          },
+          "hgbr_event_prevalence.csv": {
+            "expected": "d5518fb8fdb4b0f4badb4c2afe0c5c44e1598450cab01005a7a2c3dcde1534f9",
+            "observed": "d5518fb8fdb4b0f4badb4c2afe0c5c44e1598450cab01005a7a2c3dcde1534f9",
+            "pass": true
+          }
+        },
+        "manifest_file": "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json",
+        "completion_report_file": "revision_2026/04_controlled_reruns/hgbr/hgbr_completion_report.md",
+        "test_result": "pass_20_of_20",
+        "completion_decision": "A",
+        "package_freeze_tag": "hgbr-corrected-v1",
+        "package_freeze_commit": "4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62",
+        "remote_tag_present": true,
+        "source_preservation_pass": true,
+        "model_info_pass": true
+      }
+    },
+    "hgbr_issue_registry": {
+      "path": "revision_2026/04_controlled_reruns/hgbr/hgbr_decision_b_issue_registry.csv",
+      "resolved_all_true": true,
+      "validity_critical_any": false,
+      "pass": true
+    },
+    "mase_denom_independent_verification": [
+      {
+        "horizon": 1,
+        "outer_fold": 1,
+        "source_mase_denom_train_only": 1.160396825396825,
+        "recomputed_mase_denom_train_only": 1.1603968253968253,
+        "absolute_delta": 2.220446049250313e-16,
+        "tolerance": 1e-12,
+        "pass": true
+      },
+      {
+        "horizon": 1,
+        "outer_fold": 2,
+        "source_mase_denom_train_only": 1.2493873517786562,
+        "recomputed_mase_denom_train_only": 1.2493873517786562,
+        "absolute_delta": 0.0,
+        "tolerance": 1e-12,
+        "pass": true
+      },
+      {
+        "horizon": 1,
+        "outer_fold": 3,
+        "source_mase_denom_train_only": 1.3396315789473685,
+        "recomputed_mase_denom_train_only": 1.3396315789473685,
+        "absolute_delta": 0.0,
+        "tolerance": 1e-12,
+        "pass": true
+      },
+      {
+        "horizon": 3,
+        "outer_fold": 1,
+        "source_mase_denom_train_only": 1.1536437246963565,
+        "recomputed_mase_denom_train_only": 1.1536437246963565,
+        "absolute_delta": 0.0,
+        "tolerance": 1e-12,
+        "pass": true
+      },
+      {
+        "horizon": 3,
+        "outer_fold": 2,
+        "source_mase_denom_train_only": 1.257983870967742,
+        "recomputed_mase_denom_train_only": 1.257983870967742,
+        "absolute_delta": 0.0,
+        "tolerance": 1e-12,
+        "pass": true
+      },
+      {
+        "horizon": 3,
+        "outer_fold": 3,
+        "source_mase_denom_train_only": 1.3437852348993289,
+        "recomputed_mase_denom_train_only": 1.3437852348993289,
+        "absolute_delta": 0.0,
+        "tolerance": 1e-12,
+        "pass": true
+      }
+    ],
+    "checks": {
+      "working_directory_pass": true,
+      "required_branch_pass": true,
+      "python_3810_pass": true,
+      "clean_or_authorized_working_tree_scope_pass": true,
+      "root_protocol_sha256sum_pass": true,
+      "locked_protocol_sha256sum_raw_pass": false,
+      "locked_protocol_shared_identity_pass": true,
+      "locked_protocol_effective_pass": true,
+      "dataset_checksum_pass": true,
+      "split_checksum_pass": true,
+      "source_model_checks_pass": true,
+      "source_test_result_pass": true,
+      "source_completion_decision_pass": true,
+      "hgbr_issue_registry_pass": true,
+      "local_tag_presence_pass": true,
+      "source_preservation_pass": true,
+      "verification_pass": true
+    }
+  }
+}

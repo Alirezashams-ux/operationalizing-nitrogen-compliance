@@ -1,0 +1,13 @@
+{
+  "h": 3,
+  "npz": "/home/alrezshams/acs_tnout_ulsan/features/ulsan_H3_features.npz",
+  "best_mae": 1.7767021216581735,
+  "best_params": {
+    "learning_rate": 0.010796030105287001,
+    "max_iter": 312,
+    "max_leaf_nodes": 181,
+    "min_samples_leaf": 58,
+    "l2_regularization": 4.278503270461749e-06,
+    "max_bins": 177
+  }
+}

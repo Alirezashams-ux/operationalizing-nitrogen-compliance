@@ -1,0 +1,14 @@
+search_term,historical_context,canonical_context,status,required_action,canonical_claim_id,notes
+759,submitted H3/H5 canonical N context,corrected canonical N=747 for H3/H5,superseded,replace with canonical N=747 where final corrected context applies,CLAIM_H3_N,759 may still appear in historical records
+735,potential pre-correction filtered subset,corrected canonical counts 762/747/747,context_required,verify context before replacing,CLAIM_H5_N,not automatically invalid in unrelated contexts
+73,historical H5 tau16 event count,H5 tau16 events = 71 (N=747),superseded_in_final_h5_context,replace with 71 in corrected H5 context,CLAIM_H5_TAU16_EVENTS,73 may appear in submitted lineage
+71,event count references,H3/H5 tau16 events = 71 is valid in corrected N=747 context,context_valid_or_invalid_depends,retain when linked to corrected H3/H5 context,CLAIM_H5_TAU16_EVENTS,do not blanket-reject 71
+75,top-k pooled K or unrelated literal,pooled K=75 valid for r=0.10 with fold-local k=25 across 3 folds,context_valid_or_invalid_depends,retain when tied to corrected retrospective arithmetic,CLAIM_RETRO_FIXED_RANK_ENSEMBLE_H5_T16_R05_RECALL,do not blanket-reject 75
+76,derived from ceil(0.10 * 759),not applicable to corrected N=747 retrospective context,superseded,replace with fold-local k=25 and pooled K=75,CLAIM_H3_N,historical arithmetic context only
+77,legacy variant count references,context-specific; not canonical default,context_required,verify source lineage before replacement,CLAIM_H1_N,can be valid in unrelated contexts
+1.7127,submitted point-blend MAE,point-blend excluded from corrected final tables,excluded_pathway,remove from final corrected result claims,CLAIM_POINT_Ridge_H5_MAE,use canonical table2 metrics
+N=996,model-ready count pre-canonical filtering,final canonical held-out N by horizon: 762/747/747,superseded,do not use as final evaluation denominator,CLAIM_H1_N,may appear in process provenance only
+HybridRank v2,adaptive historical lineage,fixed rank ensemble retained for corrected final pathways,excluded_pathway,replace display term with fixed rank ensemble in final tables/figures,CLAIM_PACKAGE_FIXED_HYBRIDRANK_SCORES_TEST,historical mention may remain in archived context
+guarded hybrid,diagnostic guarded claim,not a retained final result pathway,excluded_pathway,remove from final comparative claims,CLAIM_PACKAGE_FULLY_NESTED_HYBRIDRANK_FEASIBILITY_TEST,diagnostic branch preserved only as infeasibility context
+point blend,submitted blend model wording,excluded from final corrected point model table,excluded_pathway,remove from final point-model performance claims,CLAIM_POINT_Ridge_H1_MAE,historical archive may retain phrase
+mean squared error (MAE),terminology typo,MAE and MSE are distinct metrics,terminology_error,correct wording to MAE or MSE as appropriate,CLAIM_POINT_Ridge_H1_MAE,avoid ambiguous metric labels

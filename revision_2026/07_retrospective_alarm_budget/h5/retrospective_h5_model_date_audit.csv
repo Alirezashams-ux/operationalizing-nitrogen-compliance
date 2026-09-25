@@ -1,0 +1,37 @@
+model,threshold,budget,expected_keys,observed_keys,missing_keys,extra_keys,duplicate_keys,date_set_identical,y_true_identical,event_labels_identical,score_finite,coverage_pass
+BCR-TCN v1.1,15,0.05,747,747,0,0,0,True,True,True,True,True
+BCR-TCN v1.1,15,0.1,747,747,0,0,0,True,True,True,True,True
+BCR-TCN v1.1,16,0.05,747,747,0,0,0,True,True,True,True,True
+BCR-TCN v1.1,16,0.1,747,747,0,0,0,True,True,True,True,True
+BCR-TCN v1.1,17,0.05,747,747,0,0,0,True,True,True,True,True
+BCR-TCN v1.1,17,0.1,747,747,0,0,0,True,True,True,True,True
+ElasticNet,15,0.05,747,747,0,0,0,True,True,True,True,True
+ElasticNet,15,0.1,747,747,0,0,0,True,True,True,True,True
+ElasticNet,16,0.05,747,747,0,0,0,True,True,True,True,True
+ElasticNet,16,0.1,747,747,0,0,0,True,True,True,True,True
+ElasticNet,17,0.05,747,747,0,0,0,True,True,True,True,True
+ElasticNet,17,0.1,747,747,0,0,0,True,True,True,True,True
+HGBR,15,0.05,747,747,0,0,0,True,True,True,True,True
+HGBR,15,0.1,747,747,0,0,0,True,True,True,True,True
+HGBR,16,0.05,747,747,0,0,0,True,True,True,True,True
+HGBR,16,0.1,747,747,0,0,0,True,True,True,True,True
+HGBR,17,0.05,747,747,0,0,0,True,True,True,True,True
+HGBR,17,0.1,747,747,0,0,0,True,True,True,True,True
+HybridRank_fixed_documented,15,0.05,747,747,0,0,0,True,True,True,True,True
+HybridRank_fixed_documented,15,0.1,747,747,0,0,0,True,True,True,True,True
+HybridRank_fixed_documented,16,0.05,747,747,0,0,0,True,True,True,True,True
+HybridRank_fixed_documented,16,0.1,747,747,0,0,0,True,True,True,True,True
+HybridRank_fixed_documented,17,0.05,747,747,0,0,0,True,True,True,True,True
+HybridRank_fixed_documented,17,0.1,747,747,0,0,0,True,True,True,True,True
+Persistence,15,0.05,747,747,0,0,0,True,True,True,True,True
+Persistence,15,0.1,747,747,0,0,0,True,True,True,True,True
+Persistence,16,0.05,747,747,0,0,0,True,True,True,True,True
+Persistence,16,0.1,747,747,0,0,0,True,True,True,True,True
+Persistence,17,0.05,747,747,0,0,0,True,True,True,True,True
+Persistence,17,0.1,747,747,0,0,0,True,True,True,True,True
+Ridge,15,0.05,747,747,0,0,0,True,True,True,True,True
+Ridge,15,0.1,747,747,0,0,0,True,True,True,True,True
+Ridge,16,0.05,747,747,0,0,0,True,True,True,True,True
+Ridge,16,0.1,747,747,0,0,0,True,True,True,True,True
+Ridge,17,0.05,747,747,0,0,0,True,True,True,True,True
+Ridge,17,0.1,747,747,0,0,0,True,True,True,True,True

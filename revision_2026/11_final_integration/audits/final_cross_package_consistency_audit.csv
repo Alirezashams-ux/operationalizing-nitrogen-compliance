@@ -1,0 +1,28 @@
+check_id,description,pass
+1,identical canonical dates across point models within each horizon,True
+2,identical y_true across point models within each horizon,True
+3,exact target_date = feature_date + horizon,True
+4,no duplicate canonical keys,True
+5,H1/H3/H5 N reconciliation,True
+6,threshold event-count reconciliation,True
+7,point metric recomputation,True
+8,pooled RMSE = sqrt(pooled MSE),True
+9,MASE source convention preserved,True
+10,BCR-TCN appears only at H5,True
+11,fixed rank ensemble only in rank/alarm contexts,True
+12,no point-blend values in final outputs,True
+13,no adaptive HybridRank v2 values in final outputs,True
+14,fold-local retrospective k calculation,True
+15,pooled K equals sum fold-local k,True
+16,no global 747-row top-k replacement,True
+17,retrospective labels present,True
+18,past-only sequential cutoffs use prior scores only,True
+19,quota candidates match frozen baseline,True
+20,quota prefix inequality holds,True
+21,sequential denominator uses eligible dates,True
+22,startup dates excluded from eligible alarm metrics,True
+23,lag configurations retain identical canonical test dates,True
+24,lag final-reference mapping unchanged,True
+25,all output rows have frozen source provenance,True
+26,every final numeric claim maps to frozen artifact,True
+27,old results/ files contribute zero final numeric values,True

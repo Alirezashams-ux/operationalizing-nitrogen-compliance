@@ -1,0 +1,13 @@
+{
+  "source_csv": "results/tables/leaderboard_point_by_horizon.csv",
+  "overall_pass": true,
+  "outputs": {
+    "panel_A_main_linear": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/Table_point_panel_A_main_linear.csv",
+    "panel_B_hybrid": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/Table_point_panel_B_hybrid_rank_v2_guarded_H5.csv",
+    "sanity_checks_csv": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/sanity_checks.csv",
+    "rank_errors_csv": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/rank_errors.csv",
+    "trend_csv": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/main_linear_trend_by_model.csv",
+    "audit_report_md": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/audit_report.md",
+    "manuscript_note_md": "results/paper_artifacts/20260303_175422_point_table_panelized_audit/table_explanation_for_manuscript.md"
+  }
+}

@@ -1,0 +1,109 @@
+model,horizon,outer_fold,threshold,nominal_budget_r,eligible_N,startup_alarm_count,final_capacity,final_alarms,final_alarm_cap_limit,maximum_prefix_excess_over_capacity,no_startup_alarm,cumulative_cap_never_exceeded,final_alarm_cap_pass,no_future_information_used,no_label_used,candidate_matches_frozen_baseline,only_quota_gate_changes_candidates,suppression_consistency,capacity_audit_pass
+BCR-TCN v1.1,5,1,15,0.05,219,0,11,5,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,1,15,0.1,219,0,22,10,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,1,16,0.05,219,0,11,9,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,1,16,0.1,219,0,22,18,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,1,17,0.05,219,0,11,6,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,1,17,0.1,219,0,22,14,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,2,15,0.05,219,0,11,9,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,2,15,0.1,219,0,22,21,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,2,16,0.05,219,0,11,10,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,2,16,0.1,219,0,22,19,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,2,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,2,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,3,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,3,15,0.1,219,0,22,19,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,3,16,0.05,219,0,11,3,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,3,16,0.1,219,0,22,10,22,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,3,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+BCR-TCN v1.1,5,3,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,1,15,0.05,219,0,11,0,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,1,15,0.1,219,0,22,0,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,1,16,0.05,219,0,11,0,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,1,16,0.1,219,0,22,0,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,1,17,0.05,219,0,11,0,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,1,17,0.1,219,0,22,0,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,2,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,2,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,2,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,2,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,2,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,2,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,3,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,3,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,3,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,3,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,3,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+ElasticNet,5,3,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,1,15,0.05,219,0,11,1,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,1,15,0.1,219,0,22,1,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,1,16,0.05,219,0,11,1,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,1,16,0.1,219,0,22,1,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,1,17,0.05,219,0,11,1,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,1,17,0.1,219,0,22,1,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,2,15,0.05,219,0,11,8,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,2,15,0.1,219,0,22,19,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,2,16,0.05,219,0,11,8,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,2,16,0.1,219,0,22,19,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,2,17,0.05,219,0,11,8,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,2,17,0.1,219,0,22,19,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,3,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,3,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,3,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,3,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HGBR,5,3,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HGBR,5,3,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,1,15,0.05,219,0,11,4,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,1,15,0.1,219,0,22,8,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,1,16,0.05,219,0,11,3,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,1,16,0.1,219,0,22,11,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,1,17,0.05,219,0,11,6,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,1,17,0.1,219,0,22,11,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,2,15,0.05,219,0,11,6,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,2,15,0.1,219,0,22,13,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,2,16,0.05,219,0,11,6,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,2,16,0.1,219,0,22,12,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,2,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,2,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,3,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,3,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,3,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,3,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,3,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+HybridRank_fixed_documented,5,3,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,1,15,0.05,219,0,11,7,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,1,15,0.1,219,0,22,16,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,1,16,0.05,219,0,11,7,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,1,16,0.1,219,0,22,16,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,1,17,0.05,219,0,11,7,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,1,17,0.1,219,0,22,16,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,2,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,2,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,2,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,2,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,2,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,2,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,3,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,3,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,3,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,3,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Persistence,5,3,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Persistence,5,3,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,1,15,0.05,219,0,11,0,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,1,15,0.1,219,0,22,0,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,1,16,0.05,219,0,11,0,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,1,16,0.1,219,0,22,0,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,1,17,0.05,219,0,11,0,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,1,17,0.1,219,0,22,0,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,2,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,2,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,2,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,2,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,2,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,2,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,3,15,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,3,15,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,3,16,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,3,16,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True
+Ridge,5,3,17,0.05,219,0,11,11,11,0,True,True,True,True,True,True,True,True,True
+Ridge,5,3,17,0.1,219,0,22,22,22,0,True,True,True,True,True,True,True,True,True

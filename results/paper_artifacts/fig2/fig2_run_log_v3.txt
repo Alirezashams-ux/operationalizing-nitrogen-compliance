@@ -1,0 +1,16 @@
+src/__pycache__/Figure_@code.py:38: UserWarning: The argument 'infer_datetime_format' is deprecated and will be removed in a future version. A strict version of it is now the default, see https://pandas.pydata.org/pdeps/0004-consistent-to-datetime-parsing.html. You can safely remove this argument.
+  dt = pd.to_datetime(series, errors="coerce", infer_datetime_format=True)
+=== Figure 2 input summary ===
+CSV: data/Ulsan_Yongsan.csv
+Detected date column: Date
+Detected TN column:   TNout
+Rows (after date parse): 1031
+Non-missing TNout points: 1031
+Date span: 2021-01-04 to 2023-10-31
+TNout min/median/max: 6.310 / 12.600 / 19.600 mg/L
+Base rate P(TNout ≥ 15) = 16.39%
+Base rate P(TNout ≥ 16) = 8.83%
+Base rate P(TNout ≥ 17) = 3.01%
+Saved:
+  results/paper_artifacts/fig2/fig2_tnout_reality_check.pdf
+  results/paper_artifacts/fig2/fig2_tnout_reality_check.png

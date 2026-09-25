@@ -1,0 +1,29 @@
+candidate_file,sha256,row_count,candidate_type,matches_submitted_counts,matches_si_s6_totals,n_h1,n_h3,n_h5,e15_h1,e16_h1,e17_h1,e15_h3,e16_h3,e17_h3,e15_h5,e16_h5,e17_h5,notes,record_type,horizon,date,fold,y_true,event_tau15,event_tau16,event_tau17,present_in_759,present_in_747,likely_reason
+/home/alrezshams/acs_tnout_ulsan_revision/results/final_tables/results_discussion_csvs/Table1_point_forecast_summary_H1_H3_H5_main_linear.csv,f7a316d0a3e305dbba9f265191a82861089818c2b3b7c7adcb54bf9647369f31,3.0,point_forecast_summary,NO,NO,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,contains MAE/RMSE summary only; no n_test/events columns,candidate_comparison,,,,,,,,,,
+/home/alrezshams/acs_tnout_ulsan_revision/results/final_tables/results_discussion_csvs/Table1_leakage_safe_point_forecasting.csv,1722160d320687c2ce280f23aa53b41e199e4c65dd8e0a9ce794671dae2588bd,25.0,leaderboard_point_table,NO,NO,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,model leaderboard; no direct n_test/events columns,candidate_comparison,,,,,,,,,,
+/home/alrezshams/acs_tnout_ulsan_revision/results/tables/leaderboard_point_by_horizon.csv,1722160d320687c2ce280f23aa53b41e199e4c65dd8e0a9ce794671dae2588bd,25.0,leaderboard_point_table,NO,NO,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,model leaderboard; no direct n_test/events columns,candidate_comparison,,,,,,,,,,
+/home/alrezshams/acs_tnout_ulsan_revision/results/final_tables/results_discussion_csvs/Table2_exceedance_prevalence_random_baseline.csv,87ca566e6810acd71db5b8d52c21585686b252db989857f21c72c93f81328665,9.0,exceedance_prevalence_random_baseline,YES,NO,762,759,759,141,74,30,140,73,29,140,73,29,,candidate_comparison,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-09-30,1.0,13.13,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-01,1.0,15.38,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-02,1.0,15.49,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-03,1.0,16.42,1.0,1.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-04,1.0,15.95,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-05,1.0,15.19,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-06,1.0,13.78,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-07,1.0,13.13,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-08,1.0,14.65,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-09,1.0,12.77,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-10,1.0,14.23,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,3.0,2021-10-11,1.0,16.94,1.0,1.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-09-28,1.0,13.13,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-09-29,1.0,15.38,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-09-30,1.0,15.49,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-01,1.0,16.42,1.0,1.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-02,1.0,15.95,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-03,1.0,15.19,1.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-04,1.0,13.78,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-05,1.0,13.13,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-06,1.0,14.65,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-07,1.0,12.77,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-08,1.0,14.23,0.0,0.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window
+,,,,,,,,,,,,,,,,,,,date_delta,5.0,2021-10-09,1.0,16.94,1.0,1.0,0.0,YES,NO,non-v2 feature builder includes 12 earlier test dates before v2 canonical test window

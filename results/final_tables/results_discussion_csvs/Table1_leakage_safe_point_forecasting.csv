@@ -1,0 +1,26 @@
+model,model_full_name,source_group,horizon,MAE,RMSE,MASE1,MASE7,source_file,rank_MAE,rank_RMSE
+hybrid_point,Hybrid point predictor (weighted regression blend),hybrid_rank_v2_guarded,5,1.712735274475903,2.2115470845958685,1.103976127253051,0.8148628618472348,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,1,1
+enet,ElasticNet (generic),hybrid_rank_v2_guarded,5,1.7680670149154971,2.2587175270745177,1.139641253927905,0.8411878760146418,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,2,2
+hgbr,Histogram Gradient Boosting Regressor (Optuna-tuned),hybrid_rank_v2_guarded,5,1.795447704749488,2.290501071497145,1.1572899988185572,0.8542147036919691,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,3,3
+persistence,Persistence baseline (carry-forward),hybrid_rank_v2_guarded,5,2.074511405454582,2.666127990376657,1.3371658197656016,0.9869839933674076,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv,4,4
+enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",main_linear,1,1.5372939109802246,1.9287165403366089,1.2294994535255503,0.811565238400564,results/metrics/main_linear_metrics_H1.json,1,1
+enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",main_linear,1,1.544630726178487,1.9364512364069624,1.2356406307020134,0.8155458242758727,results/metrics/main_linear_metrics_H1.json,2,2
+persistence,Persistence baseline (carry-forward),main_linear,1,1.5460530816726483,2.044486237973267,1.2315543026492115,0.8134614336432721,results/metrics/main_linear_metrics_H1.json,3,6
+enet_a0.01_l0.5,"ElasticNet (alpha=0.01, l1_ratio=0.5)",main_linear,1,1.5733778476715088,1.96690046787262,1.2593900860762617,0.8310520791410485,results/metrics/main_linear_metrics_H1.json,4,3
+enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",main_linear,1,1.5783717234929402,1.9724770784378047,1.2634656886636313,0.8337266179396942,results/metrics/main_linear_metrics_H1.json,5,4
+enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",main_linear,1,1.6070917050043745,2.013991355895996,1.2869401712296575,0.8493558740915595,results/metrics/main_linear_metrics_H1.json,6,5
+enet_a1.0_l0.5,"ElasticNet (alpha=1.0, l1_ratio=0.5)",main_linear,1,1.7068219582239788,2.1309617360432944,1.3694896303534467,0.9029965011230352,results/metrics/main_linear_metrics_H1.json,7,7
+enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",main_linear,3,1.7191454966862996,2.163148125012716,1.3744038017792553,0.9069802882739788,results/metrics/main_linear_metrics_H3.json,1,1
+enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",main_linear,3,1.7274152040481567,2.1844985485076904,1.381137543824826,0.9114121147249504,results/metrics/main_linear_metrics_H3.json,2,3
+enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",main_linear,3,1.729895830154419,2.172788619995117,1.3831895867440749,0.9128002081928313,results/metrics/main_linear_metrics_H3.json,3,2
+enet_a0.01_l0.5,"ElasticNet (alpha=0.01, l1_ratio=0.5)",main_linear,3,1.7926348447799685,2.2440013885498047,1.435030071152595,0.9467905818265584,results/metrics/main_linear_metrics_H3.json,4,4
+enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",main_linear,3,1.7959413131078084,2.2477505207061768,1.4375820347902992,0.9485264531926126,results/metrics/main_linear_metrics_H3.json,5,5
+enet_a1.0_l0.5,"ElasticNet (alpha=1.0, l1_ratio=0.5)",main_linear,3,1.8087366422017412,2.2640947500864663,1.4489887446449623,0.955399934335322,results/metrics/main_linear_metrics_H3.json,6,6
+persistence,Persistence baseline (carry-forward),main_linear,3,2.0250068772608736,2.578892839628263,1.6110314315369614,1.064406852711045,results/metrics/main_linear_metrics_H3.json,7,7
+enet_a1.0_l0.2,"ElasticNet (alpha=1.0, l1_ratio=0.2)",main_linear,5,1.794438322385152,2.266522844632467,1.4486108776092987,0.9522496759231456,results/metrics/main_linear_metrics_H5.json,1,1
+enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",main_linear,5,1.799362103144328,2.268249273300171,1.4526163230363534,0.9549818110830942,results/metrics/main_linear_metrics_H5.json,2,2
+enet_a0.1_l0.2,"ElasticNet (alpha=0.1, l1_ratio=0.2)",main_linear,5,1.8082784016927085,2.2813096841176352,1.459767046705027,0.9597629767057944,results/metrics/main_linear_metrics_H5.json,3,3
+enet_a0.01_l0.2,"ElasticNet (alpha=0.01, l1_ratio=0.2)",main_linear,5,1.8702759742736816,2.3548243840535483,1.5126512133225667,0.9940229900179708,results/metrics/main_linear_metrics_H5.json,4,5
+enet_a0.01_l0.5,"ElasticNet (alpha=0.01, l1_ratio=0.5)",main_linear,5,1.873133699099223,2.3568884134292603,1.515070187153546,0.9955915582538458,results/metrics/main_linear_metrics_H5.json,5,6
+enet_a1.0_l0.5,"ElasticNet (alpha=1.0, l1_ratio=0.5)",main_linear,5,1.874491651852925,2.3431595961252847,1.5162937852220355,0.9958111445997784,results/metrics/main_linear_metrics_H5.json,6,4
+persistence,Persistence baseline (carry-forward),main_linear,5,2.0774835591573804,2.6533337137266915,1.6664476520183549,1.0967473786077473,results/metrics/main_linear_metrics_H5.json,7,7

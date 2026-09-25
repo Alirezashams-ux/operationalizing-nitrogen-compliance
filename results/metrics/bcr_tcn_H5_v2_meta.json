@@ -1,0 +1,42 @@
+{
+  "h": 5,
+  "npz": "/home/alrezshams/acs_tnout_ulsan/features/ulsan_H5_features_v2.npz",
+  "cfg": {
+    "L": 30,
+    "channels": 32,
+    "blocks": 4,
+    "kernel": 3,
+    "dropout": 0.25,
+    "lr": 0.001,
+    "wd": 0.001,
+    "batch": 64,
+    "epochs": 200,
+    "patience": 20,
+    "val_frac": 0.15,
+    "huber_beta": 1.0,
+    "r_target": 0.05,
+    "w_reg": 1.0,
+    "w_bce": 0.5,
+    "w_rank": 0.8,
+    "w_budget": 0.2,
+    "grad_clip": 1.0
+  },
+  "fold_summary": [
+    {
+      "fold": 1,
+      "best_val_mae": 3.171808958053589,
+      "best_epoch": 25
+    },
+    {
+      "fold": 2,
+      "best_val_mae": 1.5758883953094482,
+      "best_epoch": 95
+    },
+    {
+      "fold": 3,
+      "best_val_mae": 1.7141491174697876,
+      "best_epoch": 31
+    }
+  ],
+  "n_preds": 747
+}

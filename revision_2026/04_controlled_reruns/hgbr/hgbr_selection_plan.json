@@ -1,0 +1,192 @@
+{
+  "provenance_status_by_horizon": {
+    "1": "B",
+    "3": "B",
+    "5": "B"
+  },
+  "candidate_space_by_horizon": {
+    "1": {
+      "lineage": "ordinary_non_v2",
+      "source_scripts": [
+        "src/train_hgbr_optuna_multi.py",
+        "src/save_hgbr_predictions.py"
+      ],
+      "parameter_space": {
+        "learning_rate": {
+          "distribution": "log_uniform",
+          "low": 0.01,
+          "high": 0.2
+        },
+        "max_iter": {
+          "distribution": "int_uniform",
+          "low": 200,
+          "high": 1500
+        },
+        "max_leaf_nodes": {
+          "distribution": "int_uniform",
+          "low": 15,
+          "high": 255
+        },
+        "min_samples_leaf": {
+          "distribution": "int_uniform",
+          "low": 10,
+          "high": 160
+        },
+        "l2_regularization": {
+          "distribution": "log_uniform",
+          "low": 1e-06,
+          "high": 20.0
+        },
+        "max_bins": {
+          "distribution": "int_uniform",
+          "low": 64,
+          "high": 255
+        }
+      },
+      "fixed_parameters": {
+        "early_stopping": true,
+        "validation_fraction": 0.1,
+        "random_state": 42
+      }
+    },
+    "3": {
+      "lineage": "ordinary_non_v2",
+      "source_scripts": [
+        "src/train_hgbr_optuna_multi.py",
+        "src/save_hgbr_predictions.py"
+      ],
+      "parameter_space": {
+        "learning_rate": {
+          "distribution": "log_uniform",
+          "low": 0.01,
+          "high": 0.2
+        },
+        "max_iter": {
+          "distribution": "int_uniform",
+          "low": 200,
+          "high": 1500
+        },
+        "max_leaf_nodes": {
+          "distribution": "int_uniform",
+          "low": 15,
+          "high": 255
+        },
+        "min_samples_leaf": {
+          "distribution": "int_uniform",
+          "low": 10,
+          "high": 160
+        },
+        "l2_regularization": {
+          "distribution": "log_uniform",
+          "low": 1e-06,
+          "high": 20.0
+        },
+        "max_bins": {
+          "distribution": "int_uniform",
+          "low": 64,
+          "high": 255
+        }
+      },
+      "fixed_parameters": {
+        "early_stopping": true,
+        "validation_fraction": 0.1,
+        "random_state": 42
+      }
+    },
+    "5": {
+      "lineage": "v2",
+      "source_scripts": [
+        "src/train_hgbr_optuna_v2.py",
+        "src/save_hgbr_predictions_v2.py"
+      ],
+      "parameter_space": {
+        "learning_rate": {
+          "distribution": "log_uniform",
+          "low": 0.01,
+          "high": 0.2
+        },
+        "max_iter": {
+          "distribution": "int_uniform",
+          "low": 200,
+          "high": 1800
+        },
+        "max_leaf_nodes": {
+          "distribution": "int_uniform",
+          "low": 15,
+          "high": 255
+        },
+        "min_samples_leaf": {
+          "distribution": "int_uniform",
+          "low": 10,
+          "high": 200
+        },
+        "l2_regularization": {
+          "distribution": "log_uniform",
+          "low": 1e-06,
+          "high": 30.0
+        },
+        "max_bins": {
+          "distribution": "int_uniform",
+          "low": 64,
+          "high": 255
+        }
+      },
+      "fixed_parameters": {
+        "early_stopping": true,
+        "validation_fraction": 0.1,
+        "random_state": 42
+      }
+    }
+  },
+  "feature_set_by_horizon": {
+    "1": {
+      "feature_set_id": "hgbr_npz_ordinary_H1_18col",
+      "feature_npz_path": "features/ulsan_H1_features.npz",
+      "expected_feature_count": 18
+    },
+    "3": {
+      "feature_set_id": "hgbr_npz_ordinary_H3_18col",
+      "feature_npz_path": "features/ulsan_H3_features.npz",
+      "expected_feature_count": 18
+    },
+    "5": {
+      "feature_set_id": "hgbr_npz_v2_H5_34col",
+      "feature_npz_path": "features/ulsan_H5_features_v2.npz",
+      "expected_feature_count": 34
+    }
+  },
+  "selection_metric": "inner_validation_MAE",
+  "inner_split_source": "revision_2026/03_corrected_protocol/corrected_split_assignment.csv",
+  "imputation_method": "none",
+  "scaling_method": "none",
+  "loss": "squared_error",
+  "early_stopping": true,
+  "validation_strategy": "evaluate candidates only on purged inner_validation rows from corrected_split_assignment.csv; no outer_test access during selection",
+  "random_seed": {
+    "model_fit_random_state": 42,
+    "candidate_sampling_seed_by_horizon": {
+      "1": 4201,
+      "3": 4203,
+      "5": 4205
+    }
+  },
+  "tie_break_rule": "minimize inner_validation_MAE; if tied, choose lexicographically smallest candidate_configuration_id",
+  "outer_test_isolation": "outer_test rows are never used during candidate evaluation or selection; one final refit per horizon/fold on purged outer_train only",
+  "refit_strategy": "for each horizon and outer_fold, refit selected candidate on complete purged outer_train partition, then predict outer_test exactly once",
+  "search_method": "deterministic_random_search_over_recovered_optuna_space",
+  "search_budget": {
+    "1": 16,
+    "3": 16,
+    "5": 16
+  },
+  "authorized_horizons": [
+    1,
+    3,
+    5
+  ],
+  "outer_folds": [
+    1,
+    2,
+    3
+  ]
+}

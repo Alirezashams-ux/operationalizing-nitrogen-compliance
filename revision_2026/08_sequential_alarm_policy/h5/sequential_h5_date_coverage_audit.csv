@@ -1,0 +1,37 @@
+model,threshold,nominal_budget_r,expected_N,observed_N,fold1_N,fold2_N,fold3_N,eligible_fold1_N,eligible_fold2_N,eligible_fold3_N,missing_keys,extra_keys,duplicates,dates_monotonic_within_fold,target_date_equals_feature_date_plus_5,coverage_pass
+BCR-TCN v1.1,15,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+BCR-TCN v1.1,15,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+BCR-TCN v1.1,16,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+BCR-TCN v1.1,16,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+BCR-TCN v1.1,17,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+BCR-TCN v1.1,17,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+ElasticNet,15,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+ElasticNet,15,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+ElasticNet,16,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+ElasticNet,16,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+ElasticNet,17,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+ElasticNet,17,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HGBR,15,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HGBR,15,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HGBR,16,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HGBR,16,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HGBR,17,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HGBR,17,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HybridRank_fixed_documented,15,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HybridRank_fixed_documented,15,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HybridRank_fixed_documented,16,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HybridRank_fixed_documented,16,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HybridRank_fixed_documented,17,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+HybridRank_fixed_documented,17,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Persistence,15,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Persistence,15,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Persistence,16,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Persistence,16,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Persistence,17,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Persistence,17,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Ridge,15,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Ridge,15,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Ridge,16,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Ridge,16,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Ridge,17,0.05,747,747,249,249,249,219,219,219,0,0,0,True,True,True
+Ridge,17,0.1,747,747,249,249,249,219,219,219,0,0,0,True,True,True

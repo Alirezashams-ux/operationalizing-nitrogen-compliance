@@ -1,0 +1,519 @@
+{
+  "run_id": "fully_nested_hybridrank_h5_d62721ac686f_6ed147cd_f83baf57",
+  "purpose": "Fully chronological and fully nested H5 HybridRank pathway",
+  "horizon": 5,
+  "nested_split_definition": {
+    "component_validation_fraction": 0.15,
+    "hybrid_validation_fraction": 0.15,
+    "deterministic_tail_rounding": "floor_with_min1_and_nonempty_guard",
+    "embargo_days": 5
+  },
+  "component_validation_fraction": 0.15,
+  "hybrid_validation_fraction": 0.15,
+  "embargo_days": 5,
+  "event_support_rule": {
+    "minimum_events_required": 5,
+    "minimum_alarm_slots_required": 3,
+    "guard_fixed_policy_condition": "r <= 0.05"
+  },
+  "guard_rule": "fixed_policy_when_r_le_0.05",
+  "component_models": [
+    "BCR-TCN",
+    "ElasticNet",
+    "Persistence",
+    "HGBR"
+  ],
+  "candidate_spaces": {
+    "ElasticNet": [
+      {
+        "alpha": 0.01,
+        "l1_ratio": 0.2
+      },
+      {
+        "alpha": 0.1,
+        "l1_ratio": 0.2
+      },
+      {
+        "alpha": 1.0,
+        "l1_ratio": 0.2
+      },
+      {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 0.1,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 1.0,
+        "l1_ratio": 0.5
+      }
+    ],
+    "HGBR": {
+      "candidate_space_h5": {
+        "lineage": "v2",
+        "source_scripts": [
+          "src/train_hgbr_optuna_v2.py",
+          "src/save_hgbr_predictions_v2.py"
+        ],
+        "parameter_space": {
+          "learning_rate": {
+            "distribution": "log_uniform",
+            "low": 0.01,
+            "high": 0.2
+          },
+          "max_iter": {
+            "distribution": "int_uniform",
+            "low": 200,
+            "high": 1800
+          },
+          "max_leaf_nodes": {
+            "distribution": "int_uniform",
+            "low": 15,
+            "high": 255
+          },
+          "min_samples_leaf": {
+            "distribution": "int_uniform",
+            "low": 10,
+            "high": 200
+          },
+          "l2_regularization": {
+            "distribution": "log_uniform",
+            "low": 1e-06,
+            "high": 30.0
+          },
+          "max_bins": {
+            "distribution": "int_uniform",
+            "low": 64,
+            "high": 255
+          }
+        },
+        "fixed_parameters": {
+          "early_stopping": true,
+          "validation_fraction": 0.1,
+          "random_state": 42
+        }
+      },
+      "search_budget_h5": 16,
+      "candidate_sampling_seed_h5": 4205,
+      "model_fit_random_state": 42
+    },
+    "BCR-TCN": {
+      "model": "BCR-TCN",
+      "model_full_name": "Budget-Constrained Recall Temporal Convolutional Network",
+      "model_version": "1.1",
+      "horizon": 5,
+      "L": 60,
+      "channels": 48,
+      "blocks": 5,
+      "kernel": 3,
+      "dropout": 0.25,
+      "learning_rate": 0.0008,
+      "weight_decay": 0.001,
+      "batch_size": 64,
+      "epochs_max": 260,
+      "patience": 25,
+      "validation_fraction_reference": 0.15,
+      "huber_beta": 1.0,
+      "w_reg": 1.0,
+      "w_bce": 0.6,
+      "w_rank": 1.4,
+      "grad_clip": 1.0,
+      "r_budget": 0.05,
+      "checkpoint_threshold": 16,
+      "seed": 42,
+      "optimizer": "AdamW",
+      "checkpoint_metric": "validation_recall_at_budget_r05_tau16",
+      "selection_tie_break_rule": "highest validation recall at tau16 under r=0.05; ties keep earliest epoch",
+      "training_split_rule": "use corrected_split_assignment.csv H5 locked inner assignments; do not rebuild 15% split independently"
+    },
+    "Persistence": {
+      "rule": "y_pred = TNout at feature_date"
+    }
+  },
+  "selection_objectives": {
+    "ElasticNet": "min_inner_validation_MAE_tie_smallest_alpha_then_l1_ratio",
+    "HGBR": "min_inner_validation_MAE_tie_smallest_candidate_configuration_id",
+    "BCR-TCN": "max_validation_recall_tau16_r05_tie_earliest_epoch",
+    "HybridRank": "precision_floor_then_lexicographic_recall_precision_tp"
+  },
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "canonical_assembly_id": "canonical_h5_cross_model_6ed147cd_f83baf57_596f1d05ff47",
+  "canonical_checksums": {
+    "canonical_h5_assembly_manifest.json": {
+      "expected": "fa0fc288cdb09954d11ee2da26f8258e2fb945f7d4c1f13d446daf72591e7c98",
+      "observed": "fa0fc288cdb09954d11ee2da26f8258e2fb945f7d4c1f13d446daf72591e7c98",
+      "pass": true
+    },
+    "canonical_h5_assembly_report.md": {
+      "expected": "0ddf576e309a727f93147f36ec3791728281027b38dbb2cabbec928f3cf26ff3",
+      "observed": "0ddf576e309a727f93147f36ec3791728281027b38dbb2cabbec928f3cf26ff3",
+      "pass": true
+    },
+    "canonical_h5_event_prevalence.csv": {
+      "expected": "276ba770d1b48970a69194ecf3fef1ef3beb24a4ef9586d013d420909f622ec0",
+      "observed": "276ba770d1b48970a69194ecf3fef1ef3beb24a4ef9586d013d420909f622ec0",
+      "pass": true
+    },
+    "canonical_h5_key_audit.csv": {
+      "expected": "6a6d03a668b110ca2fb3a21b3caa9bc6a4fdd6ec27d324f1c5cee40fc2ced36b",
+      "observed": "6a6d03a668b110ca2fb3a21b3caa9bc6a4fdd6ec27d324f1c5cee40fc2ced36b",
+      "pass": true
+    },
+    "canonical_h5_point_metrics_by_fold.csv": {
+      "expected": "a8bd54e70b6e62dc50391166bbf7db05f8842aadc963a87381ab7db7b4bbf8a5",
+      "observed": "a8bd54e70b6e62dc50391166bbf7db05f8842aadc963a87381ab7db7b4bbf8a5",
+      "pass": true
+    },
+    "canonical_h5_point_metrics_pooled.csv": {
+      "expected": "361831f28551ef8ce128439c0ee6a5e00c5fbaae71ebb24267ff6b4a487120b7",
+      "observed": "361831f28551ef8ce128439c0ee6a5e00c5fbaae71ebb24267ff6b4a487120b7",
+      "pass": true
+    },
+    "canonical_h5_predictions_long.csv": {
+      "expected": "01e319cc242ed38200e529a88ca196952017ea7804cd6287bcd405ed59ed0af4",
+      "observed": "01e319cc242ed38200e529a88ca196952017ea7804cd6287bcd405ed59ed0af4",
+      "pass": true
+    },
+    "canonical_h5_predictions_wide.csv": {
+      "expected": "bd0ff5160804c6945fb45e1c52c10d76f95ec1d85b4466f6ff681bed76431d77",
+      "observed": "bd0ff5160804c6945fb45e1c52c10d76f95ec1d85b4466f6ff681bed76431d77",
+      "pass": true
+    },
+    "canonical_h5_source_registry.csv": {
+      "expected": "7d6d10f75e0f50e50dc8bc39ff982077cd541e8602709c70a794001b380c79bb",
+      "observed": "7d6d10f75e0f50e50dc8bc39ff982077cd541e8602709c70a794001b380c79bb",
+      "pass": true
+    },
+    "input_verification.json": {
+      "expected": "882ad8b739f0d64da50eda5dfd5b1850fb27e29e56e0fefb76464665406ee0fc",
+      "observed": "882ad8b739f0d64da50eda5dfd5b1850fb27e29e56e0fefb76464665406ee0fc",
+      "pass": true
+    },
+    "test_canonical_h5_assembly.py": {
+      "expected": "6ad7de7d4ea203a5bb046a8330e51915e4363353693bb16e53cba7743822d3f1",
+      "observed": "6ad7de7d4ea203a5bb046a8330e51915e4363353693bb16e53cba7743822d3f1",
+      "pass": true
+    }
+  },
+  "git_branch": "controlled-reruns-v1",
+  "git_commit": "d62721ac686f9419a0fda5e08a3eae38a7eb53b4",
+  "python_executable": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python",
+  "python_version": "3.8.10",
+  "execution_command": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python build_fully_nested_hybridrank_h5.py",
+  "timestamp": "2026-08-05T07:35:01+00:00",
+  "software_versions": {
+    "pandas": "2.0.3",
+    "numpy": "1.24.4",
+    "scikit_learn": "1.3.2",
+    "torch": "2.4.1+cu121"
+  },
+  "output_files": [
+    "bcr_component_validation_gate.csv",
+    "build_fully_nested_hybridrank_h5.py",
+    "component_selection_results.csv",
+    "fold1_component_validation_tau16_diagnostic.csv",
+    "fully_nested_h5_split_assignment.csv",
+    "fully_nested_h5_split_summary.csv",
+    "fully_nested_hybridrank_h5_checksums.sha256",
+    "fully_nested_hybridrank_h5_completion_report.md",
+    "fully_nested_hybridrank_h5_manifest.json",
+    "input_verification.json",
+    "test_fully_nested_hybridrank_h5.py"
+  ],
+  "output_checksums": {
+    "fold1_component_validation_tau16_diagnostic.csv": "0d4da7a258038accf6b96773617c0573dfde4821dd8933ec7e32b4e9a96d0fa9",
+    "fully_nested_h5_split_summary.csv": "b2b7602ce92b466218c3b129a2b15710a45afcaecc8c119fa2facc47091b3951",
+    "test_fully_nested_hybridrank_h5.py": "819508b5598ecec6f6c46ce0e2344d6015f70481150d622fa114dc1984307e39",
+    "fully_nested_hybridrank_h5_checksums.sha256": "331950f2e812287992708da22ab14bcea4d742579d55e9214492444d9cba22ff",
+    "fully_nested_h5_split_assignment.csv": "ec53dd15141cc866f4164fa194309cd9ed0e997c74d7305c6cec3795ea09971f",
+    "fully_nested_hybridrank_h5_manifest.json": "377a1d16b2e8920dbd964b0cca9dce7c24498bc9f494e2a873bf7acfed82dbbc",
+    "fully_nested_hybridrank_h5_completion_report.md": "8e094c20a9c2d3400329484b3774f28d817783f1f33f24c5fc32584c8726b997",
+    "component_selection_results.csv": "7ba7fc16d018e8a04b709a964fae7501cfd888fc9da60be61ca7d47845b7b410",
+    "input_verification.json": "b43de1937b12f4ca10118b0f4645e6bc0c7a9f0661682ca399ca4d2d5bac05cc",
+    "bcr_component_validation_gate.csv": "88d3d9a443de6c4374a36b7ed8a90bc882cfa07d1f04bffa44f57b510fdfc085",
+    "build_fully_nested_hybridrank_h5.py": "78ad0ef88459db9ea029120605f07bdecb00f628a6feefc26bc80c61620a35ec"
+  },
+  "test_result": "pass_guard_block_28_of_28",
+  "deterministic_result": "pass",
+  "files_modified_outside_authorized_directory": [],
+  "limitations": [
+    "Submitted tuned HybridRank pooled non-held-out folds, allowing future chronology to influence earlier folds.",
+    "The revised procedure separates component selection and ensemble selection.",
+    "Five-day target-date embargoes separate every stage.",
+    "The fixed policy is used at r <= 0.05.",
+    "The fixed policy is also used when HybridRank-validation event support is insufficient.",
+    "Full outer-test fold rank normalization remains retrospective and non-deployable.",
+    "A separate sequential policy will be evaluated later.",
+    "Hybrid-specific component predictions are not substituted for the canonical point-forecast package.",
+    "No outer-test alarm metrics were calculated in this stage.",
+    "BCR-TCN component-validation Recall@5% checkpoint selection was blocked because tau16 event support was insufficient."
+  ],
+  "protected_source_checksum_snapshot": {
+    "before": {
+      "revision_2026/03_corrected_protocol/.pytest_cache/.gitignore": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+      "revision_2026/03_corrected_protocol/.pytest_cache/CACHEDIR.TAG": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "revision_2026/03_corrected_protocol/.pytest_cache/README.md": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "revision_2026/03_corrected_protocol/.pytest_cache/v/cache/nodeids": "405452aa21a7660c22e2348413701fa6f27d037c4135f3ae69abdb132bace928",
+      "revision_2026/03_corrected_protocol/__pycache__/test_purged_nested_splits.cpython-313-pytest-9.0.2.pyc": "49f525e4137cb459ecfacf99e64c2f91f3db272ddb0d1ba7a4c2e8e28120765f",
+      "revision_2026/03_corrected_protocol/alarm_evaluation_protocol.md": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "revision_2026/03_corrected_protocol/build_purged_nested_splits.py": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+      "revision_2026/03_corrected_protocol/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "revision_2026/03_corrected_protocol/corrected_evaluation_protocol.md": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "revision_2026/03_corrected_protocol/corrected_protocol_v1.sha256": "b878b7107622da5fb8fd21b44ac00e11a6c754f3cfd5f68915bbb1c493c81284",
+      "revision_2026/03_corrected_protocol/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "revision_2026/03_corrected_protocol/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/PROTOCOL_LOCK.md": "52b7b071be3026ce262534694454c0cf27bc8dc102cd696051ca4ae1aac39bdb",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/alarm_evaluation_protocol.md": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_evaluation_protocol.md": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_protocol_v1.sha256": "b878b7107622da5fb8fd21b44ac00e11a6c754f3cfd5f68915bbb1c493c81284",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/rerun_execution_plan.csv": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "revision_2026/03_corrected_protocol/protocol_readiness_report.md": "9ad561a8273817b296e5b063c1ecb8870c0e2529a3efcfceac61d7f35e436e20",
+      "revision_2026/03_corrected_protocol/rerun_execution_plan.csv": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "revision_2026/03_corrected_protocol/test_purged_nested_splits.py": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_boundary_audit.csv": "f814e7d75110d6a8eb2bcb7013d6dcf1563da1fa81cfed0552da44963005bc75",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_definition_and_provenance.md": "e3c7e62727750cfd12f538de24c83e054cb2d1212653ab90401e6a1daff50315",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_fixed_configuration.json": "22e0684eca4b2b8dd5118bf91d17f56418a8d2a881be89ae24e67ae53cfde87e",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_completion_report.md": "ffa5e5ea951fb7e09193687f5f1e6e3ef503607ad74d484d91e0286030ad4bfd",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_event_prevalence.csv": "b6d73e821d51277c5e878c57b713b8234766b32b3bf160c8003f13e1fb5a9535",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_fold_summary.csv": "ac2ca33effd3d777d0917a9ce74f4dcd62fbc9147a06ccf3f9f4374b8ae06d06",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_gradient_diagnostics.csv": "ae93690ac1227aa618cc97480f9be2435c29931beb4bfd3849c59bb245a58f79",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_metrics_by_fold.csv": "9038645eec83ccf43a7e7d8232df1e2ede2d67831a034915559c3d7fed3f13b5",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_metrics_pooled.csv": "e5e634b0e7ab9188137c377f07ae4b463d6c39338aee2a88d6a3395e52c77483",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_predictions.csv": "bfac2f185cef916616048b210c535726442034a6630bd080ae8dd5ed3239f8ff",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_reconciliation.md": "46e638d8bb35acbce21fd8e042351b33f14eb40c73668d6eef581f4988871a3c",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_run_manifest.json": "e37fe2d3a156c549abc06036ca118fa3f4fca332f9aa3bbd35419960038cba30",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_submitted_comparison.csv": "e550232628799fc70a17a86eac31760d258ba64b7caff7888ac52454faf454b5",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_training_history.csv": "3b6ebac375218ebf16edbb0b611157b12272ec0a2a5ebdd73e5640bc6628b654",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/input_verification.json": "5e27031c4b9c3d39db392f65fd479476eb008eb1422dfccd08ab8b12ab79f300",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/run_corrected_bcr_tcn_v11_h5.py": "db7f8c48c282cb625d68b81d4f208f8ce48e4bbf9b0c73e85feb650b46cd1e81",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/test_corrected_bcr_tcn_v11_h5.py": "15100c00a7a6288fc489f47e83c50f2cca71717091e44a1c92a86852e846527a",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_completion_report.md": "a0a1141c7b4e81203bd1f9e40d3df94faa7b7b938c648da40522415c405cc29e",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_definition_and_provenance.md": "1da393b8c340a741d3304e3ef1df608ce95168bcb61b724247a2bf11639b6597",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_event_prevalence.csv": "64f1b42b94f82ee5952b42018a2691ec74f025945187de98caa27585832ef38f",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_inner_selection_results.csv": "c70fc22d13dbd27d67086916c9da8d8ce67138c13054952a9d10b246d25158e1",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_by_fold.csv": "7ef0cba62a430da9e3d99f54f94041f98350ec96e42231389fa95deb32a82c90",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_pooled.csv": "048c02ccb30746c3cbdd0d7cbee92b630a0512b8c1ea7798f4c38d30df24fbe6",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_predictions.csv": "dab8dd118ac95fbdef4bac3ca1b763be93320ea0dac1573a8b3b269a15960edb",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json": "14be259172e160e5dffb56432e6c71482c4c80c7dfec10fad51a9dc6f9ec6b15",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_selected_configurations.csv": "b966065cd9831d52130a2947a43c6c0aa3d3fe99a28c4d6653ca24f97ba93349",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_selection_plan.json": "24877563d3fcd763ef85808e00c0f12c570ebdc7d227028a890597919820071f",
+      "revision_2026/04_controlled_reruns/elasticnet/input_verification.json": "c7b922111a111f224803d5512e6f791e9f4352b21d69e9d7c16b6b30a1141212",
+      "revision_2026/04_controlled_reruns/elasticnet/run_corrected_elasticnet.py": "7e797abbc6d774e061e09051f8cca028a9bcdcff040788143605081fc0a7eb13",
+      "revision_2026/04_controlled_reruns/elasticnet/test_corrected_elasticnet.py": "4f29050c4cfdc902228ed66e07882af89d3c04ce28c585f15ec5d268bd830267",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_completion_report.md": "d2e537b1f6d14fca0885f367a11ef74bb213b22369f069bfbd73ee3ff68e8084",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_decision_b_issue_registry.csv": "7362af24f26129ce7a5f5f86a1480a4d69b5322976e5c67695a221dbee6b4ce0",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_definition_and_provenance.md": "311a5b8d0bbfa4781829f7262ec7f7007754012e2ce1d188a5ae1fe5d7f73571",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_event_prevalence.csv": "d5518fb8fdb4b0f4badb4c2afe0c5c44e1598450cab01005a7a2c3dcde1534f9",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_inner_selection_results.csv": "7f01b47af1ce135da76ab76474f4c61fc40b9f1e9fabc972d24ea85c3f2fe694",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_metric_reconciliation.csv": "a1cd579b1723f006e3c08e5c8af56dfff84064d4b5726eb00604feadd281cfd0",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_by_fold.csv": "0abb3b0c65c6f4c1142694fb54f68cd21ee5734fdaf216c1de8dbed3d2f4ca87",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_pooled.csv": "2a414b325fd156e170d40d1c0504dd3b7926010a369d11bea1fb9b670f8bbde7",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_predictions.csv": "f5b4689128aa9cab965bbf8eac3879d05050b32a0c62572c7b3365f7bdc3ba36",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_reconciliation_report.md": "bf6a8d99e28c4adf660c2cc4bfcd4f89d23b0912a7c84769f99a3d679bf71e71",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json": "e03082490b0a7b7fb6116c6ef2ba316f55487fa405aec1b11654a5a107c80d96",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_selected_configurations.csv": "32702856123e29efd7c214f83a1d188643eabc81a177096b0f92287e18ef74aa",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_selection_plan.json": "630e8d99e0157b1573f36781e4c17b236c31cafb81b7f00365040f559cbf6e10",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_submitted_value_registry.csv": "08a2de2315cf23b96bef10913b4b031e8242c5f65d7b336cdd893b4d81f7123d",
+      "revision_2026/04_controlled_reruns/hgbr/input_verification.json": "b019e0a4cfa8adbc0d4062ebf5078df147aff2abd0a7656ddb3fd773cefbcf3c",
+      "revision_2026/04_controlled_reruns/hgbr/run_corrected_hgbr.py": "34c44587bca2d211a761308ea57e248e4d3fc1f1a3695f164314c7a4167c3769",
+      "revision_2026/04_controlled_reruns/hgbr/test_corrected_hgbr.py": "bc8ed63132b87a4c2886807d7451aa614ac5fee2dd5665d12f8e790950d7570e",
+      "revision_2026/04_controlled_reruns/hgbr/test_hgbr_reconciliation.py": "a358ceebd48d13e0337c191d63c9e28abade174ee60adf9b65f6c195e2adea35",
+      "revision_2026/04_controlled_reruns/persistence/input_verification.json": "cecccfe01177e7aefd56b510ff22df08b978d7721451021d6ba0e6e64cb1eadc",
+      "revision_2026/04_controlled_reruns/persistence/persistence_completion_report.md": "2ed4bfab19b9703ec747f199a6acb488078685589f3315c0f97c82c560f570f8",
+      "revision_2026/04_controlled_reruns/persistence/persistence_definition.md": "464f3c3fc8b95e59a7c9a46977b0bb36e2688b959ab9a51651f8651a12822eef",
+      "revision_2026/04_controlled_reruns/persistence/persistence_event_prevalence.csv": "ff3991e212e39f77af511a260d4f220cb74f28cce49ffaaa36252d1b4adb3737",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metric_reconciliation.csv": "8387a7d79b9deb87f58760eac2396a14c4c430dd510d943e3b191224e66f2b5a",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metric_reconciliation.md": "8551078814478defa4602b08c724cc931b692d8a0a4c7c6c4ae9369131290965",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metrics_by_fold.csv": "6c716094f371283a2f9b77701b1e60db738e54e4bbc188d99976cc2d10c7dcb1",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metrics_pooled.csv": "72ced96eaab2effa6614105eb79ac2dc0e64b466a41eb6babdc68a0e90a26dcf",
+      "revision_2026/04_controlled_reruns/persistence/persistence_predictions.csv": "383014421fa4419e7ba626a9a0e0df61f1b302431bb546c9049ce9f8a4b51754",
+      "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json": "444b2d820e38e5704b90010cb1fd1890aa85a5de1560a024eb5689ccdc107c2a",
+      "revision_2026/04_controlled_reruns/persistence/run_corrected_persistence.py": "d3af9d58dcb0880a5174deee06197690b5cc4ccd991078445b15f5923df109f5",
+      "revision_2026/04_controlled_reruns/persistence/test_corrected_persistence.py": "64e31f32eb9c3cb069c1e165b35701e5bce446ca9ae2a65f41bf9b95d3e44371",
+      "revision_2026/04_controlled_reruns/persistence/test_persistence_metric_reconciliation.py": "40f36dda4d151b74d7237510735a9e229bc668287e92a30ce0cc84e5d9ddd564",
+      "revision_2026/04_controlled_reruns/ridge/input_verification.json": "fb11037095e3dee8810b6ac0346e890cad86b6b9b51d8cf01d33d60175f63bca",
+      "revision_2026/04_controlled_reruns/ridge/ridge_completion_report.md": "8a86394982d03312c5702f19c699a5cda396ff6d0c2f23466c489c8d5f1ac20e",
+      "revision_2026/04_controlled_reruns/ridge/ridge_definition_and_provenance.md": "cf8252cde78c06bf6681bd4f6742664e573c9e5fd184a4ba13026fef2a4487ed",
+      "revision_2026/04_controlled_reruns/ridge/ridge_event_prevalence.csv": "63d750592e0c3c7be01a1579afc6daaf727badaa9255473d3d8609a71c9f69d0",
+      "revision_2026/04_controlled_reruns/ridge/ridge_inner_selection_results.csv": "760695944acfe1967c532ac06d8a402f54877b29e2d1e6c5ea24f789d5f92546",
+      "revision_2026/04_controlled_reruns/ridge/ridge_metrics_by_fold.csv": "ef93864fc755300d9c988c167361a8ddde6b6f08c5072486a229052caba1d8cd",
+      "revision_2026/04_controlled_reruns/ridge/ridge_metrics_pooled.csv": "fce9723255d985f8fc6540cb2a093c1c288236ec1270728f5bcf432a02c46194",
+      "revision_2026/04_controlled_reruns/ridge/ridge_predictions.csv": "1bc1646a73abbb94a60c59eb9637e2c9f09ea8d88627a1ee12c46253d2a0594b",
+      "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json": "af0dede277f047c90e483480d21fd6d485edce14e78d9bf8b20d4bdfb2d8438b",
+      "revision_2026/04_controlled_reruns/ridge/ridge_selected_configurations.csv": "d92a89156bfc46b143ec8b914f84182885084a0c74c0249d727e44ac9b759029",
+      "revision_2026/04_controlled_reruns/ridge/ridge_selection_plan.json": "8e197db0f0eaf20b93e8f93ae755efb4be2b250634c2380aafca1085730eaf44",
+      "revision_2026/04_controlled_reruns/ridge/run_corrected_ridge.py": "f98631b98258336c27c642e798614f3365b511d403500f929ad1016b059ece0c",
+      "revision_2026/04_controlled_reruns/ridge/test_corrected_ridge.py": "326346fc44990c5610f8f3e7ae5b34a1990605665146196a1e22d5f5ebb7ea3a",
+      "revision_2026/05_canonical_predictions/h5_cross_model/build_canonical_h5_predictions.py": "da8a41d6e0fbe90511b61f507b764e0db466646b604d08d25b019369ce8e5b96",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_manifest.json": "fa0fc288cdb09954d11ee2da26f8258e2fb945f7d4c1f13d446daf72591e7c98",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_report.md": "0ddf576e309a727f93147f36ec3791728281027b38dbb2cabbec928f3cf26ff3",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_checksums.sha256": "37ecae33ec18b3b7684bb81d6a1add9126c0fc949f8039f6bcd6c28e7fefdb84",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_event_prevalence.csv": "276ba770d1b48970a69194ecf3fef1ef3beb24a4ef9586d013d420909f622ec0",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_key_audit.csv": "6a6d03a668b110ca2fb3a21b3caa9bc6a4fdd6ec27d324f1c5cee40fc2ced36b",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_point_metrics_by_fold.csv": "a8bd54e70b6e62dc50391166bbf7db05f8842aadc963a87381ab7db7b4bbf8a5",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_point_metrics_pooled.csv": "361831f28551ef8ce128439c0ee6a5e00c5fbaae71ebb24267ff6b4a487120b7",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_long.csv": "01e319cc242ed38200e529a88ca196952017ea7804cd6287bcd405ed59ed0af4",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_wide.csv": "bd0ff5160804c6945fb45e1c52c10d76f95ec1d85b4466f6ff681bed76431d77",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_source_registry.csv": "7d6d10f75e0f50e50dc8bc39ff982077cd541e8602709c70a794001b380c79bb",
+      "revision_2026/05_canonical_predictions/h5_cross_model/input_verification.json": "882ad8b739f0d64da50eda5dfd5b1850fb27e29e56e0fefb76464665406ee0fc",
+      "revision_2026/05_canonical_predictions/h5_cross_model/test_canonical_h5_assembly.py": "6ad7de7d4ea203a5bb046a8330e51915e4363353693bb16e53cba7743822d3f1"
+    },
+    "after": {
+      "revision_2026/03_corrected_protocol/.pytest_cache/.gitignore": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+      "revision_2026/03_corrected_protocol/.pytest_cache/CACHEDIR.TAG": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "revision_2026/03_corrected_protocol/.pytest_cache/README.md": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "revision_2026/03_corrected_protocol/.pytest_cache/v/cache/nodeids": "405452aa21a7660c22e2348413701fa6f27d037c4135f3ae69abdb132bace928",
+      "revision_2026/03_corrected_protocol/__pycache__/test_purged_nested_splits.cpython-313-pytest-9.0.2.pyc": "49f525e4137cb459ecfacf99e64c2f91f3db272ddb0d1ba7a4c2e8e28120765f",
+      "revision_2026/03_corrected_protocol/alarm_evaluation_protocol.md": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "revision_2026/03_corrected_protocol/build_purged_nested_splits.py": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+      "revision_2026/03_corrected_protocol/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "revision_2026/03_corrected_protocol/corrected_evaluation_protocol.md": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "revision_2026/03_corrected_protocol/corrected_protocol_v1.sha256": "b878b7107622da5fb8fd21b44ac00e11a6c754f3cfd5f68915bbb1c493c81284",
+      "revision_2026/03_corrected_protocol/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "revision_2026/03_corrected_protocol/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/PROTOCOL_LOCK.md": "52b7b071be3026ce262534694454c0cf27bc8dc102cd696051ca4ae1aac39bdb",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/alarm_evaluation_protocol.md": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_evaluation_protocol.md": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_protocol_v1.sha256": "b878b7107622da5fb8fd21b44ac00e11a6c754f3cfd5f68915bbb1c493c81284",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "revision_2026/03_corrected_protocol/locked_protocol_v1/rerun_execution_plan.csv": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "revision_2026/03_corrected_protocol/protocol_readiness_report.md": "9ad561a8273817b296e5b063c1ecb8870c0e2529a3efcfceac61d7f35e436e20",
+      "revision_2026/03_corrected_protocol/rerun_execution_plan.csv": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+      "revision_2026/03_corrected_protocol/test_purged_nested_splits.py": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_boundary_audit.csv": "f814e7d75110d6a8eb2bcb7013d6dcf1563da1fa81cfed0552da44963005bc75",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_definition_and_provenance.md": "e3c7e62727750cfd12f538de24c83e054cb2d1212653ab90401e6a1daff50315",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_fixed_configuration.json": "22e0684eca4b2b8dd5118bf91d17f56418a8d2a881be89ae24e67ae53cfde87e",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_completion_report.md": "ffa5e5ea951fb7e09193687f5f1e6e3ef503607ad74d484d91e0286030ad4bfd",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_event_prevalence.csv": "b6d73e821d51277c5e878c57b713b8234766b32b3bf160c8003f13e1fb5a9535",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_fold_summary.csv": "ac2ca33effd3d777d0917a9ce74f4dcd62fbc9147a06ccf3f9f4374b8ae06d06",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_gradient_diagnostics.csv": "ae93690ac1227aa618cc97480f9be2435c29931beb4bfd3849c59bb245a58f79",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_metrics_by_fold.csv": "9038645eec83ccf43a7e7d8232df1e2ede2d67831a034915559c3d7fed3f13b5",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_metrics_pooled.csv": "e5e634b0e7ab9188137c377f07ae4b463d6c39338aee2a88d6a3395e52c77483",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_predictions.csv": "bfac2f185cef916616048b210c535726442034a6630bd080ae8dd5ed3239f8ff",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_reconciliation.md": "46e638d8bb35acbce21fd8e042351b33f14eb40c73668d6eef581f4988871a3c",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_run_manifest.json": "e37fe2d3a156c549abc06036ca118fa3f4fca332f9aa3bbd35419960038cba30",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_submitted_comparison.csv": "e550232628799fc70a17a86eac31760d258ba64b7caff7888ac52454faf454b5",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_training_history.csv": "3b6ebac375218ebf16edbb0b611157b12272ec0a2a5ebdd73e5640bc6628b654",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/input_verification.json": "5e27031c4b9c3d39db392f65fd479476eb008eb1422dfccd08ab8b12ab79f300",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/run_corrected_bcr_tcn_v11_h5.py": "db7f8c48c282cb625d68b81d4f208f8ce48e4bbf9b0c73e85feb650b46cd1e81",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/test_corrected_bcr_tcn_v11_h5.py": "15100c00a7a6288fc489f47e83c50f2cca71717091e44a1c92a86852e846527a",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_completion_report.md": "a0a1141c7b4e81203bd1f9e40d3df94faa7b7b938c648da40522415c405cc29e",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_definition_and_provenance.md": "1da393b8c340a741d3304e3ef1df608ce95168bcb61b724247a2bf11639b6597",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_event_prevalence.csv": "64f1b42b94f82ee5952b42018a2691ec74f025945187de98caa27585832ef38f",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_inner_selection_results.csv": "c70fc22d13dbd27d67086916c9da8d8ce67138c13054952a9d10b246d25158e1",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_by_fold.csv": "7ef0cba62a430da9e3d99f54f94041f98350ec96e42231389fa95deb32a82c90",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_metrics_pooled.csv": "048c02ccb30746c3cbdd0d7cbee92b630a0512b8c1ea7798f4c38d30df24fbe6",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_predictions.csv": "dab8dd118ac95fbdef4bac3ca1b763be93320ea0dac1573a8b3b269a15960edb",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json": "14be259172e160e5dffb56432e6c71482c4c80c7dfec10fad51a9dc6f9ec6b15",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_selected_configurations.csv": "b966065cd9831d52130a2947a43c6c0aa3d3fe99a28c4d6653ca24f97ba93349",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_selection_plan.json": "24877563d3fcd763ef85808e00c0f12c570ebdc7d227028a890597919820071f",
+      "revision_2026/04_controlled_reruns/elasticnet/input_verification.json": "c7b922111a111f224803d5512e6f791e9f4352b21d69e9d7c16b6b30a1141212",
+      "revision_2026/04_controlled_reruns/elasticnet/run_corrected_elasticnet.py": "7e797abbc6d774e061e09051f8cca028a9bcdcff040788143605081fc0a7eb13",
+      "revision_2026/04_controlled_reruns/elasticnet/test_corrected_elasticnet.py": "4f29050c4cfdc902228ed66e07882af89d3c04ce28c585f15ec5d268bd830267",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_completion_report.md": "d2e537b1f6d14fca0885f367a11ef74bb213b22369f069bfbd73ee3ff68e8084",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_decision_b_issue_registry.csv": "7362af24f26129ce7a5f5f86a1480a4d69b5322976e5c67695a221dbee6b4ce0",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_definition_and_provenance.md": "311a5b8d0bbfa4781829f7262ec7f7007754012e2ce1d188a5ae1fe5d7f73571",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_event_prevalence.csv": "d5518fb8fdb4b0f4badb4c2afe0c5c44e1598450cab01005a7a2c3dcde1534f9",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_inner_selection_results.csv": "7f01b47af1ce135da76ab76474f4c61fc40b9f1e9fabc972d24ea85c3f2fe694",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_metric_reconciliation.csv": "a1cd579b1723f006e3c08e5c8af56dfff84064d4b5726eb00604feadd281cfd0",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_by_fold.csv": "0abb3b0c65c6f4c1142694fb54f68cd21ee5734fdaf216c1de8dbed3d2f4ca87",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_metrics_pooled.csv": "2a414b325fd156e170d40d1c0504dd3b7926010a369d11bea1fb9b670f8bbde7",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_predictions.csv": "f5b4689128aa9cab965bbf8eac3879d05050b32a0c62572c7b3365f7bdc3ba36",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_reconciliation_report.md": "bf6a8d99e28c4adf660c2cc4bfcd4f89d23b0912a7c84769f99a3d679bf71e71",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json": "e03082490b0a7b7fb6116c6ef2ba316f55487fa405aec1b11654a5a107c80d96",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_selected_configurations.csv": "32702856123e29efd7c214f83a1d188643eabc81a177096b0f92287e18ef74aa",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_selection_plan.json": "630e8d99e0157b1573f36781e4c17b236c31cafb81b7f00365040f559cbf6e10",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_submitted_value_registry.csv": "08a2de2315cf23b96bef10913b4b031e8242c5f65d7b336cdd893b4d81f7123d",
+      "revision_2026/04_controlled_reruns/hgbr/input_verification.json": "b019e0a4cfa8adbc0d4062ebf5078df147aff2abd0a7656ddb3fd773cefbcf3c",
+      "revision_2026/04_controlled_reruns/hgbr/run_corrected_hgbr.py": "34c44587bca2d211a761308ea57e248e4d3fc1f1a3695f164314c7a4167c3769",
+      "revision_2026/04_controlled_reruns/hgbr/test_corrected_hgbr.py": "bc8ed63132b87a4c2886807d7451aa614ac5fee2dd5665d12f8e790950d7570e",
+      "revision_2026/04_controlled_reruns/hgbr/test_hgbr_reconciliation.py": "a358ceebd48d13e0337c191d63c9e28abade174ee60adf9b65f6c195e2adea35",
+      "revision_2026/04_controlled_reruns/persistence/input_verification.json": "cecccfe01177e7aefd56b510ff22df08b978d7721451021d6ba0e6e64cb1eadc",
+      "revision_2026/04_controlled_reruns/persistence/persistence_completion_report.md": "2ed4bfab19b9703ec747f199a6acb488078685589f3315c0f97c82c560f570f8",
+      "revision_2026/04_controlled_reruns/persistence/persistence_definition.md": "464f3c3fc8b95e59a7c9a46977b0bb36e2688b959ab9a51651f8651a12822eef",
+      "revision_2026/04_controlled_reruns/persistence/persistence_event_prevalence.csv": "ff3991e212e39f77af511a260d4f220cb74f28cce49ffaaa36252d1b4adb3737",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metric_reconciliation.csv": "8387a7d79b9deb87f58760eac2396a14c4c430dd510d943e3b191224e66f2b5a",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metric_reconciliation.md": "8551078814478defa4602b08c724cc931b692d8a0a4c7c6c4ae9369131290965",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metrics_by_fold.csv": "6c716094f371283a2f9b77701b1e60db738e54e4bbc188d99976cc2d10c7dcb1",
+      "revision_2026/04_controlled_reruns/persistence/persistence_metrics_pooled.csv": "72ced96eaab2effa6614105eb79ac2dc0e64b466a41eb6babdc68a0e90a26dcf",
+      "revision_2026/04_controlled_reruns/persistence/persistence_predictions.csv": "383014421fa4419e7ba626a9a0e0df61f1b302431bb546c9049ce9f8a4b51754",
+      "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json": "444b2d820e38e5704b90010cb1fd1890aa85a5de1560a024eb5689ccdc107c2a",
+      "revision_2026/04_controlled_reruns/persistence/run_corrected_persistence.py": "d3af9d58dcb0880a5174deee06197690b5cc4ccd991078445b15f5923df109f5",
+      "revision_2026/04_controlled_reruns/persistence/test_corrected_persistence.py": "64e31f32eb9c3cb069c1e165b35701e5bce446ca9ae2a65f41bf9b95d3e44371",
+      "revision_2026/04_controlled_reruns/persistence/test_persistence_metric_reconciliation.py": "40f36dda4d151b74d7237510735a9e229bc668287e92a30ce0cc84e5d9ddd564",
+      "revision_2026/04_controlled_reruns/ridge/input_verification.json": "fb11037095e3dee8810b6ac0346e890cad86b6b9b51d8cf01d33d60175f63bca",
+      "revision_2026/04_controlled_reruns/ridge/ridge_completion_report.md": "8a86394982d03312c5702f19c699a5cda396ff6d0c2f23466c489c8d5f1ac20e",
+      "revision_2026/04_controlled_reruns/ridge/ridge_definition_and_provenance.md": "cf8252cde78c06bf6681bd4f6742664e573c9e5fd184a4ba13026fef2a4487ed",
+      "revision_2026/04_controlled_reruns/ridge/ridge_event_prevalence.csv": "63d750592e0c3c7be01a1579afc6daaf727badaa9255473d3d8609a71c9f69d0",
+      "revision_2026/04_controlled_reruns/ridge/ridge_inner_selection_results.csv": "760695944acfe1967c532ac06d8a402f54877b29e2d1e6c5ea24f789d5f92546",
+      "revision_2026/04_controlled_reruns/ridge/ridge_metrics_by_fold.csv": "ef93864fc755300d9c988c167361a8ddde6b6f08c5072486a229052caba1d8cd",
+      "revision_2026/04_controlled_reruns/ridge/ridge_metrics_pooled.csv": "fce9723255d985f8fc6540cb2a093c1c288236ec1270728f5bcf432a02c46194",
+      "revision_2026/04_controlled_reruns/ridge/ridge_predictions.csv": "1bc1646a73abbb94a60c59eb9637e2c9f09ea8d88627a1ee12c46253d2a0594b",
+      "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json": "af0dede277f047c90e483480d21fd6d485edce14e78d9bf8b20d4bdfb2d8438b",
+      "revision_2026/04_controlled_reruns/ridge/ridge_selected_configurations.csv": "d92a89156bfc46b143ec8b914f84182885084a0c74c0249d727e44ac9b759029",
+      "revision_2026/04_controlled_reruns/ridge/ridge_selection_plan.json": "8e197db0f0eaf20b93e8f93ae755efb4be2b250634c2380aafca1085730eaf44",
+      "revision_2026/04_controlled_reruns/ridge/run_corrected_ridge.py": "f98631b98258336c27c642e798614f3365b511d403500f929ad1016b059ece0c",
+      "revision_2026/04_controlled_reruns/ridge/test_corrected_ridge.py": "326346fc44990c5610f8f3e7ae5b34a1990605665146196a1e22d5f5ebb7ea3a",
+      "revision_2026/05_canonical_predictions/h5_cross_model/build_canonical_h5_predictions.py": "da8a41d6e0fbe90511b61f507b764e0db466646b604d08d25b019369ce8e5b96",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_manifest.json": "fa0fc288cdb09954d11ee2da26f8258e2fb945f7d4c1f13d446daf72591e7c98",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_assembly_report.md": "0ddf576e309a727f93147f36ec3791728281027b38dbb2cabbec928f3cf26ff3",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_checksums.sha256": "37ecae33ec18b3b7684bb81d6a1add9126c0fc949f8039f6bcd6c28e7fefdb84",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_event_prevalence.csv": "276ba770d1b48970a69194ecf3fef1ef3beb24a4ef9586d013d420909f622ec0",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_key_audit.csv": "6a6d03a668b110ca2fb3a21b3caa9bc6a4fdd6ec27d324f1c5cee40fc2ced36b",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_point_metrics_by_fold.csv": "a8bd54e70b6e62dc50391166bbf7db05f8842aadc963a87381ab7db7b4bbf8a5",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_point_metrics_pooled.csv": "361831f28551ef8ce128439c0ee6a5e00c5fbaae71ebb24267ff6b4a487120b7",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_long.csv": "01e319cc242ed38200e529a88ca196952017ea7804cd6287bcd405ed59ed0af4",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_predictions_wide.csv": "bd0ff5160804c6945fb45e1c52c10d76f95ec1d85b4466f6ff681bed76431d77",
+      "revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_source_registry.csv": "7d6d10f75e0f50e50dc8bc39ff982077cd541e8602709c70a794001b380c79bb",
+      "revision_2026/05_canonical_predictions/h5_cross_model/input_verification.json": "882ad8b739f0d64da50eda5dfd5b1850fb27e29e56e0fefb76464665406ee0fc",
+      "revision_2026/05_canonical_predictions/h5_cross_model/test_canonical_h5_assembly.py": "6ad7de7d4ea203a5bb046a8330e51915e4363353693bb16e53cba7743822d3f1"
+    },
+    "changed": []
+  },
+  "bcr_checkpoint_gate": {
+    "rows": [
+      {
+        "outer_fold": 1,
+        "component_validation_N": 30,
+        "component_validation_events_tau16": 0,
+        "component_validation_k_r005": 2,
+        "recall_at_5pct_defined": false,
+        "blocked_for_bcr_checkpoint_selection": true,
+        "gate_notes": "tau16_event_count_zero; recall_at_5pct_undefined; no_checkpoint_selection_permitted",
+        "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+        "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "nested_split_id": "h5_fold1_fully_nested_v1",
+        "run_id": "fully_nested_hybridrank_h5_d62721ac686f_6ed147cd_f83baf57"
+      }
+    ],
+    "blocked_folds": [
+      1
+    ],
+    "policy": "if tau16_events==0 or k_r005==0 then stop fold and do not select checkpoint",
+    "failure": {
+      "outer_fold": 1,
+      "component_validation_N": 30,
+      "component_validation_events_tau16": 0,
+      "component_validation_k_r005": 2,
+      "reason": "tau16_event_count_zero; recall_at_5pct_undefined; no_checkpoint_selection_permitted"
+    }
+  },
+  "fold1_tau16_support_diagnostic": {
+    "file": "fold1_component_validation_tau16_diagnostic.csv",
+    "component_validation_N": 30,
+    "component_validation_tau16_events": 0,
+    "component_validation_tau16_prevalence": 0.0,
+    "component_validation_feature_date_start": "2021-07-26",
+    "component_validation_feature_date_end": "2021-08-24",
+    "component_validation_target_date_start": "2021-07-31",
+    "component_validation_target_date_end": "2021-08-29"
+  }
+}

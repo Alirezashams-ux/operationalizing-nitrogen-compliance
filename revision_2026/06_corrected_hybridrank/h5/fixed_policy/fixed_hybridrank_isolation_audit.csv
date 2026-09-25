@@ -1,0 +1,10 @@
+outer_fold,threshold,canonical_rows,component_keys_identical,raw_scores_match_canonical,weights_fixed_before_score_construction,weight_selection_performed,validation_labels_used,outer_test_labels_used_for_weights,outer_test_labels_used_for_ranks,outer_test_labels_used_for_scores,future_fold_outcomes_used,rank_normalization_uses_complete_outer_test_fold,retrospective_only_label_present,source_files_modified,canonical_files_modified,isolation_pass,notes
+1,15,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+1,16,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+1,17,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+2,15,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+2,16,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+2,17,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+3,15,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+3,16,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated
+3,17,249,True,True,True,False,False,False,False,False,False,True,True,False,False,True,fixed rank ensemble; no label-dependent selection; no top-k evaluated

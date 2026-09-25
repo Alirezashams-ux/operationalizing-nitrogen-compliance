@@ -1,0 +1,167 @@
+model	model_full_name	source_group	horizon	tau_mgL	budget_r	precision	recall	TP	events	k	source_file	rank_recall	rank_precision
+hybrid_paper_fixed	Hybrid rank ensemble (paper-fixed weights)	hybrid_rank_v2_guarded	5	15	0.05	0.5526315789473685	0.1567164179104477	21	134	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+hybrid_rank_v2	Hybrid rank ensemble v2 (policy-based)	hybrid_rank_v2_guarded	5	15	0.05	0.5526315789473685	0.1567164179104477	21	134	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+hgbr	Histogram Gradient Boosting Regressor (Optuna-tuned)	hybrid_rank_v2_guarded	5	15	0.05	0.5	0.1417910447761194	19	134	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+persistence	Persistence baseline (carry-forward)	hybrid_rank_v2_guarded	5	15	0.05	0.5	0.1417910447761194	19	134	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+tcn	TCN risk score model	hybrid_rank_v2_guarded	5	15	0.05	0.5	0.1417910447761194	19	134	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+enet	ElasticNet (generic)	hybrid_rank_v2_guarded	5	15	0.05	0.4210526315789473	0.1194029850746268	16	134	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	3	3
+enet	ElasticNet (generic)	hybrid_rank_v2_guarded	5	15	0.1	0.44	0.2462686567164179	33	134	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+hybrid_rank_v2	Hybrid rank ensemble v2 (policy-based)	hybrid_rank_v2_guarded	5	15	0.1	0.44	0.2462686567164179	33	134	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+persistence	Persistence baseline (carry-forward)	hybrid_rank_v2_guarded	5	15	0.1	0.4266666666666667	0.2388059701492537	32	134	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+hgbr	Histogram Gradient Boosting Regressor (Optuna-tuned)	hybrid_rank_v2_guarded	5	15	0.1	0.4	0.2238805970149253	30	134	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	3	3
+tcn	TCN risk score model	hybrid_rank_v2_guarded	5	15	0.1	0.3866666666666666	0.2164179104477611	29	134	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	4	4
+hybrid_paper_fixed	Hybrid rank ensemble (paper-fixed weights)	hybrid_rank_v2_guarded	5	15	0.1	0.36	0.2014925373134328	27	134	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	5	5
+hybrid_paper_fixed	Hybrid rank ensemble (paper-fixed weights)	hybrid_rank_v2_guarded	5	16	0.05	0.4473684210526316	0.2394366197183098	17	71	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+hybrid_rank_v2	Hybrid rank ensemble v2 (policy-based)	hybrid_rank_v2_guarded	5	16	0.05	0.4473684210526316	0.2394366197183098	17	71	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+persistence	Persistence baseline (carry-forward)	hybrid_rank_v2_guarded	5	16	0.05	0.3947368421052631	0.2112676056338028	15	71	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+tcn	TCN risk score model	hybrid_rank_v2_guarded	5	16	0.05	0.3947368421052631	0.2112676056338028	15	71	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+hgbr	Histogram Gradient Boosting Regressor (Optuna-tuned)	hybrid_rank_v2_guarded	5	16	0.05	0.3684210526315789	0.1971830985915492	14	71	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	3	3
+enet	ElasticNet (generic)	hybrid_rank_v2_guarded	5	16	0.05	0.2105263157894736	0.1126760563380281	8	71	38	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	4	4
+hybrid_rank_v2	Hybrid rank ensemble v2 (policy-based)	hybrid_rank_v2_guarded	5	16	0.1	0.3466666666666667	0.3661971830985915	26	71	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	1	1
+persistence	Persistence baseline (carry-forward)	hybrid_rank_v2_guarded	5	16	0.1	0.3066666666666666	0.323943661971831	23	71	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	2	2
+hgbr	Histogram Gradient Boosting Regressor (Optuna-tuned)	hybrid_rank_v2_guarded	5	16	0.1	0.2933333333333333	0.3098591549295774	22	71	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	3	3
+hybrid_paper_fixed	Hybrid rank ensemble (paper-fixed weights)	hybrid_rank_v2_guarded	5	16	0.1	0.28	0.2957746478873239	21	71	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	4	4
+enet	ElasticNet (generic)	hybrid_rank_v2_guarded	5	16	0.1	0.2533333333333333	0.2676056338028169	19	71	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	5	5
+tcn	TCN risk score model	hybrid_rank_v2_guarded	5	16	0.1	0.24	0.2535211267605634	18	71	75	results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/key_operating_points_compare_H5.csv	6	6
+persistence	Persistence baseline (carry-forward)	main_alarm	1	15	0.05	0.7692307692307693	0.2127659574468085	30	141	39	results/metrics/alarm_budget_H1.csv	1	1
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	1	15	0.05	0.6923076923076923	0.1914893617021276	27	141	39	results/metrics/alarm_budget_H1.csv	2	2
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	1	15	0.05	0.6923076923076923	0.1914893617021276	27	141	39	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	1	15	0.05	0.6666666666666666	0.1843971631205673	26	141	39	results/metrics/alarm_budget_H1.csv	3	3
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	1	15	0.05	0.6410256410256411	0.1773049645390071	25	141	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	1	15	0.05	0.6410256410256411	0.1773049645390071	25	141	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	1	15	0.05	0.5897435897435898	0.1631205673758865	23	141	39	results/metrics/alarm_budget_H1.csv	5	5
+persistence	Persistence baseline (carry-forward)	main_alarm	1	15	0.1	0.6493506493506493	0.3546099290780142	50	141	77	results/metrics/alarm_budget_H1.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	1	15	0.1	0.5974025974025974	0.3262411347517731	46	141	77	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	1	15	0.1	0.5844155844155844	0.3191489361702128	45	141	77	results/metrics/alarm_budget_H1.csv	3	3
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	1	15	0.1	0.5714285714285714	0.3120567375886525	44	141	77	results/metrics/alarm_budget_H1.csv	4	4
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	1	15	0.1	0.5714285714285714	0.3120567375886525	44	141	77	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	1	15	0.1	0.5714285714285714	0.3120567375886525	44	141	77	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	1	15	0.1	0.4935064935064935	0.2695035460992908	38	141	77	results/metrics/alarm_budget_H1.csv	5	5
+persistence	Persistence baseline (carry-forward)	main_alarm	1	16	0.05	0.5128205128205128	0.2702702702702703	20	74	39	results/metrics/alarm_budget_H1.csv	1	1
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	1	16	0.05	0.4358974358974359	0.2297297297297297	17	74	39	results/metrics/alarm_budget_H1.csv	2	2
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	1	16	0.05	0.4358974358974359	0.2297297297297297	17	74	39	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	1	16	0.05	0.4102564102564102	0.2162162162162162	16	74	39	results/metrics/alarm_budget_H1.csv	3	3
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	1	16	0.05	0.3846153846153846	0.2027027027027027	15	74	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	1	16	0.05	0.3846153846153846	0.2027027027027027	15	74	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	1	16	0.05	0.3846153846153846	0.2027027027027027	15	74	39	results/metrics/alarm_budget_H1.csv	4	4
+persistence	Persistence baseline (carry-forward)	main_alarm	1	16	0.1	0.4285714285714285	0.4459459459459459	33	74	77	results/metrics/alarm_budget_H1.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	1	16	0.1	0.3896103896103896	0.4054054054054054	30	74	77	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	1	16	0.1	0.3896103896103896	0.4054054054054054	30	74	77	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	1	16	0.1	0.3766233766233766	0.3918918918918919	29	74	77	results/metrics/alarm_budget_H1.csv	3	3
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	1	16	0.1	0.3766233766233766	0.3918918918918919	29	74	77	results/metrics/alarm_budget_H1.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	1	16	0.1	0.3246753246753247	0.3378378378378378	25	74	77	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	1	16	0.1	0.3116883116883117	0.3243243243243243	24	74	77	results/metrics/alarm_budget_H1.csv	5	5
+persistence	Persistence baseline (carry-forward)	main_alarm	1	17	0.05	0.2307692307692307	0.3	9	30	39	results/metrics/alarm_budget_H1.csv	1	1
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	1	17	0.05	0.1794871794871795	0.2333333333333333	7	30	39	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	1	17	0.05	0.1538461538461538	0.2	6	30	39	results/metrics/alarm_budget_H1.csv	3	3
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	1	17	0.05	0.1282051282051282	0.1666666666666666	5	30	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	1	17	0.05	0.1282051282051282	0.1666666666666666	5	30	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	1	17	0.05	0.1282051282051282	0.1666666666666666	5	30	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	1	17	0.05	0.1282051282051282	0.1666666666666666	5	30	39	results/metrics/alarm_budget_H1.csv	4	4
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	1	17	0.1	0.1818181818181818	0.4666666666666667	14	30	77	results/metrics/alarm_budget_H1.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	1	17	0.1	0.1818181818181818	0.4666666666666667	14	30	77	results/metrics/alarm_budget_H1.csv	1	1
+persistence	Persistence baseline (carry-forward)	main_alarm	1	17	0.1	0.1688311688311688	0.4333333333333333	13	30	77	results/metrics/alarm_budget_H1.csv	2	2
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	1	17	0.1	0.1558441558441558	0.4	12	30	77	results/metrics/alarm_budget_H1.csv	3	3
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	1	17	0.1	0.1558441558441558	0.4	12	30	77	results/metrics/alarm_budget_H1.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	1	17	0.1	0.1038961038961039	0.2666666666666666	8	30	77	results/metrics/alarm_budget_H1.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	1	17	0.1	0.0909090909090909	0.2333333333333333	7	30	77	results/metrics/alarm_budget_H1.csv	5	5
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	3	15	0.05	0.631578947368421	0.1714285714285714	24	140	38	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	3	15	0.05	0.6052631578947368	0.1642857142857142	23	140	38	results/metrics/alarm_budget_H3.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	3	15	0.05	0.6052631578947368	0.1642857142857142	23	140	38	results/metrics/alarm_budget_H3.csv	2	2
+persistence	Persistence baseline (carry-forward)	main_alarm	3	15	0.05	0.5263157894736842	0.1428571428571428	20	140	38	results/metrics/alarm_budget_H3.csv	3	3
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	3	15	0.05	0.4736842105263157	0.1285714285714285	18	140	38	results/metrics/alarm_budget_H3.csv	4	4
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	3	15	0.05	0.4736842105263157	0.1285714285714285	18	140	38	results/metrics/alarm_budget_H3.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	3	15	0.05	0.4736842105263157	0.1285714285714285	18	140	38	results/metrics/alarm_budget_H3.csv	4	4
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	3	15	0.1	0.5131578947368421	0.2785714285714286	39	140	76	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	3	15	0.1	0.5	0.2714285714285714	38	140	76	results/metrics/alarm_budget_H3.csv	2	2
+persistence	Persistence baseline (carry-forward)	main_alarm	3	15	0.1	0.4868421052631579	0.2642857142857143	37	140	76	results/metrics/alarm_budget_H3.csv	3	3
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	3	15	0.1	0.4210526315789473	0.2285714285714285	32	140	76	results/metrics/alarm_budget_H3.csv	4	4
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	3	15	0.1	0.4078947368421052	0.2214285714285714	31	140	76	results/metrics/alarm_budget_H3.csv	5	5
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	3	15	0.1	0.4078947368421052	0.2214285714285714	31	140	76	results/metrics/alarm_budget_H3.csv	5	5
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	3	15	0.1	0.3421052631578947	0.1857142857142857	26	140	76	results/metrics/alarm_budget_H3.csv	6	6
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	3	16	0.05	0.4210526315789473	0.2191780821917808	16	73	38	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	3	16	0.05	0.3421052631578947	0.1780821917808219	13	73	38	results/metrics/alarm_budget_H3.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	3	16	0.05	0.3421052631578947	0.1780821917808219	13	73	38	results/metrics/alarm_budget_H3.csv	2	2
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	3	16	0.05	0.3421052631578947	0.1780821917808219	13	73	38	results/metrics/alarm_budget_H3.csv	2	2
+persistence	Persistence baseline (carry-forward)	main_alarm	3	16	0.05	0.2894736842105263	0.1506849315068493	11	73	38	results/metrics/alarm_budget_H3.csv	3	3
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	3	16	0.05	0.2368421052631578	0.1232876712328767	9	73	38	results/metrics/alarm_budget_H3.csv	4	4
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	3	16	0.05	0.2105263157894736	0.1095890410958904	8	73	38	results/metrics/alarm_budget_H3.csv	5	5
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	3	16	0.1	0.3026315789473684	0.3150684931506849	23	73	76	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	3	16	0.1	0.3026315789473684	0.3150684931506849	23	73	76	results/metrics/alarm_budget_H3.csv	1	1
+persistence	Persistence baseline (carry-forward)	main_alarm	3	16	0.1	0.2763157894736842	0.2876712328767123	21	73	76	results/metrics/alarm_budget_H3.csv	2	2
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	3	16	0.1	0.25	0.2602739726027397	19	73	76	results/metrics/alarm_budget_H3.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	3	16	0.1	0.25	0.2602739726027397	19	73	76	results/metrics/alarm_budget_H3.csv	3	3
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	3	16	0.1	0.2368421052631578	0.2465753424657534	18	73	76	results/metrics/alarm_budget_H3.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	3	16	0.1	0.2236842105263158	0.2328767123287671	17	73	76	results/metrics/alarm_budget_H3.csv	5	5
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	3	17	0.05	0.2105263157894736	0.2758620689655172	8	29	38	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	3	17	0.05	0.1842105263157894	0.2413793103448276	7	29	38	results/metrics/alarm_budget_H3.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	3	17	0.05	0.1842105263157894	0.2413793103448276	7	29	38	results/metrics/alarm_budget_H3.csv	2	2
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	3	17	0.05	0.1578947368421052	0.2068965517241379	6	29	38	results/metrics/alarm_budget_H3.csv	3	3
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	3	17	0.05	0.131578947368421	0.1724137931034483	5	29	38	results/metrics/alarm_budget_H3.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	3	17	0.05	0.131578947368421	0.1724137931034483	5	29	38	results/metrics/alarm_budget_H3.csv	4	4
+persistence	Persistence baseline (carry-forward)	main_alarm	3	17	0.05	0.0789473684210526	0.1034482758620689	3	29	38	results/metrics/alarm_budget_H3.csv	5	5
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	3	17	0.1	0.1578947368421052	0.4137931034482758	12	29	76	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	3	17	0.1	0.1578947368421052	0.4137931034482758	12	29	76	results/metrics/alarm_budget_H3.csv	1	1
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	3	17	0.1	0.1184210526315789	0.3103448275862069	9	29	76	results/metrics/alarm_budget_H3.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	3	17	0.1	0.1184210526315789	0.3103448275862069	9	29	76	results/metrics/alarm_budget_H3.csv	2	2
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	3	17	0.1	0.1052631578947368	0.2758620689655172	8	29	76	results/metrics/alarm_budget_H3.csv	3	3
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	3	17	0.1	0.1052631578947368	0.2758620689655172	8	29	76	results/metrics/alarm_budget_H3.csv	3	3
+persistence	Persistence baseline (carry-forward)	main_alarm	3	17	0.1	0.0789473684210526	0.2068965517241379	6	29	76	results/metrics/alarm_budget_H3.csv	4	4
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	5	15	0.05	0.5263157894736842	0.1428571428571428	20	140	38	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	5	15	0.05	0.5	0.1357142857142857	19	140	38	results/metrics/alarm_budget_H5.csv	2	2
+persistence	Persistence baseline (carry-forward)	main_alarm	5	15	0.05	0.5	0.1357142857142857	19	140	38	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	5	15	0.05	0.4736842105263157	0.1285714285714285	18	140	38	results/metrics/alarm_budget_H5.csv	3	3
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	5	15	0.05	0.4736842105263157	0.1285714285714285	18	140	38	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	5	15	0.05	0.4473684210526316	0.1214285714285714	17	140	38	results/metrics/alarm_budget_H5.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	5	15	0.05	0.2894736842105263	0.0785714285714285	11	140	38	results/metrics/alarm_budget_H5.csv	5	5
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	5	15	0.1	0.4473684210526316	0.2428571428571428	34	140	76	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	5	15	0.1	0.4473684210526316	0.2428571428571428	34	140	76	results/metrics/alarm_budget_H5.csv	1	1
+persistence	Persistence baseline (carry-forward)	main_alarm	5	15	0.1	0.4473684210526316	0.2428571428571428	34	140	76	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	5	15	0.1	0.4210526315789473	0.2285714285714285	32	140	76	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	5	15	0.1	0.4210526315789473	0.2285714285714285	32	140	76	results/metrics/alarm_budget_H5.csv	2	2
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	5	15	0.1	0.3289473684210526	0.1785714285714285	25	140	76	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	5	15	0.1	0.2894736842105263	0.1571428571428571	22	140	76	results/metrics/alarm_budget_H5.csv	4	4
+persistence	Persistence baseline (carry-forward)	main_alarm	5	16	0.05	0.3684210526315789	0.1917808219178082	14	73	38	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	5	16	0.05	0.2894736842105263	0.1506849315068493	11	73	38	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	5	16	0.05	0.2894736842105263	0.1506849315068493	11	73	38	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	5	16	0.05	0.2894736842105263	0.1506849315068493	11	73	38	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	5	16	0.05	0.2631578947368421	0.136986301369863	10	73	38	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	5	16	0.05	0.2631578947368421	0.136986301369863	10	73	38	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	5	16	0.05	0.1578947368421052	0.0821917808219178	6	73	38	results/metrics/alarm_budget_H5.csv	4	4
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	5	16	0.1	0.3026315789473684	0.3150684931506849	23	73	76	results/metrics/alarm_budget_H5.csv	1	1
+persistence	Persistence baseline (carry-forward)	main_alarm	5	16	0.1	0.3026315789473684	0.3150684931506849	23	73	76	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	5	16	0.1	0.2894736842105263	0.3013698630136986	22	73	76	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	5	16	0.1	0.2631578947368421	0.273972602739726	20	73	76	results/metrics/alarm_budget_H5.csv	3	3
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	5	16	0.1	0.2631578947368421	0.273972602739726	20	73	76	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	5	16	0.1	0.2105263157894736	0.2191780821917808	16	73	76	results/metrics/alarm_budget_H5.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	5	16	0.1	0.1973684210526315	0.2054794520547945	15	73	76	results/metrics/alarm_budget_H5.csv	5	5
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	5	17	0.05	0.2105263157894736	0.2758620689655172	8	29	38	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	5	17	0.05	0.2105263157894736	0.2758620689655172	8	29	38	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	5	17	0.05	0.1578947368421052	0.2068965517241379	6	29	38	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	5	17	0.05	0.131578947368421	0.1724137931034483	5	29	38	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	5	17	0.05	0.1052631578947368	0.1379310344827586	4	29	38	results/metrics/alarm_budget_H5.csv	4	4
+persistence	Persistence baseline (carry-forward)	main_alarm	5	17	0.05	0.1052631578947368	0.1379310344827586	4	29	38	results/metrics/alarm_budget_H5.csv	4	4
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	5	17	0.05	0.0789473684210526	0.1034482758620689	3	29	38	results/metrics/alarm_budget_H5.csv	5	5
+enet_a0.1_l0.2	ElasticNet (alpha=0.1, l1_ratio=0.2)	main_alarm	5	17	0.1	0.1447368421052631	0.3793103448275862	11	29	76	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	main_alarm	5	17	0.1	0.1447368421052631	0.3793103448275862	11	29	76	results/metrics/alarm_budget_H5.csv	1	1
+enet_a0.01_l0.2	ElasticNet (alpha=0.01, l1_ratio=0.2)	main_alarm	5	17	0.1	0.131578947368421	0.3448275862068966	10	29	76	results/metrics/alarm_budget_H5.csv	2	2
+enet_a0.01_l0.5	ElasticNet (alpha=0.01, l1_ratio=0.5)	main_alarm	5	17	0.1	0.131578947368421	0.3448275862068966	10	29	76	results/metrics/alarm_budget_H5.csv	2	2
+persistence	Persistence baseline (carry-forward)	main_alarm	5	17	0.1	0.1052631578947368	0.2758620689655172	8	29	76	results/metrics/alarm_budget_H5.csv	3	3
+enet_a1.0_l0.5	ElasticNet (alpha=1.0, l1_ratio=0.5)	main_alarm	5	17	0.1	0.0921052631578947	0.2413793103448276	7	29	76	results/metrics/alarm_budget_H5.csv	4	4
+enet_a1.0_l0.2	ElasticNet (alpha=1.0, l1_ratio=0.2)	main_alarm	5	17	0.1	0.0789473684210526	0.2068965517241379	6	29	76	results/metrics/alarm_budget_H5.csv	5	5
+hybrid_rank_ens	Hybrid rank ensemble (paper v2)	paper_v2_h5	5	15	0.05	0.5526315789473685	0.1567164179104477	21	134	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	1	1
+bcr_tcn_v11	BCR-TCN v1.1	paper_v2_h5	5	15	0.05	0.5	0.1417910447761194	19	134	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	2	2
+persistence	Persistence baseline (carry-forward)	paper_v2_h5	5	15	0.05	0.5	0.1417910447761194	19	134	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	paper_v2_h5	5	15	0.05	0.4210526315789473	0.1194029850746268	16	134	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	3	3
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	paper_v2_h5	5	15	0.1	0.44	0.2462686567164179	33	134	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	1	1
+persistence	Persistence baseline (carry-forward)	paper_v2_h5	5	15	0.1	0.4266666666666667	0.2388059701492537	32	134	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	2	2
+bcr_tcn_v11	BCR-TCN v1.1	paper_v2_h5	5	15	0.1	0.3866666666666666	0.2164179104477611	29	134	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	3	3
+hybrid_rank_ens	Hybrid rank ensemble (paper v2)	paper_v2_h5	5	15	0.1	0.36	0.2014925373134328	27	134	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	4	4
+hybrid_rank_ens	Hybrid rank ensemble (paper v2)	paper_v2_h5	5	16	0.05	0.4473684210526316	0.2394366197183098	17	71	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	1	1
+bcr_tcn_v11	BCR-TCN v1.1	paper_v2_h5	5	16	0.05	0.3947368421052631	0.2112676056338028	15	71	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	2	2
+persistence	Persistence baseline (carry-forward)	paper_v2_h5	5	16	0.05	0.3947368421052631	0.2112676056338028	15	71	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	paper_v2_h5	5	16	0.05	0.2105263157894736	0.1126760563380281	8	71	38	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	3	3
+persistence	Persistence baseline (carry-forward)	paper_v2_h5	5	16	0.1	0.3066666666666666	0.323943661971831	23	71	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	1	1
+hybrid_rank_ens	Hybrid rank ensemble (paper v2)	paper_v2_h5	5	16	0.1	0.28	0.2957746478873239	21	71	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	2	2
+enet_a0.1_l0.5	ElasticNet (alpha=0.1, l1_ratio=0.5)	paper_v2_h5	5	16	0.1	0.2533333333333333	0.2676056338028169	19	71	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	3	3
+bcr_tcn_v11	BCR-TCN v1.1	paper_v2_h5	5	16	0.1	0.24	0.2535211267605634	18	71	75	results/paper_artifacts/20260219_183649_H5_v2_Table3_Fig3/tables/table3_alarm_budget_H5_v2_long.csv	4	4

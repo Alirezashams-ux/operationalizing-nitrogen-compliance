@@ -1,0 +1,376 @@
+{
+  "execution_id": "lag_window_sensitivity_execution_dee06bcfeca0_dee06bcf",
+  "input_parent_commit": "dee06bcfeca0c3c224897a2a92261c13f4fea26e",
+  "design_commit": "dee06bcfeca0c3c224897a2a92261c13f4fea26e",
+  "design_tag": "lag-window-sensitivity-design-v1",
+  "dataset_sha256": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+  "split_sha256": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+  "source_registry": "revision_2026/10_lag_window_sensitivity/01_execution/execution_source_registry.csv",
+  "software_environment": "revision_2026/10_lag_window_sensitivity/01_execution/software_environment.json",
+  "models": [
+    "Ridge",
+    "HGBR"
+  ],
+  "horizons": [
+    "H1",
+    "H3",
+    "H5"
+  ],
+  "configurations": [
+    "SHORT",
+    "REFERENCE",
+    "LONG"
+  ],
+  "final_reference_mapping": {
+    "HGBR_H1": "REFERENCE",
+    "HGBR_H3": "REFERENCE",
+    "HGBR_H5": "LONG",
+    "Ridge_H1": "REFERENCE",
+    "Ridge_H3": "REFERENCE",
+    "Ridge_H5": "REFERENCE"
+  },
+  "prediction_row_counts": {
+    "expected_total": 13536,
+    "observed_total": 13536,
+    "expected_by_horizon": {
+      "H1": 4572,
+      "H3": 4482,
+      "H5": 4482
+    },
+    "observed_by_horizon": {
+      "H1": 4572,
+      "H3": 4482,
+      "H5": 4482
+    }
+  },
+  "metric_row_counts": {
+    "point_metrics_by_fold": 54,
+    "point_metrics_pooled": 18,
+    "stability_by_fold": 54,
+    "stability_pooled": 18,
+    "recall5_by_fold": 54,
+    "recall5_pooled": 18
+  },
+  "reference_reproduction_result": {
+    "tolerance": 1e-06,
+    "overall_pass": true,
+    "material_failure": false,
+    "pathway_status": {
+      "Ridge_H1": "pass",
+      "Ridge_H3": "pass",
+      "Ridge_H5": "pass",
+      "HGBR_H1": "pass",
+      "HGBR_H3": "pass",
+      "HGBR_H5": "pass"
+    }
+  },
+  "common_date_result": {
+    "pass": true,
+    "rows": [
+      {
+        "model": "Ridge",
+        "horizon": 1,
+        "outer_fold": 1,
+        "short_n": 254,
+        "reference_n": 254,
+        "long_n": 254,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 1,
+        "outer_fold": 2,
+        "short_n": 254,
+        "reference_n": 254,
+        "long_n": 254,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 1,
+        "outer_fold": 3,
+        "short_n": 254,
+        "reference_n": 254,
+        "long_n": 254,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 3,
+        "outer_fold": 1,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 3,
+        "outer_fold": 2,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 3,
+        "outer_fold": 3,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 5,
+        "outer_fold": 1,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 5,
+        "outer_fold": 2,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "Ridge",
+        "horizon": 5,
+        "outer_fold": 3,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 1,
+        "outer_fold": 1,
+        "short_n": 254,
+        "reference_n": 254,
+        "long_n": 254,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 1,
+        "outer_fold": 2,
+        "short_n": 254,
+        "reference_n": 254,
+        "long_n": 254,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 1,
+        "outer_fold": 3,
+        "short_n": 254,
+        "reference_n": 254,
+        "long_n": 254,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 3,
+        "outer_fold": 1,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 3,
+        "outer_fold": 2,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 3,
+        "outer_fold": 3,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 5,
+        "outer_fold": 1,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 5,
+        "outer_fold": 2,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      },
+      {
+        "model": "HGBR",
+        "horizon": 5,
+        "outer_fold": 3,
+        "short_n": 249,
+        "reference_n": 249,
+        "long_n": 249,
+        "common_dates_pass": true
+      }
+    ]
+  },
+  "embargo_result": {
+    "pass": true,
+    "rows": 9
+  },
+  "training_retention_result": {
+    "pass": true,
+    "reconciliation_rows": 54,
+    "unexplained_discrepancies": 0
+  },
+  "test_result": "pass_75_of_75",
+  "deterministic_result": "pass",
+  "source_preservation_result": {
+    "pass": true,
+    "files_before": 752,
+    "files_after": 752,
+    "changed_paths": []
+  },
+  "input_checksum_result": {
+    "corrected_protocol_checksum_pass": true,
+    "stage1_checksum_pass": true
+  },
+  "design_checksum_result": {
+    "design_checksum_pass": true
+  },
+  "checksum_result": {
+    "registry_pass": true,
+    "coverage_pass": true,
+    "coverage_missing": [],
+    "coverage_extra": [],
+    "sha256sum_exit_code": 0
+  },
+  "final_decision": "A",
+  "generated_files": [
+    "revision_2026/10_lag_window_sensitivity/01_execution/event_ranking_recall5_by_fold.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/event_ranking_recall5_pooled.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/execution_source_registry.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/input_verification.json",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_predictions_long.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_predictions_wide.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_execution_completion_report.md",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_execution_manifest.json",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_summary.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_summary.json",
+    "revision_2026/10_lag_window_sensitivity/01_execution/lag_window_sensitivity_summary.md",
+    "revision_2026/10_lag_window_sensitivity/01_execution/model_fit_registry.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/point_metrics_by_fold.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/point_metrics_pooled.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/prediction_stability_by_fold.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/prediction_stability_pooled.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/realized_feature_registry.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/realized_training_retention.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/reference_reproduction_audit.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/reference_reproduction_summary.json",
+    "revision_2026/10_lag_window_sensitivity/01_execution/run_lag_window_sensitivity_execution.py",
+    "revision_2026/10_lag_window_sensitivity/01_execution/software_environment.json",
+    "revision_2026/10_lag_window_sensitivity/01_execution/split_and_embargo_audit.csv",
+    "revision_2026/10_lag_window_sensitivity/01_execution/test_lag_window_sensitivity_execution.py"
+  ],
+  "deterministic_details": {
+    "first_build_hash": {
+      "event_ranking_recall5_by_fold.csv": "0c701bf55123ff3649127b06100888df61c4f50f6d848b411f8598534e95618c",
+      "event_ranking_recall5_pooled.csv": "2083b2913493d1e021e5b262778ebf98841f3b37310e685ebee970ba7b0dac40",
+      "execution_source_registry.csv": "cae3e3a6c1fc91ab34e3c0eedbe95cde5157068c261515577a9a05266c65ee08",
+      "input_verification.json": "2d43dff4d8fc5976232295d267fd2a535440bdd1e45139b6233b2e936159cc3e",
+      "lag_window_predictions_long.csv": "534be028f3dca74b47737cd371c3c50d397dedd966fc3f500c6826b105eb043e",
+      "lag_window_predictions_wide.csv": "66c95426fd6d9493ae1d0e6df210c471532553e6098afb209f501dd70de970bf",
+      "lag_window_sensitivity_execution_completion_report.md": "9304daf536fb0595c52ecb8b2f745675172e558faa9dfc34fcd16654448946be",
+      "lag_window_sensitivity_execution_manifest.json": "61888aa1a74bbc612b78cf4f4b16155b44a903e1f0af4c17c6d8e805b9d35150",
+      "lag_window_sensitivity_summary.csv": "136129ca184272a680b4010c25ebfb85262386baed0cc79366901ee130f17c9a",
+      "lag_window_sensitivity_summary.json": "000b9b13bc302f7532f52376c753eec87d108fd056d68be4bc07541b4f6a8cd1",
+      "lag_window_sensitivity_summary.md": "60bf6da15466846a5de8490b4a98a1fb8fc2bb41cf8e7883d47bea1767c4f5b9",
+      "model_fit_registry.csv": "8ed01a222e9425a538549649dc3aa8abd6b73775de3941418272e00b664162b1",
+      "point_metrics_by_fold.csv": "55cb9b21ad479ee22d8e89c5d1d4e3083959a65b2aafc19a27c42be4730abc9b",
+      "point_metrics_pooled.csv": "5f4448263125b5a1d32c12a7f8814363be74e38322269ed15bce92bcc9001601",
+      "prediction_stability_by_fold.csv": "b04b70c2ff97bd88b0d0fa27a088bbdca8cba52ea82cfa890ebe4cda5a40955d",
+      "prediction_stability_pooled.csv": "a609aa1070c21da9058282e778c0de056854ebad407532353e4bae00540c6507",
+      "realized_feature_registry.csv": "f0d7094614321b1e479caa00db62f239da824fbe61d91a69b5c9d00c25001a00",
+      "realized_training_retention.csv": "764cc7131f8f586ae449b453d91b4720e8944493b509505b6f18219d73e6327b",
+      "reference_reproduction_audit.csv": "c6d6c8a57550aaeaaf5429cba785ee969ca7c4a7ece8c509fca39b1c4f448fae",
+      "reference_reproduction_summary.json": "eb412a1a8d7e6aa3bad92b36eedfd642b1f3a859bbfff479479e2a4ef608620e",
+      "run_lag_window_sensitivity_execution.py": "eba26fb80fd85c80df5af2c3a85e7e94e7fb73bf0d75f890c7d9d503fd3e47ae",
+      "software_environment.json": "406b1f139c040ce5c56de3aa4880d208d7be91ad39117fc12f5269b94a435a64",
+      "split_and_embargo_audit.csv": "b33a9326620bc9c9bdb09d8920e85441b1da9c04514797ed6014ddeccdc18ac9",
+      "test_lag_window_sensitivity_execution.py": "91901c8c3367ca92ed35b204e6961320e608d896486787700f693026653fc913"
+    },
+    "second_build_hash": {
+      "event_ranking_recall5_by_fold.csv": "0c701bf55123ff3649127b06100888df61c4f50f6d848b411f8598534e95618c",
+      "event_ranking_recall5_pooled.csv": "2083b2913493d1e021e5b262778ebf98841f3b37310e685ebee970ba7b0dac40",
+      "execution_source_registry.csv": "cae3e3a6c1fc91ab34e3c0eedbe95cde5157068c261515577a9a05266c65ee08",
+      "input_verification.json": "2d43dff4d8fc5976232295d267fd2a535440bdd1e45139b6233b2e936159cc3e",
+      "lag_window_predictions_long.csv": "534be028f3dca74b47737cd371c3c50d397dedd966fc3f500c6826b105eb043e",
+      "lag_window_predictions_wide.csv": "66c95426fd6d9493ae1d0e6df210c471532553e6098afb209f501dd70de970bf",
+      "lag_window_sensitivity_execution_completion_report.md": "9304daf536fb0595c52ecb8b2f745675172e558faa9dfc34fcd16654448946be",
+      "lag_window_sensitivity_execution_manifest.json": "61888aa1a74bbc612b78cf4f4b16155b44a903e1f0af4c17c6d8e805b9d35150",
+      "lag_window_sensitivity_summary.csv": "136129ca184272a680b4010c25ebfb85262386baed0cc79366901ee130f17c9a",
+      "lag_window_sensitivity_summary.json": "000b9b13bc302f7532f52376c753eec87d108fd056d68be4bc07541b4f6a8cd1",
+      "lag_window_sensitivity_summary.md": "60bf6da15466846a5de8490b4a98a1fb8fc2bb41cf8e7883d47bea1767c4f5b9",
+      "model_fit_registry.csv": "8ed01a222e9425a538549649dc3aa8abd6b73775de3941418272e00b664162b1",
+      "point_metrics_by_fold.csv": "55cb9b21ad479ee22d8e89c5d1d4e3083959a65b2aafc19a27c42be4730abc9b",
+      "point_metrics_pooled.csv": "5f4448263125b5a1d32c12a7f8814363be74e38322269ed15bce92bcc9001601",
+      "prediction_stability_by_fold.csv": "b04b70c2ff97bd88b0d0fa27a088bbdca8cba52ea82cfa890ebe4cda5a40955d",
+      "prediction_stability_pooled.csv": "a609aa1070c21da9058282e778c0de056854ebad407532353e4bae00540c6507",
+      "realized_feature_registry.csv": "f0d7094614321b1e479caa00db62f239da824fbe61d91a69b5c9d00c25001a00",
+      "realized_training_retention.csv": "764cc7131f8f586ae449b453d91b4720e8944493b509505b6f18219d73e6327b",
+      "reference_reproduction_audit.csv": "c6d6c8a57550aaeaaf5429cba785ee969ca7c4a7ece8c509fca39b1c4f448fae",
+      "reference_reproduction_summary.json": "eb412a1a8d7e6aa3bad92b36eedfd642b1f3a859bbfff479479e2a4ef608620e",
+      "run_lag_window_sensitivity_execution.py": "eba26fb80fd85c80df5af2c3a85e7e94e7fb73bf0d75f890c7d9d503fd3e47ae",
+      "software_environment.json": "406b1f139c040ce5c56de3aa4880d208d7be91ad39117fc12f5269b94a435a64",
+      "split_and_embargo_audit.csv": "b33a9326620bc9c9bdb09d8920e85441b1da9c04514797ed6014ddeccdc18ac9",
+      "test_lag_window_sensitivity_execution.py": "91901c8c3367ca92ed35b204e6961320e608d896486787700f693026653fc913"
+    },
+    "files_compared": [
+      "event_ranking_recall5_by_fold.csv",
+      "event_ranking_recall5_pooled.csv",
+      "execution_source_registry.csv",
+      "input_verification.json",
+      "lag_window_predictions_long.csv",
+      "lag_window_predictions_wide.csv",
+      "lag_window_sensitivity_execution_completion_report.md",
+      "lag_window_sensitivity_execution_manifest.json",
+      "lag_window_sensitivity_summary.csv",
+      "lag_window_sensitivity_summary.json",
+      "lag_window_sensitivity_summary.md",
+      "model_fit_registry.csv",
+      "point_metrics_by_fold.csv",
+      "point_metrics_pooled.csv",
+      "prediction_stability_by_fold.csv",
+      "prediction_stability_pooled.csv",
+      "realized_feature_registry.csv",
+      "realized_training_retention.csv",
+      "reference_reproduction_audit.csv",
+      "reference_reproduction_summary.json",
+      "run_lag_window_sensitivity_execution.py",
+      "software_environment.json",
+      "split_and_embargo_audit.csv",
+      "test_lag_window_sensitivity_execution.py"
+    ],
+    "differences_found": []
+  },
+  "assertions_total": 75,
+  "assertions_passed": 75,
+  "assertions_failed": 0
+}

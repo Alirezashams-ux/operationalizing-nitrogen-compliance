@@ -1,0 +1,11 @@
+# Minimal required dependencies
+matplotlib>=3.7
+pillow>=10.0
+numpy>=1.24
+
+# Optional (enables inset map)
+# cartopy>=0.22
+
+# Optional (enables GeoTIFF-derived scale bar)
+# rasterio>=1.3
+# pyproj>=3.5

@@ -1,0 +1,11 @@
+fold,fit_regime,count_epochs
+1,overfitting_risk,1
+1,stable_or_improving,12
+1,underfitting_risk,5
+1,warmup,8
+2,stable_or_improving,18
+2,underfitting_risk,3
+2,warmup,8
+3,overfitting_risk,6
+3,stable_or_improving,22
+3,warmup,8

@@ -1,0 +1,6 @@
+leakage_control,description,evidence_file,pass
+target_date_embargo,max(training target_date) < min(next test feature_date),revision_2026/11_final_integration/audits/final_target_date_embargo_audit.csv,True
+fold_local_top_k_budget,retrospective k calculated within each outer fold before pooling,revision_2026/11_final_integration/audits/final_alarm_budget_arithmetic_audit.csv,True
+past_only_cutoff_scope,sequential cutoffs use prior scores only,revision_2026/11_final_integration/audits/sequential_policy_reconciliation_audit.csv,True
+quota_prefix_capacity,quota policy satisfies prefix inequality,revision_2026/11_final_integration/audits/final_sequential_capacity_audit.csv,True
+bcr_scope_h5_only,BCR-TCN appears only at H5 in point and alarm tables,revision_2026/11_final_integration/tables/final_table2_point_model_comparison.csv,True

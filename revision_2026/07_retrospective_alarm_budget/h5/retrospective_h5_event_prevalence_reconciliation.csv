@@ -1,0 +1,5 @@
+outer_fold_or_pooled,N,events_tau15,events_tau16,events_tau17,prevalence_tau15,prevalence_tau16,prevalence_tau17,canonical_source,event_count_pass
+1,249,59,31,16,0.23694779116465864,0.12449799196787148,0.0642570281124498,/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_event_prevalence.csv,True
+2,249,20,7,1,0.08032128514056225,0.028112449799196786,0.004016064257028112,/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_event_prevalence.csv,True
+3,249,55,33,12,0.22088353413654618,0.13253012048192772,0.04819277108433735,/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_event_prevalence.csv,True
+pooled,747,134,71,29,0.17938420348058903,0.09504685408299866,0.038821954484605084,/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/05_canonical_predictions/h5_cross_model/canonical_h5_event_prevalence.csv,True

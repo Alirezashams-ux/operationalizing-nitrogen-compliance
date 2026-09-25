@@ -1,0 +1,9 @@
+{
+  "python_executable": "/home/alrezshams/acs_tnout_ulsan_revision/.venv-1/bin/python",
+  "python_version": "3.8.10",
+  "platform": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.29",
+  "numpy_version": "1.24.4",
+  "pandas_version": "2.0.3",
+  "scikit_learn_version": "1.3.2",
+  "scipy_version": "1.10.1"
+}

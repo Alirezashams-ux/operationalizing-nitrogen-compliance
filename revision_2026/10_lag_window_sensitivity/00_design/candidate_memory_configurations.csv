@@ -1,0 +1,4 @@
+configuration_id,configuration_label,tnout_features,maximum_required_history_days,earliest_possible_date_from_raw_start,scientific_role,predeclared,uses_future_information,notes
+SHORT,SHORT,TNout_lag1; TNout_roll7,7,2021-01-11,reduced-memory sensitivity,True,False,Shortest TN-memory candidate; strictly prior TNout only.
+REFERENCE,REFERENCE,TNout_lag1; TNout_roll14; TNout_roll7,14,2021-01-18,ordinary corrected feature reference,True,False,Reference TN-memory used by final corrected Ridge and HGBR H1/H3.
+LONG,LONG,TNout_lag1; TNout_lag3; TNout_lag5; TNout_lag7; TNout_roll14; TNout_roll30; TNout_roll7,30,2021-02-03,extended-memory sensitivity and final HGBR-H5/BCR-TCN-H5 TN-memory lineage,True,False,Final corrected HGBR-H5/BCR-TCN-H5 TN-memory lineage.

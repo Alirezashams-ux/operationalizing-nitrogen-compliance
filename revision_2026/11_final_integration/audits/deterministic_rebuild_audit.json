@@ -1,0 +1,9 @@
+{
+  "deterministic_result": "pass",
+  "differences": [],
+  "different_files": 0,
+  "files_compared": 66,
+  "first_build_package_hash": "cb86c2e2b7a190dff19a5e88ff8c5606db57f179053405fac8039dc39b1863e2",
+  "identical_files": 66,
+  "second_build_package_hash": "cb86c2e2b7a190dff19a5e88ff8c5606db57f179053405fac8039dc39b1863e2"
+}

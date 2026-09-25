@@ -1,0 +1,4 @@
+horizon,best_model,display_model,source_group,MAE_mgL,RMSE_mgL,MASE1,MASE7
+1,enet_a0.1_l0.5,ElasticNet,main_linear,1.5373,1.9287,1.2295,0.8116
+3,enet_a0.1_l0.5,ElasticNet,main_linear,1.7191,2.1631,1.3744,0.9070
+5,enet_a1.0_l0.2,ElasticNet,main_linear,1.7944,2.2665,1.4486,0.9522

@@ -1,0 +1,4 @@
+outer_fold,outer_train_N,component_subtrain_N_before_embargo,inner_embargo_excluded_N,component_subtrain_N_after_embargo,component_validation_N,hybrid_embargo_excluded_N,hybrid_validation_N,outer_test_N,component_subtrain_start,component_subtrain_end,component_validation_start,component_validation_end,hybrid_validation_start,hybrid_validation_end,outer_test_start,outer_test_end,inner_target_separation_pass,hybrid_target_separation_pass,outer_target_separation_pass,future_fold_exclusion_pass
+1,244,173,5,168,30,5,36,249,2021-02-03,2021-07-20,2021-07-26,2021-08-24,2021-08-30,2021-10-04,2021-10-10,2022-06-15,True,True,True,True
+2,493,353,5,348,62,5,73,249,2021-02-03,2022-01-16,2022-01-22,2022-03-24,2022-03-30,2022-06-10,2022-06-16,2023-02-19,True,True,True,True
+3,742,533,5,528,93,5,111,249,2021-02-03,2022-07-15,2022-07-21,2022-10-21,2022-10-27,2023-02-14,2023-02-20,2023-10-26,True,True,True,True

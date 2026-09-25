@@ -1,0 +1,14 @@
+{
+  "test_method": "permute_y_true_and_event_labels_in_memory_then_recompute_fixed_ranks_and_scores",
+  "random_seed": 42,
+  "rows_tested": 2241,
+  "thresholds_tested": [
+    15,
+    16,
+    17
+  ],
+  "rank_values_identical": true,
+  "hybrid_scores_identical": true,
+  "maximum_absolute_score_difference": 0.0,
+  "label_invariance_pass": true
+}

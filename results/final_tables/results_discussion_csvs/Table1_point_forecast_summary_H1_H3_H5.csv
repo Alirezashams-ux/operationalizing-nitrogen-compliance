@@ -1,0 +1,4 @@
+horizon,best_model,best_model_full_name,source_group,MAE,RMSE,MASE1,MASE7,source_file
+1,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",main_linear,1.5372939109802246,1.9287165403366089,1.2294994535255503,0.811565238400564,results/metrics/main_linear_metrics_H1.json
+3,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",main_linear,1.7191454966862996,2.163148125012716,1.3744038017792553,0.9069802882739788,results/metrics/main_linear_metrics_H3.json
+5,hybrid_point,Hybrid point predictor (weighted regression blend),hybrid_rank_v2_guarded,1.712735274475903,2.2115470845958685,1.103976127253051,0.8148628618472348,results/hybrid_rank_v2_runs/20260219_195429_H5_hybrid_rank_v2/tables/point_metrics_tnout_H5.csv

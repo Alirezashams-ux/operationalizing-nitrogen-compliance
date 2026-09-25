@@ -1,0 +1,4 @@
+horizon,fold,n_samples,train_size,test_size,train_idx_start,train_idx_end,test_idx_start,test_idx_end,train_date_start,train_date_end,test_date_start,test_date_end,feature_npz
+5,1,996,249,249,0,248,249,497,2021-02-03,2021-10-09,2021-10-10,2022-06-15,features/ulsan_H5_features_v2.npz
+5,2,996,498,249,0,497,498,746,2021-02-03,2022-06-15,2022-06-16,2023-02-19,features/ulsan_H5_features_v2.npz
+5,3,996,747,249,0,746,747,995,2021-02-03,2023-02-19,2023-02-20,2023-10-26,features/ulsan_H5_features_v2.npz

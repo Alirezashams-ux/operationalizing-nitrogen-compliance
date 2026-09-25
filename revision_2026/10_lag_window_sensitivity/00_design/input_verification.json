@@ -1,0 +1,191 @@
+{
+  "repository": "/home/alrezshams/acs_tnout_ulsan_revision",
+  "authorized_output_directory": "revision_2026/10_lag_window_sensitivity/00_design",
+  "required_branch": "controlled-reruns-v1",
+  "required_head": "15cc6f8414df3e60692700963afc296e7653236e",
+  "required_stage1_tag": "canonical-h1-h3-reconciliation-v1",
+  "required_python_version": "3.8.10",
+  "verification": {
+    "working_tree_status_paths": [
+      "revision_2026/10_lag_window_sensitivity/00_design/build_lag_window_sensitivity_design.py",
+      "revision_2026/10_lag_window_sensitivity/00_design/candidate_memory_configurations.csv",
+      "revision_2026/10_lag_window_sensitivity/00_design/common_date_feasibility.csv",
+      "revision_2026/10_lag_window_sensitivity/00_design/feature_artifact_registry.csv",
+      "revision_2026/10_lag_window_sensitivity/00_design/feature_lineage_audit.csv",
+      "revision_2026/10_lag_window_sensitivity/00_design/feature_lineage_audit.md",
+      "revision_2026/10_lag_window_sensitivity/00_design/input_verification.json",
+      "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design.json",
+      "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design.md",
+      "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design_checksums.sha256",
+      "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design_completion_report.md",
+      "revision_2026/10_lag_window_sensitivity/00_design/lag_window_sensitivity_design_manifest.json",
+      "revision_2026/10_lag_window_sensitivity/00_design/model_horizon_reference_registry.csv",
+      "revision_2026/10_lag_window_sensitivity/00_design/test_lag_window_sensitivity_design.py",
+      "revision_2026/10_lag_window_sensitivity/00_design/training_retention_audit.csv"
+    ],
+    "branch": "controlled-reruns-v1",
+    "head": "15cc6f8414df3e60692700963afc296e7653236e",
+    "tag_object": "12001426cd12342d5e4b8c8eba166d857838912c",
+    "tag_type": "tag",
+    "tag_commit": "15cc6f8414df3e60692700963afc296e7653236e",
+    "python_version": "3.8.10",
+    "protocol_checksum_command": {
+      "command": "sha256sum -c corrected_protocol_v1.sha256",
+      "cwd": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/03_corrected_protocol",
+      "exit_code": 0,
+      "stdout": "canonical_dataset_lock.json: OK\nbuild_purged_nested_splits.py: OK\ncorrected_split_assignment.csv: OK\ncorrected_split_summary.csv: OK\ntest_purged_nested_splits.py: OK\ncorrected_evaluation_protocol.md: OK\nalarm_evaluation_protocol.md: OK\nrerun_execution_plan.csv: OK\n",
+      "stderr": ""
+    },
+    "protocol_checksum_checks": {
+      "canonical_dataset_lock.json": {
+        "exists": true,
+        "expected": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "observed": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+        "pass": true
+      },
+      "build_purged_nested_splits.py": {
+        "exists": true,
+        "expected": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+        "observed": "6383ff614e91f60e2ea4d8999876bda0f294eb061a72ea8484be3df7f60b156a",
+        "pass": true
+      },
+      "corrected_split_assignment.csv": {
+        "exists": true,
+        "expected": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "observed": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+        "pass": true
+      },
+      "corrected_split_summary.csv": {
+        "exists": true,
+        "expected": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "observed": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+        "pass": true
+      },
+      "test_purged_nested_splits.py": {
+        "exists": true,
+        "expected": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+        "observed": "c5627d04924ef14184b71d5bb83c89696f8c5de06444247cf860297e73a1abf2",
+        "pass": true
+      },
+      "corrected_evaluation_protocol.md": {
+        "exists": true,
+        "expected": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "observed": "eda7c343c384d38c659884b9320d1813a779b15c16dc286919a5b40b1fd5c174",
+        "pass": true
+      },
+      "alarm_evaluation_protocol.md": {
+        "exists": true,
+        "expected": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "observed": "873b0cef01886608bd06d08cfc35be8841b1314b4a99eeaff13ef664ba302ef8",
+        "pass": true
+      },
+      "rerun_execution_plan.csv": {
+        "exists": true,
+        "expected": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "observed": "5a3c72fc5292581573803e8667be64862ea2c2de3a0da29b0b2878a6cb2fbf90",
+        "pass": true
+      }
+    },
+    "stage1_checksum_command": {
+      "command": "sha256sum -c canonical_h1_h3_reconciliation_checksums.sha256",
+      "cwd": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/09_h1_h3_reconciliation",
+      "exit_code": 0,
+      "stdout": "build_canonical_h1_h3_reconciliation.py: OK\ncanonical_h1_h3_point_table2_source.csv: OK\ncanonical_h1_h3_reconciliation_completion_report.md: OK\ncanonical_h1_h3_reconciliation_manifest.json: OK\ncanonical_h1_h3_source_registry.csv: OK\ncanonical_h1_h3_table1_reconciliation.csv: OK\nh1/canonical_h1_event_prevalence.csv: OK\nh1/canonical_h1_key_audit.csv: OK\nh1/canonical_h1_point_metrics_by_fold.csv: OK\nh1/canonical_h1_point_metrics_pooled.csv: OK\nh1/canonical_h1_predictions_long.csv: OK\nh1/canonical_h1_predictions_wide.csv: OK\nh1/h1_controlled_rerun_reconciliation.csv: OK\nh3/canonical_h3_event_prevalence.csv: OK\nh3/canonical_h3_key_audit.csv: OK\nh3/canonical_h3_point_metrics_by_fold.csv: OK\nh3/canonical_h3_point_metrics_pooled.csv: OK\nh3/canonical_h3_predictions_long.csv: OK\nh3/canonical_h3_predictions_wide.csv: OK\nh3/h3_controlled_rerun_reconciliation.csv: OK\ninput_verification.json: OK\ntest_canonical_h1_h3_reconciliation.py: OK\n",
+      "stderr": ""
+    },
+    "local_tag_commits": {
+      "corrected-protocol-v1": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+      "persistence-corrected-v1": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+      "ridge-corrected-v1": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+      "elasticnet-corrected-v1": "1db2f3472cd48274a5afa4010f446952d76c6042",
+      "hgbr-corrected-v1": "4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62",
+      "canonical-h1-h3-reconciliation-v1": "15cc6f8414df3e60692700963afc296e7653236e"
+    },
+    "source_preservation": {
+      "corrected-protocol-v1": {
+        "source_dir": "revision_2026/03_corrected_protocol",
+        "tag_commit": "2bbf5eba419b0650693f1e88326107bf9a346c68",
+        "changed_paths": [],
+        "pass": true
+      },
+      "persistence-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/persistence",
+        "tag_commit": "41f184a29ff88aaf275f3365267b8c909ce7598a",
+        "changed_paths": [],
+        "pass": true
+      },
+      "ridge-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/ridge",
+        "tag_commit": "69cfb2bf8bc181dc1de1e09f0c7477a1a5de7585",
+        "changed_paths": [],
+        "pass": true
+      },
+      "elasticnet-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/elasticnet",
+        "tag_commit": "1db2f3472cd48274a5afa4010f446952d76c6042",
+        "changed_paths": [],
+        "pass": true
+      },
+      "hgbr-corrected-v1": {
+        "source_dir": "revision_2026/04_controlled_reruns/hgbr",
+        "tag_commit": "4d16b4d513e4fd9aa7c1acd85d0b5894ce4d5d62",
+        "changed_paths": [],
+        "pass": true
+      },
+      "canonical-h1-h3-reconciliation-v1": {
+        "source_dir": "revision_2026/09_h1_h3_reconciliation",
+        "tag_commit": "15cc6f8414df3e60692700963afc296e7653236e",
+        "changed_paths": [],
+        "pass": true
+      }
+    },
+    "dataset_path": "/home/alrezshams/acs_tnout_ulsan_revision/revision_2026/00_provenance/recovered_inputs/figure2/Ulsan_Yongsan.csv",
+    "dataset_sha_observed": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+    "dataset_sha_expected_from_lock": "6ed147cd585e5e8083292683f9be3cf585e97e4d46fa0e3224d24a4e2b42cbbb",
+    "split_sha_observed": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+    "split_sha_expected_from_manifest": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+    "consumed_input_hashes": {
+      "features/ulsan_H1_features.npz": "311a610eaaca278b0eb0cb53051cc10b3016716f5630ee4d04c38730eb2cf435",
+      "features/ulsan_H3_features.npz": "df97bac6581c4859f2cb37640f3d14c153a87eb078db978b890c0448f7e0dea8",
+      "features/ulsan_H3_features_v2.npz": "2a38da9458abc3732efe46a6417dabc7a1145cffb262b05e83f34ad2951712f3",
+      "features/ulsan_H5_features.npz": "4b542b0640e1cbee5587b3ba455631d79481e0cf27c0a68c1788bfdd9aa9d3bf",
+      "features/ulsan_H5_features_v2.npz": "ea1cbacf7ac204c0cb60f880d9dec2ba10c5a9b509bead0785b726f54ae46066",
+      "revision_2026/03_corrected_protocol/canonical_dataset_lock.json": "1554a9381e264f3c84853cc13b23c87883db8383b2fd778774bccb2d43bd535c",
+      "revision_2026/03_corrected_protocol/corrected_protocol_v1.sha256": "b878b7107622da5fb8fd21b44ac00e11a6c754f3cfd5f68915bbb1c493c81284",
+      "revision_2026/03_corrected_protocol/corrected_split_assignment.csv": "f83baf5732ffbf88b9a448a3d9ab9fa270f7495fe44d1559c1ac49795a30881a",
+      "revision_2026/03_corrected_protocol/corrected_split_summary.csv": "17e32e4b962755295a6b2f5eee0e5b6f1e11baab6145240e65980490add6658b",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_fixed_configuration.json": "22e0684eca4b2b8dd5118bf91d17f56418a8d2a881be89ae24e67ae53cfde87e",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/bcr_tcn_v11_h5_run_manifest.json": "e37fe2d3a156c549abc06036ca118fa3f4fca332f9aa3bbd35419960038cba30",
+      "revision_2026/04_controlled_reruns/bcr_tcn_v11_h5/run_corrected_bcr_tcn_v11_h5.py": "db7f8c48c282cb625d68b81d4f208f8ce48e4bbf9b0c73e85feb650b46cd1e81",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_run_manifest.json": "14be259172e160e5dffb56432e6c71482c4c80c7dfec10fad51a9dc6f9ec6b15",
+      "revision_2026/04_controlled_reruns/elasticnet/elasticnet_selection_plan.json": "24877563d3fcd763ef85808e00c0f12c570ebdc7d227028a890597919820071f",
+      "revision_2026/04_controlled_reruns/elasticnet/run_corrected_elasticnet.py": "7e797abbc6d774e061e09051f8cca028a9bcdcff040788143605081fc0a7eb13",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_run_manifest.json": "e03082490b0a7b7fb6116c6ef2ba316f55487fa405aec1b11654a5a107c80d96",
+      "revision_2026/04_controlled_reruns/hgbr/hgbr_selection_plan.json": "630e8d99e0157b1573f36781e4c17b236c31cafb81b7f00365040f559cbf6e10",
+      "revision_2026/04_controlled_reruns/hgbr/run_corrected_hgbr.py": "34c44587bca2d211a761308ea57e248e4d3fc1f1a3695f164314c7a4167c3769",
+      "revision_2026/04_controlled_reruns/persistence/persistence_run_manifest.json": "444b2d820e38e5704b90010cb1fd1890aa85a5de1560a024eb5689ccdc107c2a",
+      "revision_2026/04_controlled_reruns/ridge/ridge_run_manifest.json": "af0dede277f047c90e483480d21fd6d485edce14e78d9bf8b20d4bdfb2d8438b",
+      "revision_2026/04_controlled_reruns/ridge/ridge_selection_plan.json": "8e197db0f0eaf20b93e8f93ae755efb4be2b250634c2380aafca1085730eaf44",
+      "revision_2026/04_controlled_reruns/ridge/run_corrected_ridge.py": "f98631b98258336c27c642e798614f3365b511d403500f929ad1016b059ece0c",
+      "revision_2026/09_h1_h3_reconciliation/canonical_h1_h3_reconciliation_checksums.sha256": "17c8b7785c5e8f4838ed814379f0f1a9aa8b02ee28a1a86cdc732661433d758b",
+      "revision_2026/09_h1_h3_reconciliation/canonical_h1_h3_reconciliation_manifest.json": "6ab856e6a7336ec374e94d34a7a042303ddc65f22e4926025f4f2f03bfbb5108",
+      "src/build_ulsan_npz.py": "d4dd5f6e82db1b260688b00eff789cc59bb291464d601d44b3fae14a7e8ab5be",
+      "src/build_ulsan_npz_H1.py": "24a55905d57070eca7d5d250302a80731992e94a346393ea677568a708fc152e",
+      "src/build_ulsan_npz_v2.py": "542f2f9d0e5f76637e1bc849a2a8c41786255f63d51535ebba5c1803dbe2b21c"
+    },
+    "checks": {
+      "branch_pass": true,
+      "head_pass": true,
+      "stage1_tag_points_to_head_pass": true,
+      "python_3810_pass": true,
+      "clean_initial_working_tree_pass": true,
+      "clean_or_authorized_scope_pass": true,
+      "corrected_protocol_checksum_pass": true,
+      "stage1_checksum_pass": true,
+      "source_preservation_pass": true,
+      "dataset_checksum_pass": true,
+      "split_checksum_pass": true,
+      "preflight_pass": true
+    }
+  }
+}

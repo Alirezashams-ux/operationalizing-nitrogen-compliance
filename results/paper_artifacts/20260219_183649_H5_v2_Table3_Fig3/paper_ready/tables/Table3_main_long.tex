@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\caption{Alarm-budget performance at $H=5$ (Ulsan, v2).}
+\label{tab:alarm_budget_h5_v2_long}
+\begin{tabular}{lrrrrrrrr}
+\hline
+model_label & tau & r & n & k & events & tp & precision & recall \\
+\hline
+BCR-TCN v1.1 & 15 & 0.05 & 747 & 38 & 134 & 19 & 0.5 & 0.142 \\
+BCR-TCN v1.1 & 15 & 0.1 & 747 & 75 & 134 & 29 & 0.387 & 0.216 \\
+BCR-TCN v1.1 & 16 & 0.05 & 747 & 38 & 71 & 15 & 0.395 & 0.211 \\
+BCR-TCN v1.1 & 16 & 0.1 & 747 & 75 & 71 & 18 & 0.24 & 0.254 \\
+ElasticNet (α=0.1, ℓ1=0.5) & 15 & 0.05 & 747 & 38 & 134 & 16 & 0.421 & 0.119 \\
+ElasticNet (α=0.1, ℓ1=0.5) & 15 & 0.1 & 747 & 75 & 134 & 33 & 0.44 & 0.246 \\
+ElasticNet (α=0.1, ℓ1=0.5) & 16 & 0.05 & 747 & 38 & 71 & 8 & 0.211 & 0.113 \\
+ElasticNet (α=0.1, ℓ1=0.5) & 16 & 0.1 & 747 & 75 & 71 & 19 & 0.253 & 0.268 \\
+Hybrid A (rank ensemble) & 15 & 0.05 & 747 & 38 & 134 & 21 & 0.553 & 0.157 \\
+Hybrid A (rank ensemble) & 15 & 0.1 & 747 & 75 & 134 & 27 & 0.36 & 0.201 \\
+Hybrid A (rank ensemble) & 16 & 0.05 & 747 & 38 & 71 & 17 & 0.447 & 0.239 \\
+Hybrid A (rank ensemble) & 16 & 0.1 & 747 & 75 & 71 & 21 & 0.28 & 0.296 \\
+Persistence & 15 & 0.05 & 747 & 38 & 134 & 19 & 0.5 & 0.142 \\
+Persistence & 15 & 0.1 & 747 & 75 & 134 & 32 & 0.427 & 0.239 \\
+Persistence & 16 & 0.05 & 747 & 38 & 71 & 15 & 0.395 & 0.211 \\
+Persistence & 16 & 0.1 & 747 & 75 & 71 & 23 & 0.307 & 0.324 \\
+\hline
+\end{tabular}
+\end{table}

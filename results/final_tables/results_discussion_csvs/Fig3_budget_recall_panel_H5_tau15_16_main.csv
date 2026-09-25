@@ -1,0 +1,21 @@
+figure_id,horizon,tau,r,model,model_label,n,k,events,tp,precision,recall,random_baseline_recall,is_random_baseline,source
+Fig3,5,15,0.05,bcr_tcn_v11,BCR-TCN v1.1,747,38,134,19,0.5,0.1417910447761194,0.05,0,recomputed_from_preds
+Fig3,5,15,0.1,bcr_tcn_v11,BCR-TCN v1.1,747,75,134,29,0.38666666666666666,0.21641791044776118,0.1,0,recomputed_from_preds
+Fig3,5,16,0.05,bcr_tcn_v11,BCR-TCN v1.1,747,38,71,15,0.39473684210526316,0.2112676056338028,0.05,0,recomputed_from_preds
+Fig3,5,16,0.1,bcr_tcn_v11,BCR-TCN v1.1,747,75,71,18,0.24,0.2535211267605634,0.1,0,recomputed_from_preds
+Fig3,5,15,0.05,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",747,38,134,16,0.42105263157894735,0.11940298507462686,0.05,0,recomputed_from_preds
+Fig3,5,15,0.1,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",747,75,134,33,0.44,0.2462686567164179,0.1,0,recomputed_from_preds
+Fig3,5,16,0.05,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",747,38,71,8,0.21052631578947367,0.11267605633802817,0.05,0,recomputed_from_preds
+Fig3,5,16,0.1,enet_a0.1_l0.5,"ElasticNet (alpha=0.1, l1_ratio=0.5)",747,75,71,19,0.25333333333333335,0.2676056338028169,0.1,0,recomputed_from_preds
+Fig3,5,15,0.05,hybrid_rank_ens,Hybrid rank ensemble,747,38,134,21,0.5526315789473685,0.15671641791044777,0.05,0,recomputed_from_preds
+Fig3,5,15,0.1,hybrid_rank_ens,Hybrid rank ensemble,747,75,134,27,0.36,0.20149253731343283,0.1,0,recomputed_from_preds
+Fig3,5,16,0.05,hybrid_rank_ens,Hybrid rank ensemble,747,38,71,17,0.4473684210526316,0.23943661971830985,0.05,0,recomputed_from_preds
+Fig3,5,16,0.1,hybrid_rank_ens,Hybrid rank ensemble,747,75,71,21,0.28,0.29577464788732394,0.1,0,recomputed_from_preds
+Fig3,5,15,0.05,persistence,Persistence,747,38,134,19,0.5,0.1417910447761194,0.05,0,recomputed_from_preds
+Fig3,5,15,0.1,persistence,Persistence,747,75,134,32,0.4266666666666667,0.23880597014925373,0.1,0,recomputed_from_preds
+Fig3,5,16,0.05,persistence,Persistence,747,38,71,15,0.39473684210526316,0.2112676056338028,0.05,0,recomputed_from_preds
+Fig3,5,16,0.1,persistence,Persistence,747,75,71,23,0.30666666666666664,0.323943661971831,0.1,0,recomputed_from_preds
+Fig3,5,15,0.05,random_baseline,Random baseline (expected),747,38,134,6.7,0.1763157894736842,0.05,0.05,1,theoretical_random_baseline
+Fig3,5,15,0.1,random_baseline,Random baseline (expected),747,75,134,13.4,0.17866666666666667,0.1,0.1,1,theoretical_random_baseline
+Fig3,5,16,0.05,random_baseline,Random baseline (expected),747,38,71,3.55,0.09342105263157895,0.05,0.05,1,theoretical_random_baseline
+Fig3,5,16,0.1,random_baseline,Random baseline (expected),747,75,71,7.1,0.09466666666666666,0.1,0.1,1,theoretical_random_baseline

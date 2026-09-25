@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "src/paper_make_fig3_alarm_budget_leaderboard.py", line 326, in <module>
+    main()
+  File "src/paper_make_fig3_alarm_budget_leaderboard.py", line 306, in main
+    make_heatmap_figure(
+  File "src/paper_make_fig3_alarm_budget_leaderboard.py", line 205, in make_heatmap_figure
+    mat[y, x] = float(row[metric])
+  File "/home/alrezshams/.local/lib/python3.8/site-packages/pandas/core/series.py", line 230, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>

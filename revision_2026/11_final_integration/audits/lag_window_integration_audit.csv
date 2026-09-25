@@ -1,0 +1,5 @@
+check,expected,observed,pass
+lag_row_count,18,18,True
+h1_long_warmup_loss_ridge,"[16,16,16]","[16, 16, 16]",True
+h1_long_warmup_loss_hgbr,"[16,16,16]","[16, 16, 16]",True
+final_reference_mapping,"Ridge(H1,H3,H5)=REFERENCE; HGBR(H1,H3)=REFERENCE; HGBR(H5)=LONG",HGBR H1:REFERENCE; HGBR H3:REFERENCE; HGBR H5:LONG; Ridge H1:REFERENCE; Ridge H3:REFERENCE; Ridge H5:REFERENCE,True

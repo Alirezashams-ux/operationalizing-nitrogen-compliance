@@ -1,0 +1,66 @@
+import argparse, json
+import numpy as np
+from pathlib import Path
+import optuna
+from sklearn.model_selection import TimeSeriesSplit
+from sklearn.metrics import mean_absolute_error
+from sklearn.ensemble import HistGradientBoostingRegressor
+
+def cv_mae(params, X, y, n_splits=3):
+    tscv = TimeSeriesSplit(n_splits=n_splits)
+    maes = []
+    for tr, te in tscv.split(X):
+        m = HistGradientBoostingRegressor(**params)
+        m.fit(X[tr], y[tr])
+        pred = m.predict(X[te])
+        maes.append(mean_absolute_error(y[te], pred))
+    return float(np.mean(maes))
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--h", type=int, required=True)
+    ap.add_argument("--trials", type=int, default=120)
+    ap.add_argument("--splits", type=int, default=3)
+    args = ap.parse_args()
+
+    ROOT = Path(__file__).resolve().parents[1]
+    NPZ  = ROOT / "features" / f"ulsan_H{args.h}_features.npz"
+    OUTD = ROOT / "results" / "hgbr"
+    OUTD.mkdir(parents=True, exist_ok=True)
+
+    z = np.load(NPZ, allow_pickle=True)
+    X, y = z["X"], z["y"]
+
+    def objective(trial):
+        params = dict(
+            learning_rate=trial.suggest_float("learning_rate", 0.01, 0.2, log=True),
+            max_iter=trial.suggest_int("max_iter", 200, 1500),
+            max_leaf_nodes=trial.suggest_int("max_leaf_nodes", 15, 255),
+            min_samples_leaf=trial.suggest_int("min_samples_leaf", 10, 160),
+            l2_regularization=trial.suggest_float("l2_regularization", 1e-6, 20.0, log=True),
+            max_bins=trial.suggest_int("max_bins", 64, 255),
+            early_stopping=True,
+            validation_fraction=0.1,
+            random_state=42,
+        )
+        return cv_mae(params, X, y, n_splits=args.splits)
+
+    study = optuna.create_study(direction="minimize")
+    study.optimize(objective, n_trials=args.trials)
+
+    out = {
+        "h": args.h,
+        "npz": str(NPZ),
+        "best_mae": study.best_value,
+        "best_params": study.best_params,
+    }
+    out_path = OUTD / f"hgbr_optuna_H{args.h}.json"
+    with open(out_path, "w") as f:
+        json.dump(out, f, indent=2)
+
+    print("Saved:", out_path)
+    print("Best MAE:", study.best_value)
+    print("Best params:", study.best_params)
+
+if __name__ == "__main__":
+    main()

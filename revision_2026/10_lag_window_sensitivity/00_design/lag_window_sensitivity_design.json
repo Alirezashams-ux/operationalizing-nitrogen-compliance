@@ -1,0 +1,136 @@
+{
+  "objective": "Design-only predeclaration of leakage-safe lag-window sensitivity configurations.",
+  "reviewer_issue_addressed": "TNout-memory robustness without post-hoc optimization.",
+  "authoritative_feature_lineage": {
+    "ordinary": "TNout_lag1 + TNout_roll7 + TNout_roll14 (18-column corrected ordinary feature set)",
+    "v2": "TNout_lag1/3/5/7 + TNout_roll7/14/30 (34-column corrected v2 feature set)",
+    "h3_v2_exists_not_used": true
+  },
+  "candidate_configurations": [
+    {
+      "configuration_id": "SHORT",
+      "configuration_label": "SHORT",
+      "tnout_features": [
+        "TNout_lag1",
+        "TNout_roll7"
+      ],
+      "maximum_required_history_days": 7,
+      "earliest_possible_date_from_raw_start": "2021-01-11",
+      "scientific_role": "reduced-memory sensitivity",
+      "predeclared": true,
+      "uses_future_information": false,
+      "notes": "Shortest TN-memory candidate; strictly prior TNout only."
+    },
+    {
+      "configuration_id": "REFERENCE",
+      "configuration_label": "REFERENCE",
+      "tnout_features": [
+        "TNout_lag1",
+        "TNout_roll14",
+        "TNout_roll7"
+      ],
+      "maximum_required_history_days": 14,
+      "earliest_possible_date_from_raw_start": "2021-01-18",
+      "scientific_role": "ordinary corrected feature reference",
+      "predeclared": true,
+      "uses_future_information": false,
+      "notes": "Reference TN-memory used by final corrected Ridge and HGBR H1/H3."
+    },
+    {
+      "configuration_id": "LONG",
+      "configuration_label": "LONG",
+      "tnout_features": [
+        "TNout_lag1",
+        "TNout_lag3",
+        "TNout_lag5",
+        "TNout_lag7",
+        "TNout_roll14",
+        "TNout_roll30",
+        "TNout_roll7"
+      ],
+      "maximum_required_history_days": 30,
+      "earliest_possible_date_from_raw_start": "2021-02-03",
+      "scientific_role": "extended-memory sensitivity and final HGBR-H5/BCR-TCN-H5 TN-memory lineage",
+      "predeclared": true,
+      "uses_future_information": false,
+      "notes": "Final corrected HGBR-H5/BCR-TCN-H5 TN-memory lineage."
+    }
+  ],
+  "model_horizon_selection": {
+    "refit_models": [
+      "Ridge",
+      "HGBR"
+    ],
+    "refit_horizons": [
+      1,
+      3,
+      5
+    ],
+    "context_only_models": [
+      "Persistence",
+      "ElasticNet",
+      "BCR-TCN"
+    ],
+    "final_reference_mapping": {
+      "Ridge_H1": "REFERENCE",
+      "Ridge_H3": "REFERENCE",
+      "Ridge_H5": "REFERENCE",
+      "HGBR_H1": "REFERENCE",
+      "HGBR_H3": "REFERENCE",
+      "HGBR_H5": "LONG"
+    }
+  },
+  "non_tn_feature_freeze_rule": "Preserve final corrected non-TN predictors; vary only TNout-memory columns.",
+  "hyperparameter_freeze_rule": "Use frozen corrected fold-specific hyperparameters; retuning is prohibited.",
+  "common_date_requirement": "Canonical outer-test dates must be preserved across SHORT/REFERENCE/LONG.",
+  "warmup_expectations": {
+    "raw_start": "2021-01-04",
+    "SHORT": "2021-01-11",
+    "REFERENCE": "2021-01-18",
+    "LONG": "2021-02-03"
+  },
+  "planned_outcomes": [
+    "MAE",
+    "MSE",
+    "RMSE",
+    "MASE",
+    "Pearson correlation vs final reference predictions",
+    "Spearman rank correlation vs final reference predictions",
+    "offline Recall@5% tau=16 diagnostic"
+  ],
+  "event_ranking_diagnostic": {
+    "type": "retrospective_offline_recall_at_5_percent",
+    "tau_mgL": 16,
+    "top_k_rule": "k=ceil(0.05*fold_N), fold-wise",
+    "not_for": [
+      "online operation",
+      "prospective validation",
+      "deployable alarm rule",
+      "lag-window optimization"
+    ]
+  },
+  "interpretation_rules": {
+    "sensitivity_not_optimization": true,
+    "do_not_choose_best_configuration": true,
+    "robust_mixed_sensitive_outcomes_possible": true,
+    "retain_mixed_results_without_posthoc_changes": true
+  },
+  "exclusions": {
+    "no_model_fitting_in_design_stage": true,
+    "no_prediction_generation_in_design_stage": true,
+    "no_metric_execution_in_design_stage": true,
+    "no_manuscript_editing_in_stage2": true
+  },
+  "execution_stop_conditions": [
+    "embargo violation",
+    "canonical test-date mismatch across configurations",
+    "future-information leakage",
+    "hyperparameter-retuning attempt",
+    "source-preservation or checksum failure"
+  ],
+  "future_decision_options": [
+    "robust",
+    "mixed",
+    "sensitive"
+  ]
+}
