@@ -5,6 +5,8 @@ derived research artifacts authored by the project team and distributed in
 this repository are made available under the Creative Commons Attribution
 4.0 International License (CC BY 4.0).
 
+License terms: https://creativecommons.org/licenses/by/4.0/
+
 ## Scope
 
 This license may apply to project-authored derived materials such as:
@@ -17,7 +19,7 @@ This license may apply to project-authored derived materials such as:
 - model-output summaries;
 - audit tables and computational registries.
 
-## Restricted source datasets
+## Source datasets not redistributed
 
 The following source datasets are intentionally excluded from public
 redistribution:
@@ -29,7 +31,11 @@ These raw source files are not distributed as part of this repository or its
 public release archives.
 
 The Ulsan wastewater-treatment dataset is subject to third-party
-data-sharing restrictions.
+data-sharing restrictions and therefore cannot be publicly redistributed.
+
+The Seoul wastewater-treatment source data are publicly obtainable from the
+official source described in the repository documentation; however, the local
+source copy used in this study is not redistributed in this repository.
 
 ## Third-party material
 
